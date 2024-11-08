@@ -1,1 +1,5 @@
 # SmartHome
+
+## Simul iot
+
+## Server
