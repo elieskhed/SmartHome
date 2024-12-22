@@ -2,6 +2,8 @@ from humidity_sensor import HumiditySensor
 from lumiere import Light
 from house import House
 
+# IP ou nom de domaine du Broker
+# PORT port par défaut 1883 (pour le tests (attention pas sécuriséé))
 BROKER = '172.20.10.5'
 PORT   = 1883
 

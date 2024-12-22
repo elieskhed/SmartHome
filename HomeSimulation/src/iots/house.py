@@ -2,6 +2,7 @@ from device import Device
 import paho.mqtt.client as mqtt
 import time
 
+
 class House:
     def __init__(self, devices, broker, port=1883):
         self.devices = devices

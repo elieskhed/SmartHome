@@ -11,7 +11,7 @@ class HumiditySensor(Device):
         :param device_location: Emplacement de l'appareil
         :param humidity_level: Niveau d'humidité actuel
         """
-        super().__init__(device_id, device_name, device_location, 'sensor/humidity')
+        super().__init__(device_id, device_name, device_location, 'device/sensor/humidity')
         self.humidity_level = humidity_level
 
     def convertDataToJSON(self):
