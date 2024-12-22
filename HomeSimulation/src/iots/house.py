@@ -1,15 +1,24 @@
-import device
+from device import Device
+import paho.mqtt.client as mqtt
+import time
 
-class house:
-    def __init__(self):
-        self.appareils = []
+class House:
+    def __init__(self, devices, broker, port=1883):
+        self.devices = devices
+        self.broker  = broker
+        self.port    = port
+        self.client = mqtt.Client()
+        self.client.connect(broker, port)
 
-    def ajouter_appareil(self, appareil):
-        self.appareils.append(appareil)
+    def add_device(self, device):
+        self.devices.append(device)
     
-    def retirer_appareil(self, appareil):
-        self.appareils.remove(appareil)
+    def sendAllDatas(self):
+        for device in self.devices:
+            self.client.publish(device.device_topic, device.convertDataToJSON())
+            print("Message publiée: " + str(device))
 
-    def afficher_etat(self):
-        for appareil in self.appareils:
-            print(appareil)
+    def sendAllDataPeriodically(self, period):
+        while 1:
+            self.sendAllDatas()
+            time.sleep(period)
