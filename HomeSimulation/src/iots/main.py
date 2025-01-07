@@ -4,7 +4,7 @@ from house import House
 
 # IP ou nom de domaine du Broker
 # PORT port par défaut 1883 (pour le tests (attention pas sécuriséé))
-BROKER = '172.20.10.5'
+BROKER = '172.20.10.3'
 PORT   = 1883
 
 devices = [
