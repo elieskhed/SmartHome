@@ -3,7 +3,7 @@ import json
 
 class Light(Device):
     def __init__(self, device_id, device_name, device_location, state):
-        super().__init__(device_id, device_name, device_location, 'device/light')
+        super().__init__(device_id, device_name, device_location, 'device/light', 'light')
         self.state = state
         
 
@@ -12,6 +12,7 @@ class Light(Device):
             "device_name": self.device_name,
             "device_id": self.device_id,
             "device_location": self.device_location,
+            "type": self.device_type,
             "values": {
                 "state": self.state
             }
