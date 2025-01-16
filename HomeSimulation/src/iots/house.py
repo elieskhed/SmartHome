@@ -2,7 +2,6 @@ from device import Device
 import paho.mqtt.client as mqtt
 import time
 
-
 class House:
     def __init__(self, devices, broker, port=1883):
         self.devices = devices
@@ -16,10 +15,19 @@ class House:
     
     def sendAllDatas(self):
         for device in self.devices:
+            device.setRandomValue()
             self.client.publish(device.device_topic, device.convertDataToJSON())
             print("Message publiée: " + str(device))
 
     def sendAllDataPeriodically(self, period):
         while 1:
             self.sendAllDatas()
+            time.sleep(period)
+
+    def printAllDataPeriodically(self, period):
+        while 1:
+            for device in self.devices:
+                device.setRandomValue()
+                self.client.publish(device.device_topic, device.convertDataToJSON())
+                print("Message publiée: " + str(device))
             time.sleep(period)
