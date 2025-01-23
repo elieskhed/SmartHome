@@ -45,3 +45,7 @@ Demande de signature `client.csr`:
 Certificat `client.crt` (expire dans 365 jours) signé par la **CA**:
 `openssl x509 -req -in client.csr -CA CA.crt -CAkey CA.key -CAcreateserial -out client.crt -days 365 -sha256`
 
+Utiliser ce code si erreur :
+`openssl x509 -req -in client.csr -CA ../ca_certificates/CA.crt -CAkey ../ca_certificates/CA.key -CAcreateserial -out client.crt -days 365 -sha256`
+
+Penser à utiliser `sudo` si commandes non fonctionnelles.
