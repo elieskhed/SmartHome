@@ -3,7 +3,7 @@ import json
 import random
 
 class CarbonSensor(Device):
-    def __init__(self, device_id, device_name, device_location):
+    def __init__(self, house_name, device_id, device_name, device_location):
         """
         Initialise un capteur d'humidité.
 
@@ -12,7 +12,7 @@ class CarbonSensor(Device):
         :param device_location: Emplacement de l'appareil
         :param device_value: Taux de carbon dans l'air
         """
-        super().__init__(device_id, device_name, device_location, 'device/sensor/carbon')
+        super().__init__(house_name, device_id, device_name, device_location, 'device/sensor/carbon')
         self.device_value = 2
     
     def setRandomValue(self):

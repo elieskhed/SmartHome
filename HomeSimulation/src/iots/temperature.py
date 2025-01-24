@@ -3,8 +3,8 @@ import json
 import random
 
 class Temperature(Device):
-    def __init__(self, device_id, device_name, device_location):
-        super().__init__(device_id, device_name, device_location, 'device/temperature')
+    def __init__(self, house_name, device_id, device_name, device_location):
+        super().__init__(house_name, device_id, device_name, device_location, 'device/temperature')
         self.device_value = 12
         
     def setRandomValue(self):

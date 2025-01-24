@@ -8,7 +8,7 @@ class Device(ABC):
         self._device_topic      = device_topic
         self._device_type       = device_type
         self._house_name        = house_name
-        self._device_value      = 0
+        #self._device_value      = 0
 
     @property
     def device_location(self):
