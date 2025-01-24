@@ -6,7 +6,11 @@ from temperature import Temperature
 
 # IP ou nom de domaine du Broker
 # PORT port par défaut 1883 (pour le tests (attention pas sécuriséé))
+<<<<<<< HEAD
 BROKER = '172.20.10.3'
+=======
+BROKER = '172.20.10.2'
+>>>>>>> 78600b1 (mac)
 PORT   = 1883
 
 #création des différents nombres aléatoires?
