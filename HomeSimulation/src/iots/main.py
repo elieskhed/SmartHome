@@ -2,6 +2,7 @@ from humidity_sensor import HumiditySensor
 from lumiere import Light
 from house import House
 from carbon_sensor import CarbonSensor
+from temperature import Temperature
 
 # IP ou nom de domaine du Broker
 # PORT port par défaut 1883 (pour le tests (attention pas sécuriséé))
@@ -16,7 +17,8 @@ PORT   = 1883
 devices = [
     Light(1, 'lamp_kit', 'kitchen'),
     HumiditySensor(2, 'humid_sens', 'kitchen'),
-    CarbonSensor(3, 'carb_sens', 'garage')
+    CarbonSensor(3, 'carb_sens', 'garage'),
+    Temperature(4, 'temp_sens', 'out_entry')
 ]
 # devices = [
 #     CarbonSensor(1, 'carb_sens', 'garage')
