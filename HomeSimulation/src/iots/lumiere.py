@@ -12,11 +12,17 @@ class Light(Device):
 =======
     def __init__(self, device_id, device_name, device_location):
         super().__init__(device_id, device_name, device_location, 'device/light')
+<<<<<<< HEAD
         self.device_value = "Off"
 >>>>>>> 3eb964b (random captors)
+=======
+        #self.device_value = "Off"
+        self.device_value = 0
+>>>>>>> b83b7ad (on to 1)
         
     def setRandomValue(self):
-        self.device_value = random.choice(["On", "Off"])
+        #self.device_value = random.choice(["On", "Off"])
+        self.device_value = random.choice([1, 0])
 
     def convertDataToJSON(self):
         data = {
