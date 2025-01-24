@@ -20,7 +20,7 @@ client_key  = './certs/clients/client.key'
 #création des différentes devices/capteurs pour l'analyse
 devices = [
     Light("eliesHouse", 1, 'lamp_kit', 'kitchen'),
-    HumiditySensor("eliesHouse", 1, 'humid_sens', 'kitchen'),
+    HumiditySensor("eliesHouse", 2, 'humid_sens', 'kitchen'),
     CarbonSensor("eliesHouse", 3, 'carb_sens', 'garage'),
     Temperature("eliesHouse", 4, 'temp_sens', 'out_entry')
 ]
