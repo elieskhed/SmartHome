@@ -57,6 +57,7 @@ class House:
 
             # Publish the data securely
             for device in self.devices:
+                device.setRandomValue()
                 topic = device.device_topic
                 message = device.convertDataToJSON()
                 print(f"Publishing to {topic}: {message}")
