@@ -23,9 +23,11 @@ class CarbonSensor(Device):
         Retourne les données du capteur d'humidité en format JSON.
         """
         data = {
+            "house_name": self.house_name,
             "device_name": self.device_name,
             "device_id": self.device_id,
             "device_location": self.device_location,
+            "type": self.device_type,
             "values": {
                 "carbon_level": self.device_value
             }

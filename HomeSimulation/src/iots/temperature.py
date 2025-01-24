@@ -12,9 +12,11 @@ class Temperature(Device):
 
     def convertDataToJSON(self):
         data = {
+            "house_name": self.house_name,
             "device_name": self.device_name,
             "device_id": self.device_id,
             "device_location": self.device_location,
+            "type": self.device_type,
             "values": {
                 "state": self.device_value
             }
