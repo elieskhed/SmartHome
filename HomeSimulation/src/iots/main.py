@@ -13,8 +13,8 @@ client_cert = './certs/clients/client.crt'
 client_key  = './certs/clients/client.key'
 
 devices = [
-    Light(1, 'lamp_kit', 'kitchen', 0),
-    HumiditySensor(1, 'humid_sens', 'kitchen', 0.12)
+    Light("eliesHouse",1, 'lamp_kit', 'kitchen', 0),
+    HumiditySensor("eliesHouse",1, 'humid_sens', 'kitchen', 0.12)
 ]
 
 house = House(devices, BROKER, PORT)

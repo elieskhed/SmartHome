@@ -1,14 +1,17 @@
 from device import Device
 import json
 
+# Topic 
+
 class Light(Device):
-    def __init__(self, device_id, device_name, device_location, state):
-        super().__init__(device_id, device_name, device_location, 'device/light', 'light')
+    def __init__(self, house_name ,device_id, device_name, device_location, state):
+        super().__init__(house_name, device_id, device_name, device_location, 'houses/'+str(house_name)+'/TYPE_LIGHT', 'light_sensor')
         self.state = state
         
 
     def convertDataToJSON(self):
         data = {
+            "house_name": self.house_name,
             "device_name": self.device_name,
             "device_id": self.device_id,
             "device_location": self.device_location,

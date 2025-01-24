@@ -2,7 +2,7 @@ from device import Device
 import json
 
 class HumiditySensor(Device):
-    def __init__(self, device_id, device_name, device_location, humidity_level):
+    def __init__(self, house_name ,device_id, device_name, device_location, humidity_level):
         """
         Initialise un capteur d'humidité.
 
@@ -11,7 +11,7 @@ class HumiditySensor(Device):
         :param device_location: Emplacement de l'appareil
         :param humidity_level: Niveau d'humidité actuel
         """
-        super().__init__(device_id, device_name, device_location, 'device/sensor/humidity', 'humidity_sensor')
+        super().__init__(house_name, device_id, device_name, device_location, 'houses/'+str(house_name)+'/TYPE_HUMIDITY', 'humidity_sensor')
         self.humidity_level = humidity_level
 
     def convertDataToJSON(self):
@@ -19,6 +19,7 @@ class HumiditySensor(Device):
         Retourne les données du capteur d'humidité en format JSON.
         """
         data = {
+            "house_name" : self.house_name,
             "device_name": self.device_name,
             "device_id": self.device_id,
             "device_location": self.device_location,
