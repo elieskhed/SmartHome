@@ -4,7 +4,7 @@ import random
 
 class Temperature(Device):
     def __init__(self, house_name, device_id, device_name, device_location):
-        super().__init__(house_name, device_id, device_name, device_location, 'device/temperature')
+        super().__init__(house_name, device_id, device_name, device_location, 'houses/'+str(house_name)+'/TYPE_TEMPERATURE/'+device_name, 'temperature_sensor')
         self.device_value = 12
         
     def setRandomValue(self):

@@ -6,7 +6,7 @@ import random
 
 class Light(Device):
     def __init__(self, house_name, device_id, device_name, device_location):
-        super().__init__(house_name, device_id, device_name, device_location, 'device/light')
+        super().__init__(house_name, device_id, device_name, device_location, 'houses/'+str(house_name)+'/TYPE_LIGHT/'+device_name, 'light_sensor')
         #self.device_value = "Off"
         self.device_value = 0
         

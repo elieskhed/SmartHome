@@ -12,7 +12,7 @@ class HumiditySensor(Device):
         :param device_location: Emplacement de l'appareil
         :param humidity_level: Niveau d'humidité actuel
         """
-        super().__init__(house_name, device_id, device_name, device_location, 'device/sensor/humidity')
+        super().__init__(house_name, device_id, device_name, device_location, 'houses/'+str(house_name)+'/TYPE_HUMIDITY/'+device_name, 'humidity_sensor')
         self.device_value = 45
 
     def setRandomValue(self):

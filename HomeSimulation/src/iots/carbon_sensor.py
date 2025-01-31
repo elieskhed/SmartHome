@@ -12,7 +12,7 @@ class CarbonSensor(Device):
         :param device_location: Emplacement de l'appareil
         :param device_value: Taux de carbon dans l'air
         """
-        super().__init__(house_name, device_id, device_name, device_location, 'device/sensor/carbon')
+        super().__init__(house_name, device_id, device_name, device_location, 'houses/'+str(house_name)+'/TYPE_HUMIDITY/'+device_name, 'carbon_sensor')
         self.device_value = 2
     
     def setRandomValue(self):
