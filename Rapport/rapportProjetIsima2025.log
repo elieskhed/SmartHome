@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  26 FEB 2025 14:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  26 FEB 2025 19:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1062,55 +1062,97 @@ t line 193.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ressources/img/logos/isi
 maInp.png> <./ressources/img/logos/imageSmartHouse.png>]
-(./rapportProjetIsima2025.toc)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.200 	\tableofcontents
+                        [1] (./rapportProjetIsima2025.toc)
 \tf@toc=\write7
 \openout7 = `rapportProjetIsima2025.toc'.
+
+ [2
+
+]
+(./rapportProjetIsima2025.lof)
+\tf@lof=\write8
+\openout8 = `rapportProjetIsima2025.lof'.
+
+ [3
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.222 	\end{abstract}
+                      [1]
+Overfull \hbox (3.12401pt too wide) in paragraph at lines 240--241
+[]\T1/cmr/m/n/10 This project in-te-grates \T1/cmr/bx/n/10 mod-ern tech-nolo-gi
+es and ad-vanced con-cepts in se-cu-rity, IoT, database
+ []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 	\chapter
-               {Introduction} [1
+l.242 	\end{abstract}
+                      [1]
+Chapter 1.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.247 	\chapter
+               {Contexte du Projet} [1
 
 ]
-Chapitre 1.
-[2
+Chapter 2.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.251 	\chapter
+               {État de l'Art} [2
 
 ]
-Chapitre 2.
-[3
+Chapter 3.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.255 	\chapter
+               {Conception et Implémentation} [3
 
 ]
-Chapitre 3.
+Chapter 4.
 [4
 
 ]
-Chapitre 4.
+Chapter 5.
 [5
 
 ]
-Chapitre 5.
+Chapter 6.
 [6
 
 ]
-Chapitre 6.
-[7
-
-]
-Annexe A.
-(./rapportProjetIsima2025.bbl [8
+Appendix A.
+(./rapportProjetIsima2025.bbl [7
 
 ]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [9
+) [8
 
 ]
 No file rapportProjetIsima2025.gls.
-[10
+[9
 
 ] (./rapportProjetIsima2025.aux)
 Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
@@ -1118,13 +1160,13 @@ Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
 (rerunfilecheck)             Checksum: F659598790AE5EA8B12985C63E66F47B;6231.
  ) 
 Here is how much of TeX's memory you used:
- 33086 strings out of 476091
- 637424 string characters out of 5794081
+ 33110 strings out of 476091
+ 637939 string characters out of 5794081
  1862330 words of memory out of 5000000
- 52856 multiletter control sequences out of 15000+600000
+ 52876 multiletter control sequences out of 15000+600000
  524749 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,12n,90p,2268b,808s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,12n,90p,2268b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
 fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
@@ -1134,10 +1176,10 @@ onts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (11 pages, 2834983 bytes).
+Output written on rapportProjetIsima2025.pdf (15 pages, 2844109 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 293 PDF objects out of 1000 (max. 8388607)
+ 250 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
  247 words of extra memory for PDF output out of 10000 (max. 10000000)
 
