@@ -194,6 +194,41 @@
 	\backgroundsetup{contents={}}
 	\ClearShipoutPicture
 	\newpage
+	\tableofcontents
+	\listoffigures
+	
+	
+	\chapter{Introduction}
+	\chapter{Contexte du Projet}
+	\section{Expression du besoin et objectif visé}
+	\section{Organisation de la conception à la création}
+	
+	\chapter{Analyse, Conception et Implémentation}
+	\section{Infrastructure}
+	\subsection{Simulation du serveur}
+		\subsubsection{Mise en place d'un Broker MQTT sécurisée}
+		\subsubsection{Mise en place d'une base de donnée à série temporelle}
+		\subsubsection{Mise en place d'un format de donnée permettant une compatibilité entre Mosquitto et InfluxDb}
+	\subsection{Simulation de la maison connecté}
+		\subsection{Architecture de la simulation}
+		\subsection{Implémentation du protocole MQTTs}
+		\subsection{Formalisation des données envoyées}
+	\section{Mise en place d'une API web}
+		\subsection{Architecture de l'API}
+		\subsection{Automatisation de l'authentification de chaque maison}
+			\subsubsection{Mise en place d'une Base de donnée mySQL}
+			\subsection{Signature automatique des certificats}
+		\subsection{Filtrage et récupération des données}
+			\subsubsection{Communication avec InfluxDB API}
+	\section{Surveillance des données avec une interface graphique}
+		\subsection{Architecture de SmartHouse Monitoring}
+		\subsection{Communication avec l'API}
+			\subsubsection{Authentification des maisons}
+			\subsubsection{Affichage des données récupérées}
+	\section{Conclusion}
+		\subsection{Conclusion du projet}
+		\subsection{Limites et améliorations possibles}
+	
 
 
 	
