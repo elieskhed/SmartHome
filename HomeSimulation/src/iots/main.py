@@ -11,10 +11,11 @@ PORT = 8883
 ca_cert     = './certs/CA/ca.crt'
 client_cert = './certs/clients/client.crt'
 client_key  = './certs/clients/client.key'
+house_token = "Wdp4HCPNvC3wHnvSfSwmVknhLuHtjUkoIzG6zPno"
 
 devices = [
-    Light("eliesHouse",1, 'lamp_kit', 'kitchen', 0),
-    HumiditySensor("eliesHouse",1, 'humid_sens', 'kitchen', 0.12)
+    Light("eliesHouse", house_token,1, 'lamp_kit', 'kitchen', 0),
+    HumiditySensor("eliesHouse", house_token,1, 'humid_sens', 'kitchen', 0.12)
 ]
 
 house = House(devices, BROKER, PORT)

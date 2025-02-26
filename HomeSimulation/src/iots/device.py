@@ -1,13 +1,14 @@
 from abc import ABC, abstractmethod
 
 class Device(ABC):
-    def __init__(self, house_name ,device_id, device_name, device_location, device_topic, device_type):
+    def __init__(self, house_name, token_house ,device_id, device_name, device_location, device_topic, device_type):
         self._device_id         = device_id
         self._device_name       = device_name
         self._device_location   = device_location
         self._device_topic      = device_topic
         self._device_type       = device_type
         self._house_name        = house_name
+        self._house_token       = token_house
 
     @property
     def device_location(self):
@@ -37,6 +38,10 @@ class Device(ABC):
     @property
     def house_name(self):
         return self._house_name
+    
+    @property
+    def house_token(self):
+        return self._house_token
 
     @abstractmethod
     def convertDataToJSON(self):
