@@ -194,44 +194,64 @@
 	\backgroundsetup{contents={}}
 	\ClearShipoutPicture
 	\newpage
-	\tableofcontents
-	\listoffigures
 	
-	
+\tableofcontents
+
 	\chapter{Introduction}
+	
 	\chapter{Contexte du Projet}
-	\section{Expression du besoin et objectif visé}
+	\section{Analyse du besoin et définition des objectifs}
 	\section{Organisation de la conception à la création}
 	
-	\chapter{Analyse, Conception et Implémentation}
-	\section{Infrastructure}
-	\subsection{Simulation du serveur}
-		\subsubsection{Mise en place d'un Broker MQTT sécurisée}
-		\subsubsection{Mise en place d'une base de donnée à série temporelle}
-		\subsubsection{Mise en place d'un format de donnée permettant une compatibilité entre Mosquitto et InfluxDb}
-	\subsection{Simulation de la maison connecté}
-		\subsection{Architecture de la simulation}
-		\subsection{Implémentation du protocole MQTTs}
-		\subsection{Formalisation des données envoyées}
-	\section{Mise en place d'une API web}
-		\subsection{Architecture de l'API}
-		\subsection{Automatisation de l'authentification de chaque maison}
-			\subsubsection{Mise en place d'une Base de donnée mySQL}
-			\subsection{Signature automatique des certificats}
-		\subsection{Filtrage et récupération des données}
-			\subsubsection{Communication avec InfluxDB API}
+	\chapter{État de l'Art}
+	\section{Technologies existantes}
+	\section{Solutions alternatives et justification des choix}
+	
+	\chapter{Conception et Implémentation}
+	
+	\section{Infrastructure et Environnement de Développement}
+	
+	\subsection{Simulation du serveur et architecture réseau}
+	\subsubsection{Déploiement d'un Broker MQTT sécurisé}
+	\subsubsection{Intégration d'une base de données à séries temporelles}
+	\subsubsection{Formalisation des données entre Mosquitto et InfluxDB}
+	
+	\subsection{Modélisation et Simulation d'une Maison Connectée}
+	\subsubsection{Conception de l'architecture logicielle de la simulation}
+	\subsubsection{Implémentation du protocole MQTTs}
+	\subsubsection{Structuration et formalisation des données échangées}
+	
+	\section{Mise en place d'une API Web}
+	\subsection{Architecture logicielle de l'API et choix technologiques}
+	\subsection{Automatisation de l'authentification des maisons}
+	\subsubsection{Mise en place d'une base de données MySQL}
+	\subsubsection{Signature automatique des certificats}
+	\subsection{Filtrage et récupération des données}
+	\subsubsection{Communication avec InfluxDB API}
+	
 	\section{Surveillance des données avec une interface graphique}
-		\subsection{Architecture de SmartHouse Monitoring}
-		\subsection{Communication avec l'API}
-			\subsubsection{Authentification des maisons}
-			\subsubsection{Affichage des données récupérées}
-	\section{Conclusion}
-		\subsection{Conclusion du projet}
-		\subsection{Limites et améliorations possibles}
+	\subsection{Architecture logicielle de l'application SmartHouse Monitoring}
+	\subsection{Intégration et communication avec l'API Web}
+	\subsubsection{Authentification des maisons}
+	\subsubsection{Affichage des données récupérées}
 	
-
-
+	\chapter{Résultats et Discussion}
+	\section{Situation à la fin de l’étude}
+	\section{Analyse des résultats obtenus}
 	
+	\chapter{Conclusion}
+	\section{Conclusion du projet}
+	\section{Limites et améliorations possibles}
+	
+	\appendix
+	\chapter{Annexes}
+	\section{Lexique}
+	\section{Bibliographie}
+	\section{Webographie}
+	
+	
+	
+		
 	
 	\nocite{*}
 	\bibliographystyle{unsrt}
