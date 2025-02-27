@@ -11,6 +11,13 @@
 #include <QtCharts/QLineSeries>
 #include <QtCharts/QtCharts>
 
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QUrl>
+#include <QDebug>
+#include <QObject>
+
 
 
 class MonitorHouseData : public QWidget
@@ -19,7 +26,10 @@ class MonitorHouseData : public QWidget
 public:
     MonitorHouseData();
 
+    void connectAPILastData();
+
     void createChartsExample();
+
 
 private:
     QTextEdit* houseToken;
@@ -35,6 +45,7 @@ private:
     QLineSeries* series;
     QChart* chart;
     QChartView* chartView;
+
 
 };
 
