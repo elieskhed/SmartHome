@@ -12,6 +12,29 @@ MonitorHouseData::MonitorHouseData() {
     this->verticalLayout->addWidget(this->houseToken);
     this->verticalLayout->addWidget(this->buttonSend);
 
+    //mise en place du graphique example
+    this->createChartsExample();
+    this->verticalLayout->addWidget(this->chartView);
+
     this->setLayout(this->verticalLayout);
+}
+
+void MonitorHouseData::createChartsExample(){
+    this->series = new QLineSeries;
+    // Example
+    this->series->append(0, 6);
+    this->series->append(2, 4);
+    this->series->append(3, 8);
+    this->series->append(7, 4);
+    this->series->append(10, 5);
+
+    this->chart = new QChart();
+    this->chart->legend()->hide();
+    this->chart->addSeries(series);
+    this->chart->createDefaultAxes();
+    this->chart->setTitle("Exemple de Graphique");
+
+    this->chartView = new QChartView(chart);
+    this->chartView->setRenderHint(QPainter::Antialiasing);
 
 }

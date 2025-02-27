@@ -6,6 +6,11 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QVBoxLayout>
+#include<QtCharts/QChartView>
+#include <QtCharts/QLineSeries>
+#include <QtCharts/QtCharts>
+
+
 
 class MonitorHouseData : public QWidget
 {
@@ -13,11 +18,18 @@ class MonitorHouseData : public QWidget
 public:
     MonitorHouseData();
 
+    void createChartsExample();
+
 private:
     QTextEdit* houseToken;
     QPushButton* buttonSend;
 
     QVBoxLayout* verticalLayout;
+
+    // Graphiques QtCharts
+    QLineSeries* series;
+    QChart* chart;
+    QChartView* chartView;
 
 };
 

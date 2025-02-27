@@ -4,6 +4,7 @@ CONFIG -= app_bundle
 
 QT += widgets
 QT += network
+QT += charts
 
 
 # Ajout de cUrl à la configuration
