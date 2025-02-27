@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  26 FEB 2025 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  27 FEB 2025 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1101,11 +1101,22 @@ l.242 	\end{abstract}
                       [1]
 Chapter 1.
 
+Overfull \hbox (1.0995pt too wide) in paragraph at lines 246--248
+[]\T1/cmr/m/n/10 La \T1/cmr/bx/n/10 do-mo-tique \T1/cmr/m/n/10 repr�sente au-jo
+urd'jui un en-jeu ma-jeur dans le do-maine des in-no-va-tions tech-nologiques.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
+
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.247 	\chapter
+l.259 	\chapter
                {Contexte du Projet} [1
 
 ]
@@ -1115,7 +1126,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.251 	\chapter
+l.263 	\chapter
                {État de l'Art} [2
 
 ]
@@ -1125,7 +1136,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.255 	\chapter
+l.267 	\chapter
                {Conception et Implémentation} [3
 
 ]
@@ -1176,7 +1187,7 @@ onts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (15 pages, 2844109 bytes).
+Output written on rapportProjetIsima2025.pdf (15 pages, 2847312 bytes).
 PDF statistics:
  293 PDF objects out of 1000 (max. 8388607)
  250 compressed objects within 3 object streams
