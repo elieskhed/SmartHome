@@ -44,10 +44,12 @@ void MonitorHouseData::connectAPILastData() {
     QNetworkReply *reply = manager->get(request);
 
     // Connexion du signal finished pour traiter la réponse dès réception
-    QObject::connect(reply, &QNetworkReply::finished, [reply, manager]() {
+    QObject::connect(reply, &QNetworkReply::finished, [this, reply, manager]() {
         if (reply->error() == QNetworkReply::NoError) {
             QByteArray responseData = reply->readAll();
-            qDebug() << "Réponse de l'API:" << responseData;
+            this->responseDataStr = QString::fromUtf8(responseData);
+
+            qDebug() << responseDataStr;
         } else {
             qDebug() << "Erreur lors de la requête:" << reply->errorString();
         }
@@ -55,6 +57,7 @@ void MonitorHouseData::connectAPILastData() {
         manager->deleteLater();
     });
 }
+
 
 
 void MonitorHouseData::createChartsExample(){

@@ -13,12 +13,14 @@ INCLUDEPATH += /usr/include
 LIBS += -lcurl
 
 SOURCES += \
+    apiresponseparser.cpp \
     createutil.cpp \
     main.cpp \
     monitorhousedata.cpp \
     window.cpp
 
 HEADERS += \
+    apiresponseparser.h \
     createutil.h \
     monitorhousedata.h \
     window.h

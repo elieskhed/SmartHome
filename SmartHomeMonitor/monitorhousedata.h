@@ -10,6 +10,7 @@
 #include<QtCharts/QChartView>
 #include <QtCharts/QLineSeries>
 #include <QtCharts/QtCharts>
+#include <QString>
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -17,6 +18,10 @@
 #include <QUrl>
 #include <QDebug>
 #include <QObject>
+
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonArray>
 
 
 
@@ -27,7 +32,6 @@ public:
     MonitorHouseData();
 
     void connectAPILastData();
-
     void createChartsExample();
 
 
@@ -45,6 +49,9 @@ private:
     QLineSeries* series;
     QChart* chart;
     QChartView* chartView;
+
+    QString responseDataStr;
+
 
 
 };
