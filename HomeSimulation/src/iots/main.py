@@ -7,7 +7,7 @@ from temperature import Temperature
 # IP ou nom de domaine du Broker
 # PORT port par défaut 1883 (pour le tests (attention pas sécuriséé))
 BROKER = '172.20.10.2'
-# PORT   = 1883
+#PORT   = 1883
 PORT = 8883
 
 ca_cert     = './certs/CA/ca.crt'
