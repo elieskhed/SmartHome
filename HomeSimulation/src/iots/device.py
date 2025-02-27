@@ -1,14 +1,12 @@
 from abc import ABC, abstractmethod
 
 class Device(ABC):
-    def __init__(self, house_name, token_house ,device_id, device_name, device_location, device_topic, device_type):
+    def __init__(self, device_id, device_name, device_location, device_topic):
         self._device_id         = device_id
         self._device_name       = device_name
         self._device_location   = device_location
         self._device_topic      = device_topic
-        self._device_type       = device_type
-        self._house_name        = house_name
-        self._house_token       = token_house
+        # self._device_type       = device_type
         self._device_value      = 0
 
     @property
@@ -31,17 +29,17 @@ class Device(ABC):
     def device_topic(self):
         return self._device_topic
     
-    @property
-    def device_type(self):
-        return self._device_type
+    # @property
+    # def device_type(self):
+    #     return self._device_type
     
-    @property
-    def house_name(self):
-        return self._house_name
+    # @property
+    # def house_name(self):
+    #     return self._house_name
     
-    @property
-    def house_token(self):
-        return self._house_token
+    # @property
+    # def house_token(self):
+    #     return self._house_token
 
     @property
     def device_value(self):
@@ -76,4 +74,4 @@ class Device(ABC):
         pass
 
     def __str__(self):
-        return f"device_name: {self.device_name}; device_id: {self.device_id}; device_location: {self.device_location}; device_value: {self.device_value}"
+        return f"{self.device_name} - {self.device_id} - {self.device_location} - {self.device_value}"

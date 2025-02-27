@@ -27,7 +27,7 @@ class CarbonSensor(Device):
             "device_id": self.device_id,
             "device_location": self.device_location,
             "values": {
-                "carbon_level": self.device_value
+                "state": self.device_value
             }
         }
         return json.dumps(data)  # Conversion en JSON

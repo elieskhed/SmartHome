@@ -8,6 +8,7 @@ class House:
         self.broker = broker
         self.port = port
         self.client = mqtt.Client()
+        # self.client.connect(broker, port)
 
     def add_device(self, device):
         self.devices.append(device)
@@ -92,11 +93,95 @@ class House:
             # Disconnect from the broker
             if self.client.is_connected():
                 self.client.disconnect()
+    
+    def print_tab(self, tab):
+        """
+        Prints a list of device strings formatted as:
+        "device_name - device_id - location - value"
+        in a nicely aligned table.
+        """
+        # Parse each item into columns
+        rows = [ [part.strip() for part in item.split(" - ")] for item in tab ]
+        
+        # Determine the maximum width for each column
+        if not rows:
+            print("No data to display.")
+            return
+
+        num_cols = len(rows[0])
+        col_widths = [0] * num_cols
+        for row in rows:
+            for i, col in enumerate(row):
+                col_widths[i] = max(col_widths[i], len(col))
+        
+        # Create a separator line for better readability
+        separator = " | ".join('-' * w for w in col_widths)
+        
+        # Print the table rows
+        for row in rows:
+            formatted_row = " | ".join(col.ljust(col_widths[i]) for i, col in enumerate(row))
+            print(formatted_row)
+            print(separator)
 
     def printAllDataPeriodically(self, period):
-        while 1:
+        i = 20
+        while i > 0:
+            tab = []
             for device in self.devices:
                 device.setRandomValue()
-                self.client.publish(device.device_topic, device.convertDataToJSON())
-                print("Message publiée: " + str(device))
+                tab.append(str(device))
+                # print("Message publiée: " + str(device))
+            i -= 1
+            # self.print_tab(tab)
+            # print("\n ---------------------------------------------------- \n")
+            # print("\n")
+            tab = self.detect(tab)
+            self.print_tab(tab) # à remplacer pour l'envoir de données sur api
+
+            print("\n ---------------------------------------------------- \n")
             time.sleep(period)
+    
+    def detect(self, tab):
+        detector_triggered = False
+        alarm_system_on = False
+        triggered_sensors = []
+        for item in tab:
+            parts = [p.strip() for p in item.split(" - ")]
+            if len(parts) != 4:
+                continue  # Skip malformed entries
+            device_name, device_id, location, value = parts
+            # Check for a detector device (case-insensitive search)
+            if "detector" in device_name.lower():
+                if value == "1":
+                    detector_triggered = True
+                    triggered_sensors.append(f"{device_name} at {location}")
+            # Check for the alarm system
+            if "alarme_system" in device_name.lower():
+                if value == "1":
+                    alarm_system_on = True
+        if detector_triggered and alarm_system_on:
+            new_tab = []
+            for item in tab:
+                parts = [p.strip() for p in item.split(" - ")]
+                if len(parts) != 4:
+                    new_tab.append(item)
+                    continue
+                device_name, device_id, location, value = parts
+                # Update the alarm (device name contains "alarme" and location is "in_entry")
+                if "alarme" in device_name.lower() and location == "in_entry":
+                    parts[3] = "1"  # Set the alarm value to 1
+                    updated_item = " - ".join(parts)
+                    new_tab.append(updated_item)
+                else:
+                    new_tab.append(item)
+            print("Alarm triggered ! ")
+            print("Triggered by sensors: " + ", ".join(triggered_sensors) + "\n")
+            return new_tab
+        else:
+            print("No alarm triggered. \n")
+            return tab
+
+    
+
+
+        
