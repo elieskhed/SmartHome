@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QtWidgets/QTextEdit>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QVBoxLayout>
@@ -23,6 +24,10 @@ public:
 private:
     QTextEdit* houseToken;
     QPushButton* buttonSend;
+
+    // Checkbox choix API
+    QCheckBox* checkBoxLastData;
+    QCheckBox* checkBoxDataFromScratch;
 
     QVBoxLayout* verticalLayout;
 

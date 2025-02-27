@@ -5,11 +5,16 @@ MonitorHouseData::MonitorHouseData() {
     this->houseToken = new QTextEdit();
     this->houseToken->setFixedSize(750, 50);
 
-    this->buttonSend = new QPushButton("Analyser la donnée");
+    this->checkBoxLastData = new QCheckBox("last data", this);
+    this->checkBoxDataFromScratch = new QCheckBox("data from scratch", this);
+
+    this->buttonSend = new QPushButton("Etats du capteur");
 
     this->verticalLayout = new QVBoxLayout();
     this->verticalLayout->addWidget(labelHouseToken);
     this->verticalLayout->addWidget(this->houseToken);
+    this->verticalLayout->addWidget(this->checkBoxLastData);
+    this->verticalLayout->addWidget(this->checkBoxDataFromScratch);
     this->verticalLayout->addWidget(this->buttonSend);
 
     //mise en place du graphique example
@@ -21,12 +26,7 @@ MonitorHouseData::MonitorHouseData() {
 
 void MonitorHouseData::createChartsExample(){
     this->series = new QLineSeries;
-    // Example
-    this->series->append(0, 6);
-    this->series->append(2, 4);
-    this->series->append(3, 8);
-    this->series->append(7, 4);
-    this->series->append(10, 5);
+
 
     this->chart = new QChart();
     this->chart->legend()->hide();
