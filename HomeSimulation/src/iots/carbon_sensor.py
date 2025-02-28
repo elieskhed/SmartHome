@@ -2,21 +2,21 @@ from device import Device
 import json
 import random
 
-class HumiditySensor(Device):
-    def __init__(self, house_name, house_token ,device_id, device_name, device_location, humidity_level):
+class CarbonSensor(Device):
+    def __init__(self, device_id, device_name, device_location):
         """
         Initialise un capteur d'humidité.
 
         :param device_id: ID unique de l'appareil
         :param device_name: Nom de l'appareil
         :param device_location: Emplacement de l'appareil
-        :param humidity_level: Niveau d'humidité actuel
+        :param device_value: Taux de carbon dans l'air
         """
-        super().__init__(house_name, house_token ,device_id, device_name, device_location, 'houses/'+str(house_name)+'/TYPE_HUMIDITY/'+device_name, 'humidity_sensor')
-        self.humidity_level = humidity_level
-
+        super().__init__(device_id, device_name, device_location, 'device/sensor/carbon')
+        self.carbon_value = 2
+    
     def setRandomValue(self):
-        self.humidity_level += (random.randint(-10,10)/100)
+        self.carbon_value += (random.randint(-10,10)/100)
 
     def convertDataToJSON(self):
         """
@@ -30,7 +30,8 @@ class HumiditySensor(Device):
             "device_location": self.device_location,
             "type": self.device_type,
             "values": {
-                "humidity_level": self.humidity_level
+                "carbon_value": self.carbon_value
             }
         }
         return json.dumps(data)  # Conversion en JSON
+    

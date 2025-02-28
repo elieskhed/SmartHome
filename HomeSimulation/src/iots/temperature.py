@@ -2,16 +2,13 @@ from device import Device
 import json
 import random
 
-# Topic 
-
-class Light(Device):
-    def __init__(self, house_name, house_token ,device_id, device_name, device_location, state):
-        super().__init__(house_name, house_token ,device_id, device_name, device_location, 'houses/'+str(house_name)+'/TYPE_LIGHT/'+device_name, 'light_sensor')
-        self.state = state
-
+class Temperature(Device):
+    def __init__(self, device_id, device_name, device_location):
+        super().__init__(device_id, device_name, device_location, 'device/temperature')
+        self.temperature_value = 12
+        
     def setRandomValue(self):
-        self.state = random.choice([1, 0])
-    
+        self.temperature_value+= (random.randint(-10,10)/10)
 
     def convertDataToJSON(self):
         data = {
@@ -22,7 +19,7 @@ class Light(Device):
             "device_location": self.device_location,
             "type": self.device_type,
             "values": {
-                "state": self.state
+                "temperature_value": self.temperature_value
             }
         }
         return json.dumps(data)
