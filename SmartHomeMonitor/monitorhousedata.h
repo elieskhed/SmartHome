@@ -31,7 +31,7 @@ class MonitorHouseData : public QWidget
 public:
     MonitorHouseData();
 
-    void connectAPILastData();
+    void connectAPILastData(QString const& urlStr);
     void createChartsExample();
 
 
@@ -45,12 +45,16 @@ private:
 
     QVBoxLayout* verticalLayout;
 
+    // message d'erreur
+    QLabel* messageErreur;
     // Graphiques QtCharts
     QLineSeries* series;
     QChart* chart;
     QChartView* chartView;
 
     QString responseDataStr;
+    QString urlStr;
+
 
 
 

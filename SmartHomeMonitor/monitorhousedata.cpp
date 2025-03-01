@@ -1,7 +1,8 @@
 #include "monitorhousedata.h"
 
-#define URL "172.20.10.5"
+#define IP_SERV "172.20.10.5"
 #define PORT 80
+// token test: Wdp4HCPNvC3wHnvSfSwmVknhLuHtjUkoIzG6zPno
 
 MonitorHouseData::MonitorHouseData() {
     QLabel* labelHouseToken = new QLabel("Token de la maison");
@@ -10,6 +11,7 @@ MonitorHouseData::MonitorHouseData() {
 
     this->checkBoxLastData = new QCheckBox("last data", this);
     this->checkBoxDataFromScratch = new QCheckBox("data from scratch", this);
+    this->messageErreur = new QLabel("",this);
 
     this->buttonSend = new QPushButton("Etats du capteur");
 
@@ -19,9 +21,41 @@ MonitorHouseData::MonitorHouseData() {
     this->verticalLayout->addWidget(this->checkBoxLastData);
     this->verticalLayout->addWidget(this->checkBoxDataFromScratch);
     this->verticalLayout->addWidget(this->buttonSend);
+    this->verticalLayout->addWidget(this->messageErreur);
+    this->urlStr = "";
+
+    QObject::connect(this->checkBoxLastData, &QCheckBox::toggled, this, [=](bool checked){
+        if (checked){
+            qDebug() << "cochée";
+
+            if (this->houseToken->toPlainText().length() == 0){
+                this->urlStr = "";
+                this->messageErreur->setText("Erreur, veuillez remplir les informations nécéssaires");
+                this->messageErreur->setStyleSheet("color: red; font-weight: bold;");
+            }
+            else {
+
+                this->urlStr = "http://172.20.10.5:8000/api/house/latestData?token=" + this->houseToken->toPlainText();
+            }
+
+
+        }
+        else{
+            qDebug() << "decochée";
+        }
+    });
 
     QObject::connect(this->buttonSend, &QPushButton::clicked, [this](){
-        this->connectAPILastData();
+        if (this->urlStr.length() == 0){
+
+            this->messageErreur->setText("Erreur lors de la création de l'url");
+            this->messageErreur->setStyleSheet("color: red; font-weight: bold;");
+        }
+        else{
+            //this->messageErreur->setText("");
+            connectAPILastData(this->urlStr);
+        }
+
     });
 
     //mise en place du graphique example
@@ -33,11 +67,11 @@ MonitorHouseData::MonitorHouseData() {
 
 
 
-void MonitorHouseData::connectAPILastData() {
+void MonitorHouseData::connectAPILastData(QString const& urlStr) {
     // gestionnaire de requêtes réseau
     QNetworkAccessManager *manager = new QNetworkAccessManager();
 
-    QUrl url("http://172.20.10.5:8000/api/house/latestData?token=Wdp4HCPNvC3wHnvSfSwmVknhLuHtjUkoIzG6zPno");
+    QUrl url(this->urlStr);
     QNetworkRequest request(url);
 
     // Envoi de la requête GET
