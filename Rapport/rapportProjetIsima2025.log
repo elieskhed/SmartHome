@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  27 FEB 2025 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  1 MAR 2025 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1085,9 +1085,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.222 	\end{abstract}
+l.233 	\end{abstract}
                       [1]
-Overfull \hbox (3.12401pt too wide) in paragraph at lines 240--241
+Overfull \hbox (3.12401pt too wide) in paragraph at lines 258--260
 []\T1/cmr/m/n/10 This project in-te-grates \T1/cmr/bx/n/10 mod-ern tech-nolo-gi
 es and ad-vanced con-cepts in se-cu-rity, IoT, database
  []
@@ -1097,18 +1097,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.242 	\end{abstract}
+l.261 	\end{abstract}
                       [1]
 Chapter 1.
 
-Overfull \hbox (1.0995pt too wide) in paragraph at lines 246--248
+Overfull \hbox (3.32118pt too wide) in paragraph at lines 265--273
 []\T1/cmr/m/n/10 La \T1/cmr/bx/n/10 do-mo-tique \T1/cmr/m/n/10 représente au-jo
-urd'jui un en-jeu ma-jeur dans le do-maine des in-no-va-tions tech-nologiques.
+urd'hui un en-jeu ma-jeur dans le do-maine des in-no-va-tions tech-nologiques.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+Underfull \hbox (badness 10000) in paragraph at lines 265--273
 
+ []
+
+
+Overfull \hbox (10.11935pt too wide) in paragraph at lines 277--279
+\T1/cmr/m/n/10 des ob-jets con-nec-tés, en fonc-tion d'horraires pro-gram-més, 
+afin d'optimiser la con-som-ma-tion d'énergie. 
  []
 
 
@@ -1116,17 +1122,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.259 	\chapter
+l.299 	\chapter
                {Contexte du Projet} [1
 
 ]
 Chapter 2.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+01.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+Overfull \hbox (126.5894pt too wide) in paragraph at lines 301--301
+[][][]\T1/cmr/m/n/8 .[]source: []$\T1/cmtt/m/n/8 https : / / www . interieur . 
+gouv . fr / actualites / actualites-[]du-[]ministere / analyse-[]conjoncturelle
+-[]des-[]crimes-[]et-[]delits-[]enregistres-[]par$[]
+ []
+
+
+Overfull \hbox (268.55368pt too wide) in paragraph at lines 301--301
+\T1/cmr/m/n/8 et []$\T1/cmtt/m/n/8 https : / / mobile . interieur . gouv . fr /
+ Interstats / Actualites / Info-[]Rapide-[]n-[]43-[]La-[]delinquance-[]enregist
+ree-[]par-[]la-[]police-[]et-[]la-[]gendarmerie-[]nationales-[]un-[]point-[]a-[
+]mi-[]annee-[]2024$[]| 
+ []
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.263 	\chapter
+l.306 	\chapter
                {Ã‰tat de l'Art} [2
 
 ]
@@ -1136,7 +1161,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 	\chapter
+l.310 	\chapter
                {Conception et ImplÃ©mentation} [3
 
 ]
@@ -1171,26 +1196,32 @@ Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
 (rerunfilecheck)             Checksum: F659598790AE5EA8B12985C63E66F47B;6231.
  ) 
 Here is how much of TeX's memory you used:
- 33110 strings out of 476091
- 637939 string characters out of 5794081
+ 33151 strings out of 476091
+ 638762 string characters out of 5794081
  1862330 words of memory out of 5000000
- 52876 multiletter control sequences out of 15000+600000
- 524749 words of font info for 50 fonts, out of 8000000 for 9000
+ 52903 multiletter control sequences out of 15000+600000
+ 528867 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,12n,90p,2268b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
-fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (15 pages, 2847934 bytes).
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fo
+nts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfxc1728.pfb>
+Output written on rapportProjetIsima2025.pdf (15 pages, 2908072 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 312 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
  247 words of extra memory for PDF output out of 10000 (max. 10000000)
 
