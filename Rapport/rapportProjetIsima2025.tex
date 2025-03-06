@@ -302,6 +302,20 @@
 		Parallèlement, la proliférations des dispositifs IOT dans les foyers pose des défis non négligeables en matière de cybersécurité. Bien que ces technologies offrent des avantages indéniables en termes de confort et d'efficacité énergetiques, elles peuvent constituées des points d'entrée pour les cybercriminelles si elle ne sont pas correctement sécurisées. Il est ainsi essentiel de garantir que seuls les propriétaires autorisés aient accès à ces dispositifs et que les données transmises soient protégés contre toute altération ou interception malveillante.\\
 		Fâce à ces constats, notre projet vise à développer une solution permettant la transimission sécurisée issues de capteurs IoT d'une maison vers un serveur distant. Cette solution devra assurer l'authentification des dispositifs, garantir l'intégrité ainsi que la confidentialité des données, et ainsi permettre aux propriétaires de surveiller à distance l'état de leur domicile en temps réel.
 	\section{Organisation de la conception à la création}
+	Dans le cadre du développement de ce projet, nous avons adopté une approche structurée en plusieurs étapes allant de la simulation initiale de l'environnement domotique jusqu'à la mise en place d'une infrastructure de communication sécurisée et fiable.\\\\
+	\textbf{Phase 1: Simulation de l'environnement domotique et émission des données}\\
+	Avant de mettre en place l'architecture réseau et serveur, nous avons débuté par la simulation logicielle de la maison connectée, en programmant un environnement permettant la génération de données de divers capteurs (température, humidité, lumière...). Cette simulation développée en \textbf{Python},modélise une maison contenant divers équipements Iots et capteurs emettant des séries de données à temps réel.\\
+	L'objectif principal de cette étape était de tester l'envoie de séries de données, à intervalle régulier, au sein d'un serveur distant (Phase suivante), en utilisant le protocole de communication \textbf{MQTT}. A ce moment là, la transmission s'effectuait sans authentification ni chiffrement, nous permettant ainsi, de valider l'intégralité du transport, la récéption au serveur et d'évaluer aussi les performances du protocole. \\\\
+	\textbf{Phase 2: Mise en place de l'infrastructure serveur}
+	Une fois la simulation fonctionnelle, nous avons déployé une \textbf{infrastructure serveur} sous une machine virtuelle \textbf{Ubuntu}, utilisant l'hyperviseur \textbf{Virtualbox} avec un accès par pont en configuration réseau. Ce serveur assure le rôle de récépteur des données envoyées par la maison connectée.\\
+	Afin de permettre la récéption ainsi que le sotckage des données, nous avons mit en place plusieurs composants essentiels:\\
+	\begin{itemize}
+		\item \textbf{Mosquitto}: Un broker \textbf{MQTT} permettant la gestion des messages entres les maisons connectées et le serveur aux divers topics.
+		\item \textbf{InfluxDB}: Une \textbf{base de données à séries temporelles}, choisie pour sa capacité à stocker et traiter efficacement des flux de données en temps réel.
+		\item \textbf{Telegraf}: Un agent de collecte des données utilisé pour formaliser et structure les données recues depuis le \textbf{Broker} avant leur insertion dans la base de données.
+	\end{itemize}
+	À la fin de cette étape, après configuration des composantes, l’infrastructure était fonctionnelle, mais vulnérable : les données envoyées par les capteurs n’étaient pas protégées et n’importe quel utilisateur pouvait intercepter ou publier des messages MQTT sur le serveur, compromettant ainsi l’intégrité du système.\\\\
+	\textbf{Phase 3: Sécurisation des échanges et authentifications des Maisons}
 	
 	\chapter{État de l'Art}
 	\section{Technologies existantes}
