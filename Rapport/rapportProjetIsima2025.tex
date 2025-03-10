@@ -319,10 +319,37 @@
 	Afin de garantir l'\textbf{authenticité des émetteurs} et de protéger les données échangées, nous avons implémenté une \textbf{authentification basée sur des certificats SSL/TLS} pour le protocole MQTT. Cette sécurisation repose sur \textbf{l'utilisation de certificats clients} généré par une autorité de certifcation interne au serveur, l'exigence d'une \textbf{authentification mutuelle} entre la maison et le serveur pour toute communication MQTT ainsi que le \textbf{chiffrement des échanges} grâce à TLS emêchant toute interception des données transmises.\\
 	Ce mécanisme permet ainsi de \textbf{garantir l'identité des dispositifs connectés} et d'empêcher ainsi toute inteception des données par un acteur non autorisé.\\\\
 	\textbf{Phase 4 : Développement d’une API centralisant l’accès aux données}\\
-	Afin de faciliter l'accès aux données, d'éviter une exposition directe du broker MQTT et aussi de permettre par la suite la création d'interfaces fonctionnant sur divers plateformes, nous avons concu une \textbf{API Rest sous laravel}, jouant deux rôles importants:\\
+	Afin de faciliter l'accès aux données, d'éviter une exposition directe du broker MQTT et aussi de permettre par la suite la création d'interfaces fonctionnant sur divers plateformes, nous avons développé une \textbf{API Rest sous laravel}, jouant deux rôles importants:\\
 	\begin{itemize}
-		\item \textbf{API de relais:}
+		\item \textbf{Gestion de propriétaires et authentification:} L'API permet la \textbf{création de propriétaires} assurant une authentification unique et sécurisée. Un nouvel utilisateur peut en effet s'enregistrer en tant que propriétaire, l'API lui générera ainsi un \textbf{token unique}, qui servira \textbf{d'identifiant primaire} pour toutes les interactions futures entre les propriétés de l'utilisateur et le système. Elle générera de plus, un \textbf{certificat client signé} par l'autorité de certification accompagné d'une clès privé, permettant ainsi une authentification sécurisée lors des échanges avec le broker MQTT.
+		
+		\item \textbf{API de relais et récupération des données: } L'API agit également en tant que \textbf{relais sécurisé} entre les propriétaires et les données stockées au sein du serveur. L'API est capable d'extraire les series temporelles stockées au sein de \textbf{InfluxDB}, en les filtrant en fonction des critères demandées pour chaque utilisateurs (temps réel, historique...). Ainsi, les utilisateurs peuvent accéder uniquement aux données qui leur sont déstinées, garantissant l'intégrité et la confidentialité des échanges.
 	\end{itemize}
+	 
+	
+	\textbf{Phase 5: Développement d'une interface graphique  permettant un affichage concret des données}
+	
+	Afin de permettre une visualisation claire des données issues des capteurs, nous avons eu l'idée de développer une interface graphique utilisant \textbf{Qt}. Cette interface permet aux propriétaires d'interagir avec l'\textbf{API}
+	et d'accéder aux informations de leur maison de manière ergonomique.\\
+	Le but de l'interface QT est de récupérer les données via l'API en appliquant divers critères de filtrage, et placer les résultats affichés sous forme de graphique dynamique, afin de faciliter l'analyse ainsi que la supervision de la maison connectée.\\
+	Le choix d'utiliser Qt comme technologie, est liée à plusieurs raisons:\\
+	\begin{itemize}
+		\item \textbf{Demande élevée en entreprise: } Qt est largement utilisé dans l’industrie pour le développement d’interfaces utilisateur performantes et multiplateformes.
+		\item \textbf{Complémentarité avec les connaissances acquises en C++:} jusqu’à présent, le programme de formation avait principalement abordé le C++ de manière théorique. Ce projet était donc une opportunité idéale pour appliquer concrètement ces connaissances en développant une interface interactive et fonctionnelle.
+	\end{itemize}
+	\vspace{3cm}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/Gantt/diagrammePrevisionnel}
+		\caption{Diagramme de Gantt \textbf{Prévisionnel}}
+		\label{fig:GanttPrevisionnel}
+	\end{figure}
+		\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/Gantt/diagrammeReel}
+		\caption{Diagramme de Gantt \textbf{réel}}
+		\label{fig:GanttReel}
+	\end{figure}
 	
 	\chapter{État de l'Art}
 	\section{Technologies existantes}
@@ -331,7 +358,7 @@
 	\chapter{Conception et Implémentation}
 	
 	\section{Infrastructure et Environnement de Développement}
-	
+	Cette partie détaille l'ensemble de l’infrastructure mise en place, depuis la simulation logicielle d'une maison connectée jusqu'à l'infrastructure serveur dédiée. Cette dernière assure la \textbf{réception}, le \textbf{traitement} ainsi que le \textbf{stockage} sécurisé des données issues des différents capteurs IoT simulés. Nous présenterons les diverses technologies utilisées au sein de l'infrastructure, ainsi que la façon dont elles ont été intégrées afin de garantir une cohérence globale avec les objectifs initiales du projet.
 	\subsection{Simulation du serveur et architecture réseau}
 	\subsubsection{Déploiement d'un Broker MQTT sécurisé}
 	\subsubsection{Intégration d'une base de données à séries temporelles}
