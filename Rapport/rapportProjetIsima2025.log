@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  10 MAR 2025 14:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  12 MAR 2025 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1195,14 +1195,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--336
 
  []
 
-<ressources/img/Gantt/diagrammePrevisionnel.png, id=208, 887.315pt x 222.8325pt
+<ressources/img/Gantt/diagrammePrevisionnel.png, id=210, 887.315pt x 222.8325pt
 >
 File: ressources/img/Gantt/diagrammePrevisionnel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammePrevisionnel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammePrevisionnel.png  used o
 n input line 343.
 (pdftex.def)             Requested size: 455.24411pt x 114.32309pt.
-<ressources/img/Gantt/diagrammeReel.png, id=209, 888.31876pt x 225.84375pt>
+<ressources/img/Gantt/diagrammeReel.png, id=211, 888.31876pt x 225.84375pt>
 File: ressources/img/Gantt/diagrammeReel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammeReel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammeReel.png  used on input 
@@ -1215,29 +1215,40 @@ Chapter 3.
 
 ]
 Chapter 4.
+<ressources/img/shémas/shemaInfras.png, id=220, 1073.00874pt x 620.3175pt>
+File: ressources/img/shémas/shemaInfras.png Graphic file (type png)
+<use ressources/img/shémas/shemaInfras.png>
+Package pdftex.def Info: ressources/img/shémas/shemaInfras.png  used on input 
+line 368.
+(pdftex.def)             Requested size: 227.62206pt x 131.58618pt.
 [6
 
-] [7]
-Chapter 5.
-[8
+ <./ressources/img/shémas/shemaInfras.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 380--383
 
-]
-Chapter 6.
+ []
+
+[7] [8]
+Chapter 5.
 [9
 
 ]
+Chapter 6.
+[10
+
+]
 Appendix A.
-(./rapportProjetIsima2025.bbl [10
+(./rapportProjetIsima2025.bbl [11
 
 ]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [11
+) [12
 
 ]
 No file rapportProjetIsima2025.gls.
-[12
+[13
 
 ] (./rapportProjetIsima2025.aux)
 Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
@@ -1245,10 +1256,10 @@ Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
 (rerunfilecheck)             Checksum: F659598790AE5EA8B12985C63E66F47B;6231.
  ) 
 Here is how much of TeX's memory you used:
- 33188 strings out of 476091
- 639978 string characters out of 5794081
+ 33201 strings out of 476091
+ 640351 string characters out of 5794081
  1862330 words of memory out of 5000000
- 52932 multiletter control sequences out of 15000+600000
+ 52941 multiletter control sequences out of 15000+600000
  528867 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,12n,90p,2268b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1267,10 +1278,10 @@ s/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-su
 per/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (18 pages, 2963332 bytes).
+Output written on rapportProjetIsima2025.pdf (19 pages, 3152718 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 262 words of extra memory for PDF output out of 10000 (max. 10000000)
 

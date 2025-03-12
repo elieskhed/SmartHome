@@ -358,9 +358,45 @@
 	\chapter{Conception et Implémentation}
 	
 	\section{Infrastructure et Environnement de Développement}
-	Cette partie détaille l'ensemble de l’infrastructure mise en place, depuis la simulation logicielle d'une maison connectée jusqu'à l'infrastructure serveur dédiée. Cette dernière assure la \textbf{réception}, le \textbf{traitement} ainsi que le \textbf{stockage} sécurisé des données issues des différents capteurs IoT simulés. Nous présenterons les diverses technologies utilisées au sein de l'infrastructure, ainsi que la façon dont elles ont été intégrées afin de garantir une cohérence globale avec les objectifs initiales du projet.
+	Cette section détaille l'ensemble de l’infrastructure mise en place, depuis la simulation logicielle d'une maison connectée jusqu'à l'infrastructure serveur dédiée. Cette dernière assure la \textbf{réception}, le \textbf{traitement} ainsi que le \textbf{stockage} sécurisé des données issues des différents capteurs IoT simulés. Nous présenterons les diverses technologies utilisées au sein de l'infrastructure, ainsi que la façon dont elles ont été intégrées afin de garantir une cohérence globale avec les objectifs initiales du projet.\\
+	Ce projet a été réalisé en \textbf{local}, sous la forme d'une \textbf{simulation globale}. Le serveur utilisé repose sur une machine virtuelle exécutant \textbf{Ubuntu Server}, configurée localement via \textbf{un accès réseau en mode pont}. Cette configuration permet au serveur d'obtenir une adresse IP dédiée sur le même réseau local que la machine hôte, facilitant ainsi une connectivité réseau directe et simplifiée avec la maison connectée simulée. Dans ce contexte, notre simulation considère que le serveur et l’émetteur sont présents au sein du même réseau local, en l'absence de solution cloud externe.\\
+	Nous verrons que le serveur joue un rôle centrale au sein de cette infrastructure. En effet, il héberge l'ensemble des services essentiels au fonctionnement de la solution réceptrice: Le \textbf{broker MQTT}, l'\textbf{API REST} développée sous Laravel, ainsi que l'ensemble des bases de données qu'elles soient à\textbf{ séries temporelles ou relationnelles}.\\
+	Concernant l'infrastructure émettrice, afin de simuler les équipement IOTs de la \textbf{maison connectée}, nous avons utilisé le\textbf{ language Python} du fait de la disponibilité étendue des bibliothèques réseau faciles à implémenter, facilitant ainsi la mise en ouvre rapide et fiable de la simulation. \\
+	Dans les sous-sections suivantes, nous détaillerons la mise en place précise de chacun des composants techniques essentiels à la réalisation de nos objectifs.
+		\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\textwidth]{ressources/img/shémas/shemaInfras.png}
+		\caption{Architecture de l'infrastructure fonctionnelle}
+		\label{fig:archiInfra}
+	\end{figure}
+	
+	Le schéma ci-dessus décrit l'infrastructure globale mis en place décrit au sein de la section.
+	
+	
+ 
 	\subsection{Simulation du serveur et architecture réseau}
 	\subsubsection{Déploiement d'un Broker MQTT sécurisé}
+	
+	Afin de garantir une transmission en temps réel des données IOTs entre la maison connectée et le serveur, nous avons trouver plus judicieux de choisir le protocole \textbf{MQTT}.\\
+	\textbf{MQTT} est un protocole de messagerie léger basé sur le modèle \textbf{publish/subscribe}, initialement concu pour des environnements où la bande passante est limitée et latence faible. MQTT est dans notre contexte parfaitement adapté, en effet, le protocole a initialement été concu afin d'être adapté aux applications IoTs, grâce à sa faible consommation de ressources, sa simplicité d'implémentation et son support pour des communications asynchrones et pouvant être sécurisées par le biais de la technologie \textbf{SSL/TLS}.\\\\
+	Il est important de savoir que MQTT repose sur trois éléments fondamentaux:
+	\begin{itemize}
+		\item \textbf{Le Broker (serveur de message):} Element central de l'architecture MQTT agissant comme un relais entre les clients acheminant les messages publiés et les abonnés appropriés. Il en existe une variété, dans le cadre de notre projet, nous avons choisit d'utiliser \textbf{Mosquitto}.
+		
+		\item \textbf{Les Topics (Sujets de message):} Il s'agit d'une chaîne hierarchique permettant d'identifier une catégorie de message, leur format est composé de "/" permettant de séparrer les sous-topics. Dans le cadre de notre projet nous avons justement exploiter ce système de chaîne hiérarchique afin d'organiser d'une manière précise l'ensemble des types d'\textbf{iots} situés aux différentes salles des divers \textbf{maisons} des différents \textbf{propriétaires}. 
+		
+		\item \textbf{Les clients (publishers et subscribers):} MQTT fait la distinction entre deux types de clients: 
+		\begin{itemize}
+			\item \textbf{Les pusblishers (éditeurs)}, ceux qui envoient des messages à un topic spécifiques, sans se soucier du destinataire, il s'agit dans le cadre de notre projet, de la \textbf{maison connectée} qui envoies des series de données aux différents topics correspondant. 
+			
+			\item \textbf{Les subscribers (abonné)} ceux qui écoutent au sein d'un topic et reçoit les messages spécifiques correspondant, dans notre cas, il s'agit des \textbf{propriétaires} des maisons.
+		\end{itemize}
+	\end{itemize}
+	\vspace{0.5cm}
+	Tels qu'expliquait, nous avons choisis de déployer \textbf{Mosquitto} au sein du serveur. Malgré le fait qu'il existe d'autres solution tels que \textbf{HiveMQT}, \textbf{EMQX} ou \textbf{RabbitMQ MQTT}, pouvant faire office de \textbf{broker}, nous avons choisit \textbf{Mosquitto}, du fait qu'il est conçu pour être \textbf{ultra-lêger}, consommer \textbf{très peu de mémoire et de CPU même sous forte charge}, et convenir aussi bien \textbf{aux petits réseaux IoT qu'aux grandes infrastructures}.\\
+	De plus, \textbf{Mosquitto} permet une installation assez rapide de son service, et la configuration s'effectue via un fichier \textbf{mosquitto.conf}. Enfin, il supporte des fonctionnalités de sécurité avancé que nous avons mit en place au sein de notre serveur, tels que le support \textbf{TLS/SSL} afin de chiffrer les communications.
+	
+	
 	\subsubsection{Intégration d'une base de données à séries temporelles}
 	\subsubsection{Formalisation des données entre Mosquitto et InfluxDB}
 	
