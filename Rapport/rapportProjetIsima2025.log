@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  12 MAR 2025 11:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  12 MAR 2025 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1195,14 +1195,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--336
 
  []
 
-<ressources/img/Gantt/diagrammePrevisionnel.png, id=210, 887.315pt x 222.8325pt
+<ressources/img/Gantt/diagrammePrevisionnel.png, id=212, 887.315pt x 222.8325pt
 >
 File: ressources/img/Gantt/diagrammePrevisionnel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammePrevisionnel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammePrevisionnel.png  used o
 n input line 343.
 (pdftex.def)             Requested size: 455.24411pt x 114.32309pt.
-<ressources/img/Gantt/diagrammeReel.png, id=211, 888.31876pt x 225.84375pt>
+<ressources/img/Gantt/diagrammeReel.png, id=213, 888.31876pt x 225.84375pt>
 File: ressources/img/Gantt/diagrammeReel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammeReel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammeReel.png  used on input 
@@ -1215,7 +1215,7 @@ Chapter 3.
 
 ]
 Chapter 4.
-<ressources/img/shémas/shemaInfras.png, id=220, 1073.00874pt x 620.3175pt>
+<ressources/img/shémas/shemaInfras.png, id=222, 1073.00874pt x 620.3175pt>
 File: ressources/img/shémas/shemaInfras.png Graphic file (type png)
 <use ressources/img/shémas/shemaInfras.png>
 Package pdftex.def Info: ressources/img/shémas/shemaInfras.png  used on input 
@@ -1228,7 +1228,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 380--383
 
  []
 
-[7] [8]
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--400
+
+ []
+
+[7]
+<ressources/img/shémas/shemaEmissionSSL.drawio.png, id=234, 1073.00874pt x 590
+.205pt>
+File: ressources/img/shémas/shemaEmissionSSL.drawio.png Graphic file (type png
+)
+<use ressources/img/shémas/shemaEmissionSSL.drawio.png>
+Package pdftex.def Info: ressources/img/shémas/shemaEmissionSSL.drawio.png  us
+ed on input line 410.
+(pdftex.def)             Requested size: 227.62206pt x 125.1985pt.
+ [8 <./ressources/img/shémas/shemaEmissionSSL.drawio.png>]
 Chapter 5.
 [9
 
@@ -1256,10 +1270,10 @@ Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
 (rerunfilecheck)             Checksum: F659598790AE5EA8B12985C63E66F47B;6231.
  ) 
 Here is how much of TeX's memory you used:
- 33201 strings out of 476091
- 640351 string characters out of 5794081
+ 33210 strings out of 476091
+ 640738 string characters out of 5794081
  1862330 words of memory out of 5000000
- 52941 multiletter control sequences out of 15000+600000
+ 52948 multiletter control sequences out of 15000+600000
  528867 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,12n,90p,2268b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1278,10 +1292,10 @@ s/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-su
 per/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (19 pages, 3152718 bytes).
+Output written on rapportProjetIsima2025.pdf (19 pages, 3321789 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 262 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -394,8 +394,23 @@
 	\end{itemize}
 	\vspace{0.5cm}
 	Tels qu'expliquait, nous avons choisis de déployer \textbf{Mosquitto} au sein du serveur. Malgré le fait qu'il existe d'autres solution tels que \textbf{HiveMQT}, \textbf{EMQX} ou \textbf{RabbitMQ MQTT}, pouvant faire office de \textbf{broker}, nous avons choisit \textbf{Mosquitto}, du fait qu'il est conçu pour être \textbf{ultra-lêger}, consommer \textbf{très peu de mémoire et de CPU même sous forte charge}, et convenir aussi bien \textbf{aux petits réseaux IoT qu'aux grandes infrastructures}.\\
-	De plus, \textbf{Mosquitto} permet une installation assez rapide de son service, et la configuration s'effectue via un fichier \textbf{mosquitto.conf}. Enfin, il supporte des fonctionnalités de sécurité avancé que nous avons mit en place au sein de notre serveur, tels que le support \textbf{TLS/SSL} afin de chiffrer les communications.
+	De plus, \textbf{Mosquitto} permet une installation assez rapide de son service, et la configuration s'effectue via un fichier \textbf{mosquitto.conf}. Enfin, il supporte des fonctionnalités de sécurité avancé que nous avons mit en place au sein de notre serveur, tels que le support \textbf{TLS/SSL} afin de chiffrer les communications.\\
+	Pour sécuriser les connexions et assurer l'authenticité des communications, nous avons implémenté MQTT sécurisé (MQTTs) basé sur SSL/TLS. Nous avons utilisé l’outil \textbf{OpenSSL} pour créer une autorité de certification interne \textbf{CA} ainsi que pour \textbf{générer et signer automatiquement} des certificats clients \textbf{client.crt} et leurs clés privées associées \textbf{client.key}. Chaque maison simulée dispose donc de trois certificats essentiels pour établir une connexion sécurisée.\\\\
+	Voici ainsi l'architecture de sécurisation de \textbf{Mosquitto}:
+	\begin{itemize}
+		 \item La création d'une Autorité de Certification (CA) dédiée pour la \textbf{génération et la signature des certificats}.
+		\item L'utilisation de certificats clients signés (certificat client et clé privée) pour chaque maison voulant envoyer des données au sein d'un serveur.
+		\item L'utilisation du protocole MQTTs, permettant une \textbf{authentification mutuelle} et un chiffrement systématique des communications, empêchant ainsi toute interception ou injection malveillante de données.
+	\end{itemize}
 	
+	Afin de faciliter la compréhension de la sécurisation de Mosquitto, et l'intégration du protocole MQTTs au sein de l'architecture, voici un schéma explicatif: 
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\textwidth]{ressources/img/shémas/shemaEmissionSSL.drawio.png}
+		\caption{Sécurisation de mosquitto}
+		\label{fig:secuMosquitto}
+	\end{figure}
 	
 	\subsubsection{Intégration d'une base de données à séries temporelles}
 	\subsubsection{Formalisation des données entre Mosquitto et InfluxDB}
