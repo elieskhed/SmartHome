@@ -448,15 +448,26 @@
 	Ainsi, pour des raisons de clarté et de lisibilité, nous avons opté pour le format \textbf{JSON}, cela nous facilitera ainsi l'écriture des algorithmes dédiées à l'envoie de données des maison.\\
 	Afin d'effectuer cela, nous avons configuré le fichier \textbf{telegraf.conf} auquel nous avons utilisé le plugin \textbf{mqtt\_consumer}.\\
 	Ce plugin va permettre à \textbf{Telegraf} de s'abonner à tout les \textbf{topics MQTT} auxquels par la suite nous aurons besoin de récupérer les messages publiées au format \textbf{JSON}, afin d'\textbf{orchestrer automatiquement} la structuration des données au sein des tables \textbf{InfluxDB}, et de faire correspondre \textbf{les colonnes aux valeurs JSON} issues des clés correspondantes. Nous verrons plus en détail à la \textbf{sous-section suivante} comment nous avons choisit de formaliser les données et ainsi structuré la base de données.\\\\
-	Le schéma \textbf{ci-dessous} décrit le but de \textbf{Telegraf au sein de notre architecture} par un exemple simple de données à envoyer.
+	Le schéma récapitulatif \textbf{ci-dessous} décrit décrit le fonctionnement de \textbf{InfluxDB} et \textbf{Telegraf} au sein de l'architecture par le biais d'un exemple simple de récapitulatifdonnées à envoyer:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/shémas/archiInflux.drawio}
+		\caption{Exemple de données \textbf{JSON simples} à envoyer}
+		\label{fig:archiInflux}
+	\end{figure}
+	\vspace{1cm}
+	Ainsi, l'émetteur écrit un \textbf{buffer} dans lequel il insère des donnée formatées en \textbf{JSON}, ces données sont envoyées à travers le protocole MQTT à un topic nommé \textbf{example/}.\\
+	Ces données sont recu au sein du broker au topic \textbf{example}, auquel s'abonne le service \textbf{telegraf} dans le but de \textbf{traduire} le format JSON recu, afin d'orchestrer et créer au sein d'\textbf{InfluxDB} la table correspondante.
 	
 	
-	\subsubsection{Formalisation des données entre Mosquitto et InfluxDB}
+	\subsubsection{Structuration et formalisation des données échangées}
+	
+	Afin d'assurer une gestion cohérente et efficace des données transmises par les maisons connectées au serveur central, il est necessaire de mettre en place une structuration précises des \textbf{topics} et des \textbf{messages MQTT en utilisant le format JSON}.Cette structuration va ainsi permettre une identification claire des maisons, une organisation logique des équipements et un formats de données standarisées, disposées au sein de la base de données \textbf{InfluxDB}, facilitant leur stockage, leur exploitation, et l'extensibilité des données à ajouter. 
 	
 	\subsection{Modélisation et Simulation d'une Maison Connectée}
 	\subsubsection{Conception de l'architecture logicielle de la simulation}
 	\subsubsection{Implémentation du protocole MQTTs}
-	\subsubsection{Structuration et formalisation des données échangées}
 	
 	\section{Mise en place d'une API Web}
 	\subsection{Architecture logicielle de l'API et choix technologiques}

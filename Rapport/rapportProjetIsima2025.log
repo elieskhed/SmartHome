@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  13 MAR 2025 14:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  13 MAR 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1195,14 +1195,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--336
 
  []
 
-<ressources/img/Gantt/diagrammePrevisionnel.png, id=201, 887.315pt x 222.8325pt
+<ressources/img/Gantt/diagrammePrevisionnel.png, id=203, 887.315pt x 222.8325pt
 >
 File: ressources/img/Gantt/diagrammePrevisionnel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammePrevisionnel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammePrevisionnel.png  used o
 n input line 343.
 (pdftex.def)             Requested size: 455.24411pt x 114.32309pt.
-<ressources/img/Gantt/diagrammeReel.png, id=202, 888.31876pt x 225.84375pt>
+<ressources/img/Gantt/diagrammeReel.png, id=204, 888.31876pt x 225.84375pt>
 File: ressources/img/Gantt/diagrammeReel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammeReel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammeReel.png  used on input 
@@ -1211,7 +1211,7 @@ line 349.
 [4 <./ressources/img/Gantt/diagrammePrevisionnel.png> <./ressources/img/Gantt/d
 iagrammeReel.png>]
 Chapter 3.
-<ressources/img/shémas/shemaInfras.png, id=207, 1073.00874pt x 620.3175pt>
+<ressources/img/shémas/shemaInfras.png, id=209, 1073.00874pt x 620.3175pt>
 File: ressources/img/shémas/shemaInfras.png Graphic file (type png)
 <use ressources/img/shémas/shemaInfras.png>
 Package pdftex.def Info: ressources/img/shémas/shemaInfras.png  used on input 
@@ -1230,7 +1230,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 393--397
  []
 
 [6]
-<ressources/img/shémas/shemaEmissionSSL.drawio.png, id=218, 1073.00874pt x 590
+<ressources/img/shémas/shemaEmissionSSL.drawio.png, id=220, 1073.00874pt x 590
 .205pt>
 File: ressources/img/shémas/shemaEmissionSSL.drawio.png Graphic file (type png
 )
@@ -1243,7 +1243,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
-<ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png, id=220, 33
+<ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png, id=222, 33
 13.37875pt x 1263.72125pt>
 File: ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png Graphi
 c file (type png)
@@ -1253,7 +1253,7 @@ e.drawio.png  used on input line 417.
 (pdftex.def)             Requested size: 455.24411pt x 173.6224pt.
 [7 <./ressources/img/shémas/shemaEmissionSSL.drawio.png> <./ressources/img/pre
 uves/emissionReceptionMosquittoValide.drawio.png>]
-<ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png, id=230, 
+<ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png, id=232, 
 4078.23625pt x 1263.72125pt>
 File: ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png Grap
 hic file (type png)
@@ -1266,7 +1266,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 448--452
 
  []
 
-[9] [10]
+<ressources/img/shémas/archiInflux.drawio.png, id=239, 5779.5925pt x 1290.8225
+pt>
+File: ressources/img/shémas/archiInflux.drawio.png Graphic file (type png)
+<use ressources/img/shémas/archiInflux.drawio.png>
+Package pdftex.def Info: ressources/img/shémas/archiInflux.drawio.png  used on
+ input line 455.
+(pdftex.def)             Requested size: 455.24411pt x 101.6725pt.
+[9 <./ressources/img/shémas/archiInflux.drawio.png>] [10]
 Chapter 4.
 [11
 
@@ -1294,10 +1301,10 @@ Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
 (rerunfilecheck)             Checksum: 3814B301D1106C042677AEA84A056793;5625.
  ) 
 Here is how much of TeX's memory you used:
- 33243 strings out of 476091
- 642484 string characters out of 5794081
+ 33256 strings out of 476091
+ 643030 string characters out of 5794081
  1861330 words of memory out of 5000000
- 52972 multiletter control sequences out of 15000+600000
+ 52983 multiletter control sequences out of 15000+600000
  529643 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,12n,90p,2268b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1321,10 +1328,10 @@ per/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (21 pages, 5013855 bytes).
+Output written on rapportProjetIsima2025.pdf (21 pages, 5444899 bytes).
 PDF statistics:
- 353 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
+ 356 PDF objects out of 1000 (max. 8388607)
+ 287 compressed objects within 3 object streams
  64 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 258 words of extra memory for PDF output out of 10000 (max. 10000000)
 

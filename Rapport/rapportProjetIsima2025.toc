@@ -11,23 +11,22 @@
 \contentsline {subsection}{\numberline {3.1.1}Simulation du serveur et architecture réseau}{6}{subsection.3.1.1}%
 \contentsline {subsubsection}{Déploiement d'un Broker MQTT sécurisé}{6}{section*.4}%
 \contentsline {subsubsection}{Intégration d'une base de données à séries temporelles}{8}{section*.5}%
-\contentsline {subsubsection}{Formalisation des données entre Mosquitto et InfluxDB}{10}{section*.6}%
+\contentsline {subsubsection}{Structuration et formalisation des données échangées}{10}{section*.6}%
 \contentsline {subsection}{\numberline {3.1.2}Modélisation et Simulation d'une Maison Connectée}{10}{subsection.3.1.2}%
 \contentsline {subsubsection}{Conception de l'architecture logicielle de la simulation}{10}{section*.7}%
 \contentsline {subsubsection}{Implémentation du protocole MQTTs}{10}{section*.8}%
-\contentsline {subsubsection}{Structuration et formalisation des données échangées}{10}{section*.9}%
 \contentsline {section}{\numberline {3.2}Mise en place d'une API Web}{10}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Architecture logicielle de l'API et choix technologiques}{10}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Automatisation de l'authentification des maisons}{10}{subsection.3.2.2}%
-\contentsline {subsubsection}{Mise en place d'une base de données MySQL}{10}{section*.10}%
-\contentsline {subsubsection}{Signature automatique des certificats}{10}{section*.11}%
+\contentsline {subsubsection}{Mise en place d'une base de données MySQL}{10}{section*.9}%
+\contentsline {subsubsection}{Signature automatique des certificats}{10}{section*.10}%
 \contentsline {subsection}{\numberline {3.2.3}Filtrage et récupération des données}{10}{subsection.3.2.3}%
-\contentsline {subsubsection}{Communication avec InfluxDB API}{10}{section*.12}%
+\contentsline {subsubsection}{Communication avec InfluxDB API}{10}{section*.11}%
 \contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{10}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{10}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{10}{subsection.3.3.2}%
-\contentsline {subsubsection}{Authentification des maisons}{10}{section*.13}%
-\contentsline {subsubsection}{Affichage des données récupérées}{10}{section*.14}%
+\contentsline {subsubsection}{Authentification des maisons}{10}{section*.12}%
+\contentsline {subsubsection}{Affichage des données récupérées}{10}{section*.13}%
 \contentsline {chapter}{\numberline {4}Résultats et Discussion}{11}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{11}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{11}{section.4.2}%
