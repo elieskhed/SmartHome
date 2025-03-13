@@ -214,9 +214,9 @@
 	
 	Une \textbf{API centralisée}, développée en \textbf{Laravel}, a été mise en place afin de :
 	\begin{itemize}
-		\item \textbf{Gérer la création des propriétaires} et l’association sécurisée de leurs équipements.
-		\item \textbf{Automatiser la génération et la signature des certificats} pour garantir une authentification fiable.
-		\item \textbf{Offrir une interface d’accès aux données}, permettant aux utilisateurs de récupérer \textbf{des données en temps 
+		\item \textbf{gérer la création des propriétaires} et l’association sécurisée de leurs équipements.
+		\item \textbf{automatiser la génération et la signature des certificats} pour garantir une authentification fiable.
+		\item \textbf{offrir une interface d’accès aux données}, permettant aux utilisateurs de récupérer \textbf{des données en temps 
 		réel ou historiques}, selon différents filtres appliqués à la base de données.
 	\end{itemize}
 	
@@ -269,13 +269,13 @@
 		aux propriétaires d'obtenir une \textbf{vue globale de l'état de leur habitation en temps réel}. Cela joue un rôle crucial dans 
 		plusieurs domaines:
 		\begin{itemize}
-			\item Il permet de \textbf{sécuriser} un domicile, permettant par exemple la détéction d'intrusion ainsi que la prévention 
+			\item il \textbf{sécuriser} un domicile, permettant par exemple la détéction d'intrusion ainsi que la prévention 
 			des cambriolages
 			
-			\item Il permet également une \textbf{optimisation énérgétique} du domicile, par le biais de l'automatisation des objets 
+			\item il \textbf{optimise énérgétiquement} le domicile, par le biais de l'automatisation des objets 
 			connectés, en fonction d'horraires programmés, afin d'optimiser la consommation d'énergie.
 			
-			\item Il permet enfin \textbf{un confort et un contrôle à distance}, offrant aux propriétaires la possibilité d'activer ou 
+			\item et il permet enfin \textbf{un confort et un contrôle à distance}, offrant aux propriétaires la possibilité d'activer ou 
 			de désactiver certains dispositifs sans être physiquement présent.\\
 		\end{itemize}
 		Si ces avancées technologiques offrent des opportunités considérables, elles soulèvent néanmoins une problématique critique: 
@@ -296,32 +296,32 @@
 	
 	\chapter{Contexte du Projet}
 	\section{Analyse du besoin et définition des objectifs}
-		Lorsqu'un résident quitte son domicile, il peut être préoccupé par l'état de sa maison, se demandant si une lumière a été éteinte ou si une fenêtre a été correctement fermée. Ces préoccupations sont légitimes, d'autant plus les statistiques récentes indiquent une augmentation des cambriolages de logements en France. En effet au 30 juin 2024, les forces de sécurité ont enregistré une hausse de 4\% des cambriolages de logements sur les douze derniers mois\footnote{source: \url{https://www.interieur.gouv.fr/actualites/actualites-du-ministere/analyse-conjoncturelle-des-crimes-et-delits-enregistres-par} et \url{https://mobile.interieur.gouv.fr/Interstats/Actualites/Info-Rapide-n-43-La-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales-un-point-a-mi-annee-2024}}. Cette tendance souligne la nécessité de renforcer les dispositifs de sécurité pour protéger les habitations.\\
-		Parallèlement, la proliférations des dispositifs IOT dans les foyers pose des défis non négligeables en matière de cybersécurité. Bien que ces technologies offrent des avantages indéniables en termes de confort et d'efficacité énergetiques, elles peuvent constituées des points d'entrée pour les cybercriminelles si elle ne sont pas correctement sécurisées. Il est ainsi essentiel de garantir que seuls les propriétaires autorisés aient accès à ces dispositifs et que les données transmises soient protégés contre toute altération ou interception malveillante.\\
-		Fâce à ces constats, notre projet vise à développer une solution permettant la transimission sécurisée issues de capteurs IoT d'une maison vers un serveur distant. Cette solution devra assurer l'authentification des dispositifs, garantir l'intégrité ainsi que la confidentialité des données, et ainsi permettre aux propriétaires de surveiller à distance l'état de leur domicile en temps réel.
+		Lorsqu'un résident quitte son domicile, il peut être préoccupé par l'état de sa maison, se demandant si une lumière a bien été éteinte ou si une fenêtre a été correctement fermée. Ces préoccupations sont légitimes, d'autant plus que les statistiques récentes indiquent une augmentation des cambriolages des logements en France. En effet au 30 juin 2024, les forces de sécurité ont enregistré une hausse de 4\% des cambriolages de logements sur les douze derniers mois\footnote{source: \url{https://www.interieur.gouv.fr/actualites/actualites-du-ministere/analyse-conjoncturelle-des-crimes-et-delits-enregistres-par} et \url{https://mobile.interieur.gouv.fr/Interstats/Actualites/Info-Rapide-n-43-La-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales-un-point-a-mi-annee-2024}}. Cette tendance souligne la nécessité de renforcer les dispositifs de sécurité pour protéger les habitations.\\
+		Parallèlement, la proliférations des dispositifs IOT dans les foyers pose des défis non négligeables en matière de cybersécurité. Bien que ces technologies offrent des avantages indéniables en termes de confort et d'efficacité énergetiques, elles peuvent constituer des points d'entrée pour les cybercriminelles si elles ne sont pas correctement sécurisées. Il est ainsi essentiel de garantir que seuls les propriétaires autorisés aient accès à ces dispositifs et que les données transmises soient protégées contre toute altération ou interception malveillante.\\
+		Fâce à ces constats, notre projet vise à développer une solution permettant la transimission sécurisée issues de capteurs IoTs d'une maison vers un serveur distant. Cette solution devra assurer l'authentification des dispositifs, garantir l'intégrité ainsi que la confidentialité des données, et ainsi permettre aux propriétaires de surveiller à distance l'état de leur domicile en temps réel.
 	\section{Organisation de la conception à la création}
 	Dans le cadre du développement de ce projet, nous avons adopté une approche structurée en plusieurs phases allant de la simulation initiale de l'environnement domotique jusqu'à la mise en place d'une infrastructure de communication sécurisée et fiable.\\\\
 	\textbf{Phase 1: Simulation de l'environnement domotique et émission des données}\\
-	Avant de mettre en place l'architecture réseau et serveur, nous avons débuté par la simulation logicielle de la maison connectée, en programmant un environnement permettant la génération de données de divers capteurs (température, humidité, lumière...). Cette simulation développée en \textbf{Python},modélise une maison contenant divers équipements Iots et capteurs emettant des séries de données à temps réel.\\
-	L'objectif principal de cette étape était de tester l'envoie de séries de données, à intervalle régulier, au sein d'un serveur distant (Phase suivante), en utilisant le protocole de communication \textbf{MQTT}. A ce moment là, la transmission s'effectuait sans authentification ni chiffrement, nous permettant ainsi, de valider l'intégralité du transport, la récéption au serveur et d'évaluer aussi les performances du protocole. \\\\
+	Avant de mettre en place l'architecture réseau et serveur, nous avons débuté par la simulation logicielle de la maison connectée, en programmant un environnement permettant la génération de données de divers capteurs (température, humidité, lumière...). Cette simulation développée en \textbf{Python}, modélise une maison contenant divers équipements Iots et capteurs, emettant des séries de données à temps réel.\\
+	L'objectif principal de cette étape était de tester l'envoie de séries de données, à intervalle régulier, au sein d'un serveur distant (Phase suivante), en utilisant le protocole de communication \textbf{MQTT}. À ce moment là, la transmission s'effectuait sans authentification ni chiffrement, nous permettant ainsi, de valider l'intégralité du transport, la récéption au serveur et d'évaluer aussi les performances du protocole. \\\\
 	\textbf{Phase 2: Mise en place de l'infrastructure serveur}\\
 	Une fois la simulation fonctionnelle, nous avons déployé une \textbf{infrastructure serveur} sous une machine virtuelle \textbf{Ubuntu}, utilisant l'hyperviseur \textbf{Virtualbox} avec un accès par pont en configuration réseau. Ce serveur assure le rôle de récépteur des données envoyées par la maison connectée.\\
-	Afin de permettre la récéption ainsi que le sotckage des données, nous avons mit en place plusieurs composants essentiels:\\
+	Afin de permettre la récéption ainsi que le sotckage des données, nous avons mis en place plusieurs composants essentiels:\\
 	\begin{itemize}
-		\item \textbf{Mosquitto}: Un broker \textbf{MQTT} permettant la gestion des messages entres les maisons connectées et le serveur aux divers topics.
+		\item \textbf{Mosquitto}: Un broker \textbf{MQTT} permettant la gestion des messages entre les maisons connectées et le serveur aux divers topics.
 		\item \textbf{InfluxDB}: Une \textbf{base de données à séries temporelles}, choisie pour sa capacité à stocker et traiter efficacement des flux de données en temps réel.
-		\item \textbf{Telegraf}: Un agent de collecte des données utilisé pour formaliser et structure les données recues depuis le \textbf{Broker} avant leur insertion dans la base de données.
+		\item \textbf{Telegraf}: Un agent de collecte des données utilisé pour formaliser et structurer les données reçues depuis le \textbf{Broker} avant leur insertion dans la base de données.\\
 	\end{itemize}
-	À la fin de cette étape, après configuration des composantes, l’infrastructure était fonctionnelle, mais vulnérable : les données envoyées par les capteurs n’étaient pas protégées et n’importe quel utilisateur pouvait intercepter ou publier des messages MQTT sur le serveur, compromettant ainsi l’intégrité du système.\\\\
+	À la fin de cette étape, après configuration des composants, l’infrastructure était fonctionnelle, mais vulnérable : les données envoyées par les capteurs n’étaient pas protégées et n’importe quel utilisateur pouvait intercepter ou publier des messages MQTT sur le serveur, compromettant ainsi l’intégrité du système.\\\\
 	\textbf{Phase 3: Sécurisation des échanges et authentifications des Maisons}\\
-	Afin de garantir l'\textbf{authenticité des émetteurs} et de protéger les données échangées, nous avons implémenté une \textbf{authentification basée sur des certificats SSL/TLS} pour le protocole MQTT. Cette sécurisation repose sur \textbf{l'utilisation de certificats clients} généré par une autorité de certifcation interne au serveur, l'exigence d'une \textbf{authentification mutuelle} entre la maison et le serveur pour toute communication MQTT ainsi que le \textbf{chiffrement des échanges} grâce à TLS emêchant toute interception des données transmises.\\
+	Afin de garantir l'\textbf{authenticité des émetteurs} et de protéger les données échangées, nous avons implémenté une \textbf{authentification basée sur des certificats SSL/TLS} pour le protocole MQTT. Cette sécurisation repose sur \textbf{l'utilisation de certificats clients} générés par une autorité de certifcation interne au serveur, exigeant une \textbf{authentification mutuelle} entre la maison et le serveur pour toute communication MQTT ainsi que le \textbf{chiffrement des échanges} grâce à TLS qui empêche toute interception des données transmises.\\
 	Ce mécanisme permet ainsi de \textbf{garantir l'identité des dispositifs connectés} et d'empêcher ainsi toute inteception des données par un acteur non autorisé.\\\\
 	\textbf{Phase 4 : Développement d’une API centralisant l’accès aux données}\\
-	Afin de faciliter l'accès aux données, d'éviter une exposition directe du broker MQTT et aussi de permettre par la suite la création d'interfaces fonctionnant sur divers plateformes, nous avons développé une \textbf{API Rest sous laravel}, jouant deux rôles importants:\\
+	Afin de faciliter l'accès aux données, d'éviter une exposition directe du broker MQTT et aussi de permettre par la suite la création d'interfaces fonctionnant sur divers plateformes, nous avons développé une \textbf{API Rest sous Laravel}, jouant deux rôles importants:\\
 	\begin{itemize}
-		\item \textbf{Gestion de propriétaires et authentification:} L'API permet la \textbf{création de propriétaires} assurant une authentification unique et sécurisée. Un nouvel utilisateur peut en effet s'enregistrer en tant que propriétaire, l'API lui générera ainsi un \textbf{token unique}, qui servira \textbf{d'identifiant primaire} pour toutes les interactions futures entre les propriétés de l'utilisateur et le système. Elle générera de plus, un \textbf{certificat client signé} par l'autorité de certification accompagné d'une clès privé, permettant ainsi une authentification sécurisée lors des échanges avec le broker MQTT.
+		\item \textbf{Gestion de propriétaires et authentification:} l'API permet la \textbf{création de propriétaires} assurant une authentification unique et sécurisée. Un nouvel utilisateur peut en effet s'enregistrer en tant que propriétaire, l'API lui générera ainsi un \textbf{token unique}, qui servira \textbf{d'identifiant primaire} pour toutes les interactions futures entre les propriétés de l'utilisateur et le système. Elle générera de plus, un \textbf{certificat client signé} par l'autorité de certification accompagné d'une clé privée, permettant ainsi une authentification sécurisée lors des échanges avec le broker MQTT.
 		
-		\item \textbf{API de relais et récupération des données: } L'API agit également en tant que \textbf{relais sécurisé} entre les propriétaires et les données stockées au sein du serveur. L'API est capable d'extraire les series temporelles stockées au sein de \textbf{InfluxDB}, en les filtrant en fonction des critères demandées pour chaque utilisateurs (temps réel, historique...). Ainsi, les utilisateurs peuvent accéder uniquement aux données qui leur sont déstinées, garantissant l'intégrité et la confidentialité des échanges.
+		\item \textbf{API de relais et récupération des données: } l'API agit également en tant que \textbf{relais sécurisé} entre les propriétaires et les données stockées au sein du serveur. L'API est capable d'extraire les series temporelles stockées au sein de \textbf{InfluxDB}, en les filtrant en fonction des critères demandés pour chaque utilisateurs (temps réel, historique...). Ainsi, les utilisateurs peuvent accéder uniquement aux données qui leur sont déstinées, garantissant l'intégrité et la confidentialité des échanges.\\
 	\end{itemize}
 	 
 	
@@ -333,7 +333,7 @@
 	Le choix d'utiliser Qt comme technologie, est liée à plusieurs raisons:\\
 	\begin{itemize}
 		\item \textbf{Demande élevée en entreprise: } Qt est largement utilisé dans l’industrie pour le développement d’interfaces utilisateur performantes et multiplateformes.
-		\item \textbf{Complémentarité avec les connaissances acquises en C++:} jusqu’à présent, le programme de formation avait principalement abordé le C++ de manière théorique. Ce projet était donc une opportunité idéale pour appliquer concrètement ces connaissances en développant une interface interactive et fonctionnelle.
+		\item \textbf{Complémentarité avec les connaissances acquises en C++:} jusqu’à présent, le programme de formation avait principalement abordé le C++ de manière théorique. Ce projet était donc une opportunité idéale pour appliquer concrètement ses connaissances en développant une interface interactive et fonctionnelle.
 	\end{itemize}
 	\vspace{3cm}
 	\begin{figure}[h!]
