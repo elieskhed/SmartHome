@@ -1,4 +1,4 @@
-\documentclass[10pt, a4paper]{report}
+\documentclass[12pt, a4paper]{report}
 \usepackage[utf8]{inputenc}
 
 \usepackage[T1]{fontenc}
@@ -403,14 +403,34 @@
 		\item L'utilisation du protocole MQTTs, permettant une \textbf{authentification mutuelle} et un chiffrement systématique des communications, empêchant ainsi toute interception ou injection malveillante de données.
 	\end{itemize}
 	
-	Afin de faciliter la compréhension de la sécurisation de Mosquitto, et l'intégration du protocole MQTTs au sein de l'architecture, voici un schéma explicatif: 
+	\vspace{1cm}
 	
+	Afin de faciliter la compréhension de la sécurisation de Mosquitto, et l'intégration du protocole MQTTs au sein de l'architecture, voici un schéma explicatif: 
+	\newpage
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.5\textwidth]{ressources/img/shémas/shemaEmissionSSL.drawio.png}
 		\caption{Sécurisation de mosquitto}
 		\label{fig:secuMosquitto}
 	\end{figure}
+	
+	Afin de vérifier le fonctionnement des certificats ainsi que l'envoi de données au sein du broker mosquitto du serveur virtuel, nous avons à ce moment là tester avec les commandes \textbf{mosquitto\_pub côté client} et les \textbf{logs temps réel côté serveur}\footnote{Au sein de la configuration de mosquitto, nous avons définit un chemin de log accessible en temps réel via la commande linux \textbf{tail -f /var/log/mosquitto/mosquitto.log}}.\\\\ Ainsi, après génération et auto-signature des certificats, les figures ci-dessous montrent ce qu'il se passe lorsque l'authentification est valide c'est à dire lorsque le \textbf{client.key} et le \textbf{client.crt} correspondent bien, et lorsque ces derniers sont invalides:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/preuves/emissionReceptionMosquittoValide.drawio}
+		\caption{Authentification effectuée: Émission et réception effectuée avec succès}
+		\label{fig:mosquittoValide}
+	\end{figure}
+	Dans la figure ci-dessus, nous pouvons nous apercevoir par la capture d'écran du résultat du log instantané du broker que la connexion de l'emetteur, s'est correctement déroulée, et que ce client a été correctement authentifiée par le nom d'utilisateur \textbf{houseElies}. \newpage
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio}
+		\caption{Authentification erronée: Émission et réception non fonctionnel}
+		\label{fig:mosquittoInvalide}
+	\end{figure}
+	A la différence de la figure précédente, afin de prouver qu'il est nécéssaire de disposer de certificats clients valide, nous avons intentionnellement modifier la clès générée de manière à ce qu'elle soit erronée, nous pouvons ainsi constater qu'il y a une erreur lors de la connexion de l'emmeteur et que ce dernier n'est pas parvenue à publier, ni à être identifié par le broker.
 	
 	
 	

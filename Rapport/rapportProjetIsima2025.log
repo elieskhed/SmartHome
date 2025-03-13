@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  12 MAR 2025 12:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  13 MAR 2025 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@chapter=\count186
@@ -1018,12 +1018,12 @@ Package hyperref Info: Link coloring OFF on input line 160.
 * \topmargin=-1.1381pt
 * \headheight=0.0pt
 * \headsep=0.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1034,12 +1034,6 @@ Package hyperref Info: Link coloring OFF on input line 160.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (8.59207pt too wide) in paragraph at lines 188--190
-[]\T1/cmr/m/n/10 Responsable Isima : Mon-sieur \T1/cmr/bx/n/10 Alexandre GUIT-T
-ON |  \T1/cmr/m/n/10 Date de sou-te-nance : \T1/cmr/bx/n/10 02/07/2024 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
@@ -1048,13 +1042,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--190
 File: ressources/img/logos/isimaInp.png Graphic file (type png)
 <use ressources/img/logos/isimaInp.png>
 Package pdftex.def Info: ressources/img/logos/isimaInp.png  used on input line 
-193.
+190.
 (pdftex.def)             Requested size: 184.9429pt x 79.16699pt.
 <ressources/img/logos/imageSmartHouse.png, id=121, 1798.72pt x 1027.84pt>
 File: ressources/img/logos/imageSmartHouse.png Graphic file (type png)
 <use ressources/img/logos/imageSmartHouse.png>
 Package pdftex.def Info: ressources/img/logos/imageSmartHouse.png  used on inpu
-t line 193.
+t line 190.
 (pdftex.def)             Requested size: 597.50787pt x 341.431pt.
 [1
 
@@ -1062,23 +1056,40 @@ t line 193.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ressources/img/logos/isi
 maInp.png> <./ressources/img/logos/imageSmartHouse.png>]
+File: ressources/img/logos/isimaInp.png Graphic file (type png)
+<use ressources/img/logos/isimaInp.png>
+Package pdftex.def Info: ressources/img/logos/isimaInp.png  used on input line 
+193.
+(pdftex.def)             Requested size: 184.9429pt x 79.16699pt.
+File: ressources/img/logos/imageSmartHouse.png Graphic file (type png)
+<use ressources/img/logos/imageSmartHouse.png>
+Package pdftex.def Info: ressources/img/logos/imageSmartHouse.png  used on inpu
+t line 193.
+(pdftex.def)             Requested size: 597.50787pt x 341.431pt.
+ [2]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.200 	\tableofcontents
-                        [1] (./rapportProjetIsima2025.toc)
+                        [1] (./rapportProjetIsima2025.toc
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 ...berline {A.3}Webographie}{16}{section.A.3}
+                                                  % [2
+
+])
 \tf@toc=\write7
 \openout7 = `rapportProjetIsima2025.toc'.
 
- [2
-
-]
+ [3]
 (./rapportProjetIsima2025.lof)
 \tf@lof=\write8
 \openout8 = `rapportProjetIsima2025.lof'.
 
- [3
+ [4
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -1087,12 +1098,6 @@ been already used, duplicate ignored
                    \relax 
 l.233 	\end{abstract}
                       [1]
-Overfull \hbox (3.12401pt too wide) in paragraph at lines 258--260
-[]\T1/cmr/m/n/10 This project in-te-grates \T1/cmr/bx/n/10 mod-ern tech-nolo-gi
-es and ad-vanced con-cepts in se-cu-rity, IoT, database
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1101,20 +1106,14 @@ l.261 	\end{abstract}
                       [1]
 Chapter 1.
 
-Overfull \hbox (3.32118pt too wide) in paragraph at lines 265--273
-[]\T1/cmr/m/n/10 La \T1/cmr/bx/n/10 do-mo-tique \T1/cmr/m/n/10 représente au-jo
-urd'hui un en-jeu ma-jeur dans le do-maine des in-no-va-tions tech-nologiques.
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 265--273
 
  []
 
 
-Overfull \hbox (10.11935pt too wide) in paragraph at lines 277--279
-\T1/cmr/m/n/10 des ob-jets con-nec-tés, en fonc-tion d'horraires pro-gram-més, 
-afin d'optimiser la con-som-ma-tion d'énergie. 
+Overfull \hbox (1.59427pt too wide) in paragraph at lines 274--276
+[]\T1/cmr/m/n/12 Il per-met de \T1/cmr/bx/n/12 sécuriser \T1/cmr/m/n/12 un domi
+-cile, per-me-t-tant par ex-em-ple la détéc-tion d'intrusion
  []
 
 
@@ -1122,28 +1121,43 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.299 	\chapter
-               {Contexte du Projet} [1
+l.297 		
+         [1
 
 ]
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.299 	\chapter
+               {Contexte du Projet} [2]
 Chapter 2.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
 01.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-Overfull \hbox (126.5894pt too wide) in paragraph at lines 301--301
-[][][]\T1/cmr/m/n/8 .[]source: []$\T1/cmtt/m/n/8 https : / / www . interieur . 
-gouv . fr / actualites / actualites-[]du-[]ministere / analyse-[]conjoncturelle
--[]des-[]crimes-[]et-[]delits-[]enregistres-[]par$[]
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+[][][]\T1/cmr/m/n/10 .[]source: []$\T1/cmtt/m/n/10 https : / / www . interieur 
+. gouv . fr / actualites / actualites-[]du-[]ministere /
  []
 
 
-Overfull \hbox (268.55368pt too wide) in paragraph at lines 301--301
-\T1/cmr/m/n/8 et []$\T1/cmtt/m/n/8 https : / / mobile . interieur . gouv . fr /
- Interstats / Actualites / Info-[]Rapide-[]n-[]43-[]La-[]delinquance-[]enregist
-ree-[]par-[]la-[]police-[]et-[]la-[]gendarmerie-[]nationales-[]un-[]point-[]a-[
-]mi-[]annee-[]2024$[]| 
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 analyse-[]conjoncturelle-[]des-[]crimes-[]et-[]delits-[]enregis
+tres-[]par$[] \T1/cmr/m/n/10 et []$\T1/cmtt/m/n/10 https : / / mobile .
+ []
+
+
+Overfull \hbox (346.81235pt too wide) in paragraph at lines 301--301
+\T1/cmtt/m/n/10 interieur . gouv . fr / Interstats / Actualites / Info-[]Rapide
+-[]n-[]43-[]La-[]delinquance-[]enregistree-[]par-[]la-[]police-[]et-[]la-[]gend
+armerie-[]nationales-[]un-[]point-[]a-[]mi-[]annee-[]2024$[]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--312
+
  []
 
 
@@ -1153,34 +1167,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--312
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 305--312
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
-
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.312 	\begin{itemize}
-                       [2
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 317--323
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--323
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--323
 
  []
 
@@ -1189,43 +1175,105 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.327 	\end{itemize}
-                     [3]
+l.312 	\begin{itemize}
+                       [3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 317--323
+
+ []
+
+
+Overfull \hbox (17.43768pt too wide) in paragraph at lines 317--323
+\T1/cmr/m/n/12 Ce mé-can-isme per-met ainsi de \T1/cmr/bx/n/12 garan-tir l'iden
+tité des dis-posi-tifs con-nec-tés \T1/cmr/m/n/12 et d'empêcher
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--323
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.323 	\begin{itemize}
+                       [4]
 Underfull \hbox (badness 10000) in paragraph at lines 332--336
 
  []
 
-<ressources/img/Gantt/diagrammePrevisionnel.png, id=212, 887.315pt x 222.8325pt
+[5]
+Overfull \hbox (0.59157pt too wide) in paragraph at lines 338--339
+[]\T1/cmr/bx/n/12 Complémentarité avec les con-nais-sances ac-quises en C++: \T
+1/cmr/m/n/12 jusqu'à présent,
+ []
+
+
+Overfull \hbox (11.38364pt too wide) in paragraph at lines 338--339
+\T1/cmr/m/n/12 le pro-gramme de for-ma-tion avait prin-ci-pale-ment abordé le C
+++ de manière théorique.
+ []
+
+<ressources/img/Gantt/diagrammePrevisionnel.png, id=232, 887.315pt x 222.8325pt
 >
 File: ressources/img/Gantt/diagrammePrevisionnel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammePrevisionnel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammePrevisionnel.png  used o
 n input line 343.
 (pdftex.def)             Requested size: 455.24411pt x 114.32309pt.
-<ressources/img/Gantt/diagrammeReel.png, id=213, 888.31876pt x 225.84375pt>
+<ressources/img/Gantt/diagrammeReel.png, id=233, 888.31876pt x 225.84375pt>
 File: ressources/img/Gantt/diagrammeReel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammeReel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammeReel.png  used on input 
 line 349.
 (pdftex.def)             Requested size: 455.24411pt x 115.7405pt.
-[4 <./ressources/img/Gantt/diagrammePrevisionnel.png> <./ressources/img/Gantt/d
+[6 <./ressources/img/Gantt/diagrammePrevisionnel.png> <./ressources/img/Gantt/d
 iagrammeReel.png>]
 Chapter 3.
-[5
+[7
 
 ]
 Chapter 4.
-<ressources/img/shÃ©mas/shemaInfras.png, id=222, 1073.00874pt x 620.3175pt>
+
+Overfull \hbox (2.33061pt too wide) in paragraph at lines 360--360
+[]\T1/cmr/bx/n/17.28 Infrastructure et En-vi-ron-nement de Développe-ment 
+ []
+
+<ressources/img/shÃ©mas/shemaInfras.png, id=242, 1073.00874pt x 620.3175pt>
 File: ressources/img/shÃ©mas/shemaInfras.png Graphic file (type png)
 <use ressources/img/shÃ©mas/shemaInfras.png>
 Package pdftex.def Info: ressources/img/shÃ©mas/shemaInfras.png  used on input 
 line 368.
 (pdftex.def)             Requested size: 227.62206pt x 131.58618pt.
-[6
 
- <./ressources/img/shÃ©mas/shemaInfras.png>]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 380--383
 
+ []
+
+[8
+
+] [9 <./ressources/img/shÃ©mas/shemaInfras.png>]
+Overfull \hbox (4.981pt too wide) in paragraph at lines 396--400
+\T1/cmr/m/n/12 plé-menté MQTT sécurisé (MQTTs) basé sur SS-L/TLS. Nous avons ut
+il-isé l'outil \T1/cmr/bx/n/12 OpenSSL
+ []
+
+
+Overfull \hbox (2.78694pt too wide) in paragraph at lines 396--400
+\T1/cmr/bx/n/12 toma-tique-ment \T1/cmr/m/n/12 des cer-ti-fi-cats clients \T1/c
+mr/bx/n/12 client.crt \T1/cmr/m/n/12 et leurs clés privées as-so-ciées \T1/cmr/
+bx/n/12 client.key\T1/cmr/m/n/12 .
  []
 
 
@@ -1233,36 +1281,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 396--400
 
  []
 
-[7]
-<ressources/img/shÃ©mas/shemaEmissionSSL.drawio.png, id=234, 1073.00874pt x 590
+[10]
+<ressources/img/shÃ©mas/shemaEmissionSSL.drawio.png, id=257, 1073.00874pt x 590
 .205pt>
 File: ressources/img/shÃ©mas/shemaEmissionSSL.drawio.png Graphic file (type png
 )
 <use ressources/img/shÃ©mas/shemaEmissionSSL.drawio.png>
 Package pdftex.def Info: ressources/img/shÃ©mas/shemaEmissionSSL.drawio.png  us
-ed on input line 410.
+ed on input line 412.
 (pdftex.def)             Requested size: 227.62206pt x 125.1985pt.
- [8 <./ressources/img/shÃ©mas/shemaEmissionSSL.drawio.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
+
+ []
+
+<ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png, id=259, 33
+13.37875pt x 1263.72125pt>
+File: ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png Graphi
+c file (type png)
+<use ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png>
+Package pdftex.def Info: ressources/img/preuves/emissionReceptionMosquittoValid
+e.drawio.png  used on input line 421.
+(pdftex.def)             Requested size: 455.24411pt x 173.6224pt.
+[11 <./ressources/img/shÃ©mas/shemaEmissionSSL.drawio.png> <./ressources/img/pr
+euves/emissionReceptionMosquittoValide.drawio.png>]
+<ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png, id=269, 
+4078.23625pt x 1263.72125pt>
+File: ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png Grap
+hic file (type png)
+<use ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png>
+Package pdftex.def Info: ressources/img/preuves/emissionReceptionMosquittoInval
+ide.drawio.png  used on input line 429.
+(pdftex.def)             Requested size: 455.24411pt x 141.05374pt.
+
+Overfull \hbox (15.59856pt too wide) in paragraph at lines 456--456
+[]\T1/cmr/bx/n/17.28 Surveillance des don-nées avec une in-ter-face graphique 
+ []
+
+[12 <./ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png>]
+[13]
 Chapter 5.
-[9
+[14
 
 ]
 Chapter 6.
-[10
+[15
 
 ]
 Appendix A.
-(./rapportProjetIsima2025.bbl [11
+(./rapportProjetIsima2025.bbl [16
 
 ]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [12
+) [17
 
 ]
 No file rapportProjetIsima2025.gls.
-[13
+[18
 
 ] (./rapportProjetIsima2025.aux)
 Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
@@ -1270,13 +1347,17 @@ Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
 (rerunfilecheck)             Checksum: F659598790AE5EA8B12985C63E66F47B;6231.
  ) 
 Here is how much of TeX's memory you used:
- 33210 strings out of 476091
- 640738 string characters out of 5794081
+ 33263 strings out of 476091
+ 642813 string characters out of 5794081
  1862330 words of memory out of 5000000
- 52948 multiletter control sequences out of 15000+600000
- 528867 words of font info for 61 fonts, out of 8000000 for 9000
+ 52986 multiletter control sequences out of 15000+600000
+ 529238 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,12n,90p,2268b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,13n,90p,2268b,952s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1286,16 +1367,16 @@ nts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (19 pages, 3321789 bytes).
+uper/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfxc2074.pfb>
+Output written on rapportProjetIsima2025.pdf (26 pages, 4970002 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 267 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 386 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

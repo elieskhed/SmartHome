@@ -4,12 +4,14 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramme de Gantt \textbf {Prévisionnel}}}{4}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagramme de Gantt \textbf {réel}}}{4}{figure.2.2}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramme de Gantt \textbf {Prévisionnel}}}{6}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagramme de Gantt \textbf {réel}}}{6}{figure.2.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture de l'infrastructure fonctionnelle}}{6}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Sécurisation de mosquitto}}{8}{figure.4.2}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture de l'infrastructure fonctionnelle}}{9}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sécurisation de mosquitto}}{11}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Authentification effectuée: Émission et réception effectuée avec succès}}{11}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Authentification erronée: Émission et réception non fonctionnel}}{12}{figure.4.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
