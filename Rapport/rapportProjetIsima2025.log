@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  13 MAR 2025 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  13 MAR 2025 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1062,32 +1062,32 @@ t line 193.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ressources/img/logos/isi
 maInp.png> <./ressources/img/logos/imageSmartHouse.png>]
+(./rapportProjetIsima2025.toc)
+\tf@toc=\write7
+\openout7 = `rapportProjetIsima2025.toc'.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 	\tableofcontents
-                        [1] (./rapportProjetIsima2025.toc)
-\tf@toc=\write7
-\openout7 = `rapportProjetIsima2025.toc'.
+l.199 	\listoffigures
+                      [1
+
+] (./rapportProjetIsima2025.lof)
+\tf@lof=\write8
+\openout8 = `rapportProjetIsima2025.lof'.
 
  [2
 
 ]
-(./rapportProjetIsima2025.lof)
-\tf@lof=\write8
-\openout8 = `rapportProjetIsima2025.lof'.
-
- [3
-
-]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.233 	\end{abstract}
+l.231 	\end{abstract}
                       [1]
-Overfull \hbox (3.12401pt too wide) in paragraph at lines 258--260
+Overfull \hbox (3.12401pt too wide) in paragraph at lines 256--258
 []\T1/cmr/m/n/10 This project in-te-grates \T1/cmr/bx/n/10 mod-ern tech-nolo-gi
 es and ad-vanced con-cepts in se-cu-rity, IoT, database
  []
@@ -1097,24 +1097,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 	\end{abstract}
+l.259 	\end{abstract}
                       [1]
 Chapter 1.
 
-Overfull \hbox (3.32118pt too wide) in paragraph at lines 265--273
+Overfull \hbox (3.32118pt too wide) in paragraph at lines 263--271
 []\T1/cmr/m/n/10 La \T1/cmr/bx/n/10 do-mo-tique \T1/cmr/m/n/10 repr�sente au-jo
 urd'hui un en-jeu ma-jeur dans le do-maine des in-no-va-tions tech-nologiques.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--273
+Underfull \hbox (badness 10000) in paragraph at lines 278--280
 
- []
-
-
-Overfull \hbox (10.11935pt too wide) in paragraph at lines 277--279
-\T1/cmr/m/n/10 des ob-jets con-nec-t�s, en fonc-tion d'horraires pro-gram-m�s, 
-afin d'optimiser la con-som-ma-tion d'�nergie. 
  []
 
 
@@ -1122,24 +1116,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.299 	\chapter
+l.297 	\chapter
                {Contexte du Projet} [1
 
 ]
 Chapter 2.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-01.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+99.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-Overfull \hbox (126.5894pt too wide) in paragraph at lines 301--301
+Overfull \hbox (126.5894pt too wide) in paragraph at lines 299--299
 [][][]\T1/cmr/m/n/8 .[]source: []$\T1/cmtt/m/n/8 https : / / www . interieur . 
 gouv . fr / actualites / actualites-[]du-[]ministere / analyse-[]conjoncturelle
 -[]des-[]crimes-[]et-[]delits-[]enregistres-[]par$[]
  []
 
 
-Overfull \hbox (268.55368pt too wide) in paragraph at lines 301--301
+Overfull \hbox (268.55368pt too wide) in paragraph at lines 299--299
 \T1/cmr/m/n/8 et []$\T1/cmtt/m/n/8 https : / / mobile . interieur . gouv . fr /
  Interstats / Actualites / Info-[]Rapide-[]n-[]43-[]La-[]delinquance-[]enregist
 ree-[]par-[]la-[]police-[]et-[]la-[]gendarmerie-[]nationales-[]un-[]point-[]a-[
@@ -1147,17 +1141,17 @@ ree-[]par-[]la-[]police-[]et-[]la-[]gendarmerie-[]nationales-[]un-[]point-[]a-[
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
+Underfull \hbox (badness 10000) in paragraph at lines 303--310
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
+Underfull \hbox (badness 10000) in paragraph at lines 303--310
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--312
+Underfull \hbox (badness 10000) in paragraph at lines 303--310
 
  []
 
@@ -1166,94 +1160,98 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.312 	\begin{itemize}
+l.310 	\begin{itemize}
                        [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 317--323
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--323
+Underfull \hbox (badness 10000) in paragraph at lines 315--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--323
+Underfull \hbox (badness 10000) in paragraph at lines 315--321
 
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.327 	\end{itemize}
-                     [3]
-Underfull \hbox (badness 10000) in paragraph at lines 332--336
+Underfull \hbox (badness 10000) in paragraph at lines 315--321
 
  []
 
-<ressources/img/Gantt/diagrammePrevisionnel.png, id=203, 887.315pt x 222.8325pt
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 330--334
+
+ []
+
+<ressources/img/Gantt/diagrammePrevisionnel.png, id=199, 887.315pt x 222.8325pt
 >
 File: ressources/img/Gantt/diagrammePrevisionnel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammePrevisionnel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammePrevisionnel.png  used o
-n input line 343.
+n input line 341.
 (pdftex.def)             Requested size: 455.24411pt x 114.32309pt.
-<ressources/img/Gantt/diagrammeReel.png, id=204, 888.31876pt x 225.84375pt>
+<ressources/img/Gantt/diagrammeReel.png, id=200, 1110.1475pt x 301.125pt>
 File: ressources/img/Gantt/diagrammeReel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammeReel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammeReel.png  used on input 
-line 349.
-(pdftex.def)             Requested size: 455.24411pt x 115.7405pt.
+line 347.
+(pdftex.def)             Requested size: 455.24411pt x 123.48502pt.
 [4 <./ressources/img/Gantt/diagrammePrevisionnel.png> <./ressources/img/Gantt/d
 iagrammeReel.png>]
 Chapter 3.
-<ressources/img/shémas/shemaInfras.png, id=209, 1073.00874pt x 620.3175pt>
+<ressources/img/shémas/shemaInfras.png, id=206, 1073.00874pt x 620.3175pt>
 File: ressources/img/shémas/shemaInfras.png Graphic file (type png)
 <use ressources/img/shémas/shemaInfras.png>
 Package pdftex.def Info: ressources/img/shémas/shemaInfras.png  used on input 
-line 365.
+line 363.
 (pdftex.def)             Requested size: 227.62206pt x 131.58618pt.
 [5
 
  <./ressources/img/shémas/shemaInfras.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 377--380
+Underfull \hbox (badness 10000) in paragraph at lines 375--378
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--397
+Underfull \hbox (badness 10000) in paragraph at lines 392--396
 
  []
 
 [6]
-<ressources/img/shémas/shemaEmissionSSL.drawio.png, id=220, 1073.00874pt x 590
+<ressources/img/shémas/shemaEmissionSSL.drawio.png, id=217, 1073.00874pt x 590
 .205pt>
 File: ressources/img/shémas/shemaEmissionSSL.drawio.png Graphic file (type png
 )
 <use ressources/img/shémas/shemaEmissionSSL.drawio.png>
 Package pdftex.def Info: ressources/img/shémas/shemaEmissionSSL.drawio.png  us
-ed on input line 408.
+ed on input line 407.
 (pdftex.def)             Requested size: 227.62206pt x 125.1985pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
-<ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png, id=222, 33
+<ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png, id=219, 33
 13.37875pt x 1263.72125pt>
 File: ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png Graphi
 c file (type png)
 <use ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png>
 Package pdftex.def Info: ressources/img/preuves/emissionReceptionMosquittoValid
-e.drawio.png  used on input line 417.
+e.drawio.png  used on input line 416.
 (pdftex.def)             Requested size: 455.24411pt x 173.6224pt.
 [7 <./ressources/img/shémas/shemaEmissionSSL.drawio.png> <./ressources/img/pre
 uves/emissionReceptionMosquittoValide.drawio.png>]
-<ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png, id=232, 
+<ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png, id=228, 
 4078.23625pt x 1263.72125pt>
 File: ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png Grap
 hic file (type png)
@@ -1266,7 +1264,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 448--452
 
  []
 
-<ressources/img/shémas/archiInflux.drawio.png, id=239, 5779.5925pt x 1290.8225
+<ressources/img/shémas/archiInflux.drawio.png, id=236, 5779.5925pt x 1290.8225
 pt>
 File: ressources/img/shémas/archiInflux.drawio.png Graphic file (type png)
 <use ressources/img/shémas/archiInflux.drawio.png>
@@ -1301,8 +1299,8 @@ Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
 (rerunfilecheck)             Checksum: 3814B301D1106C042677AEA84A056793;5625.
  ) 
 Here is how much of TeX's memory you used:
- 33256 strings out of 476091
- 643030 string characters out of 5794081
+ 33255 strings out of 476091
+ 643019 string characters out of 5794081
  1861330 words of memory out of 5000000
  52983 multiletter control sequences out of 15000+600000
  529643 words of font info for 62 fonts, out of 8000000 for 9000
@@ -1328,10 +1326,10 @@ per/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (21 pages, 5444899 bytes).
+Output written on rapportProjetIsima2025.pdf (20 pages, 5574892 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 353 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
  258 words of extra memory for PDF output out of 10000 (max. 10000000)
 

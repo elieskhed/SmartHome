@@ -195,8 +195,6 @@
 	\ClearShipoutPicture
 	\newpage
 	
-	\section*{Remerciements}
-	
 	\tableofcontents
 	\listoffigures
 	
@@ -216,9 +214,9 @@
 	
 	Une \textbf{API centralisée}, développée en \textbf{Laravel}, a été mise en place afin de :
 	\begin{itemize}
-		\item \textbf{Gérer la création des propriétaires} et l’association sécurisée de leurs équipements.
-		\item \textbf{Automatiser la génération et la signature des certificats} pour garantir une authentification fiable.
-		\item \textbf{Offrir une interface d’accès aux données}, permettant aux utilisateurs de récupérer \textbf{des données en temps 
+		\item \textbf{gérer la création des propriétaires} et l’association sécurisée de leurs équipements.
+		\item \textbf{automatiser la génération et la signature des certificats} pour garantir une authentification fiable.
+		\item \textbf{offrir une interface d’accès aux données}, permettant aux utilisateurs de récupérer \textbf{des données en temps 
 		réel ou historiques}, selon différents filtres appliqués à la base de données.
 	\end{itemize}
 	
@@ -269,16 +267,16 @@
 		l'automatisation et la connectivité jouent un rôle crucial dans notre quotidien.\\
 		Le \textbf{monitoring à distance} des équipements d'une maison constitue un axe fondamental de la domotique moderne. Il permet 
 		aux propriétaires d'obtenir une \textbf{vue globale de l'état de leur habitation en temps réel}. Cela joue un rôle crucial dans 
-		plusieurs domaines:\\
+		plusieurs domaines:
 		\begin{itemize}
-			\item Il permet de \textbf{sécuriser} un domicile, permettant par exemple la détéction d'intrusion ainsi que la prévention 
+			\item il \textbf{sécuriser} un domicile, permettant par exemple la détéction d'intrusion ainsi que la prévention 
 			des cambriolages
 			
-			\item Il permet également une \textbf{optimisation énérgétique} du domicile, par le biais de l'automatisation des objets 
+			\item il \textbf{optimise énérgétiquement} le domicile, par le biais de l'automatisation des objets 
 			connectés, en fonction d'horraires programmés, afin d'optimiser la consommation d'énergie.
 			
-			\item Il permet enfin \textbf{un confort et un contrôle à distance}, offrant aux propriétaires la possibilité d'activer ou 
-			de désactiver certains dispositifs sans être physiquement présent.
+			\item et il permet enfin \textbf{un confort et un contrôle à distance}, offrant aux propriétaires la possibilité d'activer ou 
+			de désactiver certains dispositifs sans être physiquement présent.\\
 		\end{itemize}
 		Si ces avancées technologiques offrent des opportunités considérables, elles soulèvent néanmoins une problématique critique: 
 		\textbf{la sécurisation des dispositifs IoTs et du transfert des données}. Aujourd'hui, de nombreux objets connectés sont 
@@ -298,32 +296,32 @@
 	
 	\chapter{Contexte du Projet}
 	\section{Analyse du besoin et définition des objectifs}
-		Lorsqu'un résident quitte son domicile, il peut être préoccupé par l'état de sa maison, se demandant si une lumière a été éteinte ou si une fenêtre a été correctement fermée. Ces préoccupations sont légitimes, d'autant plus les statistiques récentes indiquent une augmentation des cambriolages de logements en France. En effet au 30 juin 2024, les forces de sécurité ont enregistré une hausse de 4\% des cambriolages de logements sur les douze derniers mois\footnote{source: \url{https://www.interieur.gouv.fr/actualites/actualites-du-ministere/analyse-conjoncturelle-des-crimes-et-delits-enregistres-par} et \url{https://mobile.interieur.gouv.fr/Interstats/Actualites/Info-Rapide-n-43-La-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales-un-point-a-mi-annee-2024}}. Cette tendance souligne la nécessité de renforcer les dispositifs de sécurité pour protéger les habitations.\\
-		Parallèlement, la proliférations des dispositifs IOT dans les foyers pose des défis non négligeables en matière de cybersécurité. Bien que ces technologies offrent des avantages indéniables en termes de confort et d'efficacité énergetiques, elles peuvent constituées des points d'entrée pour les cybercriminelles si elle ne sont pas correctement sécurisées. Il est ainsi essentiel de garantir que seuls les propriétaires autorisés aient accès à ces dispositifs et que les données transmises soient protégés contre toute altération ou interception malveillante.\\
-		Fâce à ces constats, notre projet vise à développer une solution permettant la transimission sécurisée issues de capteurs IoT d'une maison vers un serveur distant. Cette solution devra assurer l'authentification des dispositifs, garantir l'intégrité ainsi que la confidentialité des données, et ainsi permettre aux propriétaires de surveiller à distance l'état de leur domicile en temps réel.
+		Lorsqu'un résident quitte son domicile, il peut être préoccupé par l'état de sa maison, se demandant si une lumière a bien été éteinte ou si une fenêtre a été correctement fermée. Ces préoccupations sont légitimes, d'autant plus que les statistiques récentes indiquent une augmentation des cambriolages des logements en France. En effet au 30 juin 2024, les forces de sécurité ont enregistré une hausse de 4\% des cambriolages de logements sur les douze derniers mois\footnote{source: \url{https://www.interieur.gouv.fr/actualites/actualites-du-ministere/analyse-conjoncturelle-des-crimes-et-delits-enregistres-par} et \url{https://mobile.interieur.gouv.fr/Interstats/Actualites/Info-Rapide-n-43-La-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales-un-point-a-mi-annee-2024}}. Cette tendance souligne la nécessité de renforcer les dispositifs de sécurité pour protéger les habitations.\\
+		Parallèlement, la proliférations des dispositifs IOT dans les foyers pose des défis non négligeables en matière de cybersécurité. Bien que ces technologies offrent des avantages indéniables en termes de confort et d'efficacité énergetiques, elles peuvent constituer des points d'entrée pour les cybercriminelles si elles ne sont pas correctement sécurisées. Il est ainsi essentiel de garantir que seuls les propriétaires autorisés aient accès à ces dispositifs et que les données transmises soient protégées contre toute altération ou interception malveillante.\\
+		Fâce à ces constats, notre projet vise à développer une solution permettant la transimission sécurisée issues de capteurs IoTs d'une maison vers un serveur distant. Cette solution devra assurer l'authentification des dispositifs, garantir l'intégrité ainsi que la confidentialité des données, et ainsi permettre aux propriétaires de surveiller à distance l'état de leur domicile en temps réel.
 	\section{Organisation de la conception à la création}
 	Dans le cadre du développement de ce projet, nous avons adopté une approche structurée en plusieurs phases allant de la simulation initiale de l'environnement domotique jusqu'à la mise en place d'une infrastructure de communication sécurisée et fiable.\\\\
 	\textbf{Phase 1: Simulation de l'environnement domotique et émission des données}\\
-	Avant de mettre en place l'architecture réseau et serveur, nous avons débuté par la simulation logicielle de la maison connectée, en programmant un environnement permettant la génération de données de divers capteurs (température, humidité, lumière...). Cette simulation développée en \textbf{Python},modélise une maison contenant divers équipements Iots et capteurs emettant des séries de données à temps réel.\\
-	L'objectif principal de cette étape était de tester l'envoie de séries de données, à intervalle régulier, au sein d'un serveur distant (Phase suivante), en utilisant le protocole de communication \textbf{MQTT}. A ce moment là, la transmission s'effectuait sans authentification ni chiffrement, nous permettant ainsi, de valider l'intégralité du transport, la récéption au serveur et d'évaluer aussi les performances du protocole. \\\\
+	Avant de mettre en place l'architecture réseau et serveur, nous avons débuté par la simulation logicielle de la maison connectée, en programmant un environnement permettant la génération de données de divers capteurs (température, humidité, lumière...). Cette simulation développée en \textbf{Python}, modélise une maison contenant divers équipements Iots et capteurs, emettant des séries de données à temps réel.\\
+	L'objectif principal de cette étape était de tester l'envoie de séries de données, à intervalle régulier, au sein d'un serveur distant (Phase suivante), en utilisant le protocole de communication \textbf{MQTT}. À ce moment là, la transmission s'effectuait sans authentification ni chiffrement, nous permettant ainsi, de valider l'intégralité du transport, la récéption au serveur et d'évaluer aussi les performances du protocole. \\\\
 	\textbf{Phase 2: Mise en place de l'infrastructure serveur}\\
 	Une fois la simulation fonctionnelle, nous avons déployé une \textbf{infrastructure serveur} sous une machine virtuelle \textbf{Ubuntu}, utilisant l'hyperviseur \textbf{Virtualbox} avec un accès par pont en configuration réseau. Ce serveur assure le rôle de récépteur des données envoyées par la maison connectée.\\
-	Afin de permettre la récéption ainsi que le sotckage des données, nous avons mit en place plusieurs composants essentiels:\\
+	Afin de permettre la récéption ainsi que le sotckage des données, nous avons mis en place plusieurs composants essentiels:\\
 	\begin{itemize}
-		\item \textbf{Mosquitto}: Un broker \textbf{MQTT} permettant la gestion des messages entres les maisons connectées et le serveur aux divers topics.
+		\item \textbf{Mosquitto}: Un broker \textbf{MQTT} permettant la gestion des messages entre les maisons connectées et le serveur aux divers topics.
 		\item \textbf{InfluxDB}: Une \textbf{base de données à séries temporelles}, choisie pour sa capacité à stocker et traiter efficacement des flux de données en temps réel.
-		\item \textbf{Telegraf}: Un agent de collecte des données utilisé pour formaliser et structure les données recues depuis le \textbf{Broker} avant leur insertion dans la base de données.
+		\item \textbf{Telegraf}: Un agent de collecte des données utilisé pour formaliser et structurer les données reçues depuis le \textbf{Broker} avant leur insertion dans la base de données.\\
 	\end{itemize}
-	À la fin de cette étape, après configuration des composantes, l’infrastructure était fonctionnelle, mais vulnérable : les données envoyées par les capteurs n’étaient pas protégées et n’importe quel utilisateur pouvait intercepter ou publier des messages MQTT sur le serveur, compromettant ainsi l’intégrité du système.\\\\
+	À la fin de cette étape, après configuration des composants, l’infrastructure était fonctionnelle, mais vulnérable : les données envoyées par les capteurs n’étaient pas protégées et n’importe quel utilisateur pouvait intercepter ou publier des messages MQTT sur le serveur, compromettant ainsi l’intégrité du système.\\\\
 	\textbf{Phase 3: Sécurisation des échanges et authentifications des Maisons}\\
-	Afin de garantir l'\textbf{authenticité des émetteurs} et de protéger les données échangées, nous avons implémenté une \textbf{authentification basée sur des certificats SSL/TLS} pour le protocole MQTT. Cette sécurisation repose sur \textbf{l'utilisation de certificats clients} généré par une autorité de certifcation interne au serveur, l'exigence d'une \textbf{authentification mutuelle} entre la maison et le serveur pour toute communication MQTT ainsi que le \textbf{chiffrement des échanges} grâce à TLS emêchant toute interception des données transmises.\\
+	Afin de garantir l'\textbf{authenticité des émetteurs} et de protéger les données échangées, nous avons implémenté une \textbf{authentification basée sur des certificats SSL/TLS} pour le protocole MQTT. Cette sécurisation repose sur \textbf{l'utilisation de certificats clients} générés par une autorité de certifcation interne au serveur, exigeant une \textbf{authentification mutuelle} entre la maison et le serveur pour toute communication MQTT ainsi que le \textbf{chiffrement des échanges} grâce à TLS qui empêche toute interception des données transmises.\\
 	Ce mécanisme permet ainsi de \textbf{garantir l'identité des dispositifs connectés} et d'empêcher ainsi toute inteception des données par un acteur non autorisé.\\\\
 	\textbf{Phase 4 : Développement d’une API centralisant l’accès aux données}\\
-	Afin de faciliter l'accès aux données, d'éviter une exposition directe du broker MQTT et aussi de permettre par la suite la création d'interfaces fonctionnant sur divers plateformes, nous avons développé une \textbf{API Rest sous laravel}, jouant deux rôles importants:\\
+	Afin de faciliter l'accès aux données, d'éviter une exposition directe du broker MQTT et aussi de permettre par la suite la création d'interfaces fonctionnant sur divers plateformes, nous avons développé une \textbf{API Rest sous Laravel}, jouant deux rôles importants:\\
 	\begin{itemize}
-		\item \textbf{Gestion de propriétaires et authentification:} L'API permet la \textbf{création de propriétaires} assurant une authentification unique et sécurisée. Un nouvel utilisateur peut en effet s'enregistrer en tant que propriétaire, l'API lui générera ainsi un \textbf{token unique}, qui servira \textbf{d'identifiant primaire} pour toutes les interactions futures entre les propriétés de l'utilisateur et le système. Elle générera de plus, un \textbf{certificat client signé} par l'autorité de certification accompagné d'une clès privé, permettant ainsi une authentification sécurisée lors des échanges avec le broker MQTT.
+		\item \textbf{Gestion de propriétaires et authentification:} l'API permet la \textbf{création de propriétaires} assurant une authentification unique et sécurisée. Un nouvel utilisateur peut en effet s'enregistrer en tant que propriétaire, l'API lui générera ainsi un \textbf{token unique}, qui servira \textbf{d'identifiant primaire} pour toutes les interactions futures entre les propriétés de l'utilisateur et le système. Elle générera de plus, un \textbf{certificat client signé} par l'autorité de certification accompagné d'une clé privée, permettant ainsi une authentification sécurisée lors des échanges avec le broker MQTT.
 		
-		\item \textbf{API de relais et récupération des données: } L'API agit également en tant que \textbf{relais sécurisé} entre les propriétaires et les données stockées au sein du serveur. L'API est capable d'extraire les series temporelles stockées au sein de \textbf{InfluxDB}, en les filtrant en fonction des critères demandées pour chaque utilisateurs (temps réel, historique...). Ainsi, les utilisateurs peuvent accéder uniquement aux données qui leur sont déstinées, garantissant l'intégrité et la confidentialité des échanges.
+		\item \textbf{API de relais et récupération des données: } l'API agit également en tant que \textbf{relais sécurisé} entre les propriétaires et les données stockées au sein du serveur. L'API est capable d'extraire les series temporelles stockées au sein de \textbf{InfluxDB}, en les filtrant en fonction des critères demandés pour chaque utilisateurs (temps réel, historique...). Ainsi, les utilisateurs peuvent accéder uniquement aux données qui leur sont déstinées, garantissant l'intégrité et la confidentialité des échanges.\\
 	\end{itemize}
 	 
 	
@@ -335,7 +333,7 @@
 	Le choix d'utiliser Qt comme technologie, est liée à plusieurs raisons:\\
 	\begin{itemize}
 		\item \textbf{Demande élevée en entreprise: } Qt est largement utilisé dans l’industrie pour le développement d’interfaces utilisateur performantes et multiplateformes.
-		\item \textbf{Complémentarité avec les connaissances acquises en C++:} jusqu’à présent, le programme de formation avait principalement abordé le C++ de manière théorique. Ce projet était donc une opportunité idéale pour appliquer concrètement ces connaissances en développant une interface interactive et fonctionnelle.
+		\item \textbf{Complémentarité avec les connaissances acquises en C++:} jusqu’à présent, le programme de formation avait principalement abordé le C++ de manière théorique. Ce projet était donc une opportunité idéale pour appliquer concrètement ses connaissances en développant une interface interactive et fonctionnelle.
 	\end{itemize}
 	\vspace{3cm}
 	\begin{figure}[h!]
@@ -357,8 +355,8 @@
 	\section{Infrastructure et Environnement de Développement}
 	Cette section détaille l'ensemble de l’infrastructure mise en place, depuis la simulation logicielle d'une maison connectée jusqu'à l'infrastructure serveur dédiée. Cette dernière assure la \textbf{réception}, le \textbf{traitement} ainsi que le \textbf{stockage} sécurisé des données issues des différents capteurs IoT simulés. Nous présenterons les diverses technologies utilisées au sein de l'infrastructure, ainsi que la façon dont elles ont été intégrées afin de garantir une cohérence globale avec les objectifs initiales du projet.\\
 	Ce projet a été réalisé en \textbf{local}, sous la forme d'une \textbf{simulation globale}. Le serveur utilisé repose sur une machine virtuelle exécutant \textbf{Ubuntu Server}, configurée localement via \textbf{un accès réseau en mode pont}. Cette configuration permet au serveur d'obtenir une adresse IP dédiée sur le même réseau local que la machine hôte, facilitant ainsi une connectivité réseau directe et simplifiée avec la maison connectée simulée. Dans ce contexte, notre simulation considère que le serveur et l’émetteur sont présents au sein du même réseau local, en l'absence de solution cloud externe.\\
-	Nous verrons que le serveur joue un rôle centrale au sein de cette infrastructure. En effet, il héberge l'ensemble des services essentiels au fonctionnement de la solution réceptrice: Le \textbf{broker MQTT}, l'\textbf{API REST} développée sous Laravel, ainsi que l'ensemble des bases de données qu'elles soient à\textbf{ séries temporelles ou relationnelles}.\\
-	Concernant l'infrastructure émettrice, afin de simuler les équipement IOTs de la \textbf{maison connectée}, nous avons utilisé le\textbf{ language Python} du fait de la disponibilité étendue des bibliothèques réseau faciles à implémenter, facilitant ainsi la mise en ouvre rapide et fiable de la simulation. \\
+	Nous verrons que le serveur joue un rôle central au sein de cette infrastructure. En effet, il héberge l'ensemble des services essentiels au fonctionnement de la solution réceptrice: le \textbf{broker MQTT}, l'\textbf{API REST} développée sous Laravel, ainsi que l'ensemble des bases de données qu'elles soient à\textbf{ séries temporelles ou relationnelles}.\\
+	Concernant l'infrastructure émettrice, afin de simuler les équipement IOTs de la \textbf{maison connectée}, nous avons utilisé le\textbf{ language Python} du fait de la disponibilité étendue des bibliothèques réseau faciles à implémenter, facilitant ainsi la mise en œuvre rapide et fiable de la simulation. \\
 	Dans les sous-sections suivantes, nous détaillerons la mise en place précise de chacun des composants techniques essentiels à la réalisation de nos objectifs.
 		\begin{figure}[h!]
 		\centering
@@ -367,42 +365,43 @@
 		\label{fig:archiInfra}
 	\end{figure}
 	
-	Le schéma ci-dessus décrit l'infrastructure globale mis en place décrit au sein de la section.
+	Le schéma ci-dessus décrit l'infrastructure globale mis en place au sein de la section.
 	
 	
  
 	\subsection{Simulation du serveur et architecture réseau}
 	\subsubsection{Déploiement d'un Broker MQTT sécurisé}
 	
-	Afin de garantir une transmission en temps réel des données IOTs entre la maison connectée et le serveur, nous avons trouver plus judicieux de choisir le protocole \textbf{MQTT}.\\
-	\textbf{MQTT} est un protocole de messagerie léger basé sur le modèle \textbf{publish/subscribe}, initialement concu pour des environnements où la bande passante est limitée et latence faible. MQTT est dans notre contexte parfaitement adapté, en effet, le protocole a initialement été concu afin d'être adapté aux applications IoTs, grâce à sa faible consommation de ressources, sa simplicité d'implémentation et son support pour des communications asynchrones et pouvant être sécurisées par le biais de la technologie \textbf{SSL/TLS}.\\\\
+	Afin de garantir une transmission en temps réel des données IoTs entre la maison connectée et le serveur, nous avons trouver plus judicieux de choisir le protocole \textbf{MQTT}.\\
+	\textbf{MQTT} est un protocole de messagerie léger basé sur le modèle \textbf{publish/subscribe}, initialement conçu pour des environnements où la bande passante est limitée et la latence est faible. MQTT est, dans notre contexte, parfaitement adapté. En effet, le protocole a initialement été concu afin d'être adapté aux applications IoTs, grâce à sa faible consommation de ressources, sa simplicité d'implémentation et son support pour des communications asynchrones et pouvant être sécurisées par le biais de la technologie \textbf{SSL/TLS}.\\\\
 	Il est important de savoir que MQTT repose sur trois éléments fondamentaux:
 	\begin{itemize}
-		\item \textbf{Le Broker (serveur de message):} Element central de l'architecture MQTT agissant comme un relais entre les clients acheminant les messages publiés et les abonnés appropriés. Il en existe une variété, dans le cadre de notre projet, nous avons choisit d'utiliser \textbf{Mosquitto}.
+		\item \textbf{le Broker (serveur de message):} Element central de l'architecture MQTT agissant comme un relais entre les clients acheminant les messages publiés et les abonnés appropriés. Il en existe un certain nombre, et dans le cadre de notre projet, nous avons choisi d'utiliser \textbf{Mosquitto}.
 		
-		\item \textbf{Les Topics (Sujets de message):} Il s'agit d'une chaîne hierarchique permettant d'identifier une catégorie de message, leur format est composé de "/" permettant de séparrer les sous-topics. Dans le cadre de notre projet nous avons justement exploiter ce système de chaîne hiérarchique afin d'organiser d'une manière précise l'ensemble des types d'\textbf{iots} situés aux différentes salles des divers \textbf{maisons} des différents \textbf{propriétaires}. 
+		\item \textbf{les Topics (Sujets de message):} Il s'agit d'une chaîne hierarchique permettant d'identifier une catégorie de messages, leur format est composé de "/" permettant de séparrer les sous-topics. Dans le cadre de notre projet nous avons justement exploité ce système de chaînes hiérarchiques afin d'organiser d'une manière précise, l'ensemble des types d'\textbf{iots} situés dans les différentes salles des divers \textbf{maisons} des différents \textbf{propriétaires}. 
 		
-		\item \textbf{Les clients (publishers et subscribers):} MQTT fait la distinction entre deux types de clients: 
+		\item \textbf{les clients (publishers et subscribers):} MQTT fait la distinction entre deux types de clients: 
 		\begin{itemize}
-			\item \textbf{Les pusblishers (éditeurs)}, ceux qui envoient des messages à un topic spécifiques, sans se soucier du destinataire, il s'agit dans le cadre de notre projet, de la \textbf{maison connectée} qui envoies des series de données aux différents topics correspondant. 
+			\item \textbf{les pusblishers (éditeurs)}, ceux qui envoient des messages à un topic spécifique, sans se soucier du destinataire, il s'agit dans le cadre de notre projet, de la \textbf{maison connectée} qui envoie des series de données aux différents topics correspondants. 
 			
-			\item \textbf{Les subscribers (abonné)} ceux qui écoutent au sein d'un topic et reçoit les messages spécifiques correspondant, dans notre cas, il s'agit des \textbf{propriétaires} des maisons.
+			\item \textbf{les subscribers (abonnés)} ceux qui écoutent au sein d'un topic et reçoivent les messages spécifiques correspondants, dans notre cas, il s'agit des \textbf{propriétaires} des maisons.
 		\end{itemize}
 	\end{itemize}
 	\vspace{0.5cm}
-	Tels qu'expliquait, nous avons choisis de déployer \textbf{Mosquitto} au sein du serveur. Malgré le fait qu'il existe d'autres solution tels que \textbf{HiveMQT}, \textbf{EMQX} ou \textbf{RabbitMQ MQTT}, pouvant faire office de \textbf{broker}, nous avons choisit \textbf{Mosquitto}, du fait qu'il est conçu pour être \textbf{ultra-lêger}, consommer \textbf{très peu de mémoire et de CPU même sous forte charge}, et convenir aussi bien \textbf{aux petits réseaux IoT qu'aux grandes infrastructures}.\\
-	De plus, \textbf{Mosquitto} permet une installation assez rapide de son service, et la configuration s'effectue via un fichier \textbf{mosquitto.conf}. Enfin, il supporte des fonctionnalités de sécurité avancé que nous avons mit en place au sein de notre serveur, tels que le support \textbf{TLS/SSL} afin de chiffrer les communications.\\
+	
+	Tel qu'expliqué, nous avons choisis de déployer \textbf{Mosquitto} au sein du serveur. Malgré le fait qu'il existe d'autres solutions telles que \textbf{HiveMQT}, \textbf{EMQX} ou \textbf{RabbitMQ MQTT}, pouvant faire office de \textbf{broker}, nous avons choisit \textbf{Mosquitto}, du fait qu'il est conçu pour être \textbf{ultra-léger}, consommer \textbf{très peu de mémoire et de CPU même sous forte charge}, et convient aussi bien \textbf{aux petits réseaux IoT qu'aux grandes infrastructures}.\\
+	De plus, \textbf{Mosquitto} permet une installation assez rapide de son service, et la configuration s'effectue via un seul fichier : \textbf{mosquitto.conf}. Enfin, il supporte des fonctionnalités de sécurité avancées que nous avons mis en place au sein de notre serveur, telles que le support \textbf{TLS/SSL} afin de chiffrer les communications.\\
 	Pour sécuriser les connexions et assurer l'authenticité des communications, nous avons implémenté MQTT sécurisé (MQTTs) basé sur SSL/TLS. Nous avons utilisé l’outil \textbf{OpenSSL} pour créer une autorité de certification interne \textbf{CA} ainsi que pour \textbf{générer et signer automatiquement} des certificats clients \textbf{client.crt} et leurs clés privées associées \textbf{client.key}. Chaque maison simulée dispose donc de trois certificats essentiels pour établir une connexion sécurisée.\\\\
 	Voici ainsi l'architecture de sécurisation de \textbf{Mosquitto}:
 	\begin{itemize}
-		 \item La création d'une Autorité de Certification (CA) dédiée pour la \textbf{génération et la signature des certificats}.
-		\item L'utilisation de certificats clients signés (certificat client et clé privée) pour chaque maison voulant envoyer des données au sein d'un serveur.
-		\item L'utilisation du protocole MQTTs, permettant une \textbf{authentification mutuelle} et un chiffrement systématique des communications, empêchant ainsi toute interception ou injection malveillante de données.
+		 \item la création d'une Autorité de Certification (CA) dédiée pour la \textbf{génération et la signature des certificats}.
+		\item l'utilisation de certificats clients signés (certificat client et clé privée) pour chaque maison voulant envoyer des données au sein d'un serveur.
+		\item l'utilisation du protocole MQTTs, permettant une \textbf{authentification mutuelle} et un chiffrement systématique des communications, empêchant ainsi toute interception ou injection malveillante de données.
 	\end{itemize}
 	
 	\vspace{1cm}
 	
-	Afin de faciliter la compréhension de la sécurisation de Mosquitto, et l'intégration du protocole MQTTs au sein de l'architecture, voici un schéma explicatif: 
+	Pour faciliter la compréhension de la sécurisation de Mosquitto, et l'intégration du protocole MQTTs au sein de l'architecture, voici un schéma explicatif: 
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.5\textwidth]{ressources/img/shémas/shemaEmissionSSL.drawio.png}
@@ -410,7 +409,7 @@
 		\label{fig:secuMosquitto}
 	\end{figure}
 	
-	Afin de vérifier le fonctionnement des certificats ainsi que l'envoi de données au sein du broker mosquitto du serveur virtuel, nous avons à ce moment là tester avec les commandes \textbf{mosquitto\_pub côté client} et les \textbf{logs temps réel côté serveur}\footnote{Au sein de la configuration de mosquitto, nous avons définit un chemin de log accessible en temps réel via la commande linux \textbf{tail -f /var/log/mosquitto/mosquitto.log}}.\\\\ Ainsi, après génération et auto-signature des certificats, les figures ci-dessous montrent ce qu'il se passe lorsque l'authentification est valide c'est à dire lorsque le \textbf{client.key} et le \textbf{client.crt} correspondent bien, et lorsque ces derniers sont invalides:
+	Afin de vérifier le fonctionnement des certificats ainsi que l'envoi de données au sein du broker mosquitto du serveur virtuel, nous avons à ce moment là testé avec les commandes \textbf{mosquitto\_pub côté client} et les \textbf{logs temps réel côté serveur}\footnote{Au sein de la configuration de mosquitto, nous avons définit un chemin de log accessible en temps réel via la commande linux \textbf{tail -f /var/log/mosquitto/mosquitto.log}}.\\\\ Ainsi, après génération et auto-signature des certificats, les figures ci-dessous montrent ce qu'il se passe lorsque l'authentification est valide c'est à dire lorsque le \textbf{client.key} et le \textbf{client.crt} correspondent bien, et lorsque ces derniers sont invalides:
 	
 	\begin{figure}[h!]
 		\centering
@@ -418,7 +417,8 @@
 		\caption{Authentification effectuée: Émission et réception effectuée avec succès}
 		\label{fig:mosquittoValide}
 	\end{figure}
-	Dans la figure ci-dessus, nous pouvons nous apercevoir par la capture d'écran du résultat du log instantané du broker que la connexion de l'emetteur, s'est correctement déroulée, et que ce client a été correctement authentifiée par le nom d'utilisateur \textbf{houseElies}. \newpage
+	
+	Dans la figure ci-dessus, nous pouvons nous apercevoir (par la capture d'écran du résultat du log instantané du broker) que la connexion de l'emetteur, s'est correctement déroulée, et que ce client a été correctement authentifiée par le nom d'utilisateur \textbf{houseElies}. \newpage
 	
 	\begin{figure}[h!]
 		\centering
@@ -426,13 +426,13 @@
 		\caption{Authentification erronée: Émission et réception non fonctionnel}
 		\label{fig:mosquittoInvalide}
 	\end{figure}
-	A la différence de la figure précédente, afin de prouver qu'il est nécéssaire de disposer de certificats clients valide, nous avons intentionnellement modifier la clès générée de manière à ce qu'elle soit erronée, nous pouvons ainsi constater qu'il y a une erreur lors de la connexion de l'emmeteur et que ce dernier n'est pas parvenue à publier, ni à être identifié par le broker.
+	À la différence de la figure précédente, afin de prouver qu'il est nécéssaire de disposer des certificats clients valides, nous avons intentionnellement modifié la clé générée de manière à ce qu'elle soit erronée. Nous pouvons ainsi constater qu'il y a une erreur lors de la connexion de l'emmeteur et que ce dernier n'est pas parvenu à publier, ni à être identifié par le broker.
 	
 	
 	
 	\subsubsection{Intégration d'une base de données à séries temporelles}
 	
-	L'émission sécurisée des données depuis une adresse IP distante vers le serveur étant désormais établie, l'étape suivante consiste à assurer le stockage efficace et structuré de ces informations. L'objectif de ce projet, étant non seulement de permettre l'émission de grandes séries données en temps réel, mais aussi de pouvoir interroger et analyser des données collectées à une date ou une période spécifique. C'est pourquoi, nous avons jugés indispensable d'intégrer une base de données adaptées à des contraintes temporelles.\\
+	L'émission sécurisée des données depuis une adresse IP distante vers le serveur étant désormais établie, l'étape suivante consiste à assurer le stockage efficace et structuré de ces informations. L'objectif de ce projet, étant non seulement de permettre l'émission de grandes séries données en temps réel, mais aussi de pouvoir interroger et analyser des données collectées à une date ou une période spécifique. C'est pourquoi, nous avons jugé indispensable d'intégrer une base de données adaptées à des contraintes temporelles.\\
 	Afin de répondre à ce problème de contrainte temporelle, nous avons utilisé une \textbf{base de donnée à sériess temporelles (TSDB)}. Une base de donnée à séries temporelles est un type de base de donénes optimisée pour stocker et interroger des données indexées par le temps. A la différence des base de données classiques tels que \textbf{MySQL ou PostgreSQL}, stockant les données sous forme de relation statiques, une \textbf{TSDB} permet de gérer des séries de données continus, optimisant les requêtes temporelles et sotckant de manière efficace les données horodatées.\\
 	Une des plus connues est \textbf{InfluxDB}. Développée par \textbf{InfluxData}, cette base de données répond parfaitement au problème du fiat qu'elle permet l'enregistrement de données évoluant dans le temps et facilite leur analyse. A la différence de ses concurents, elle permet une écriture des donnnées rapide, ce qui est essentiels pour le temps réel. De plus, elle compresse les données de manière efficace, permettant ainsi l'optimisation de l'espace de stockage. Enfin, un des avantages clès pour notre projet, est le fait que cette base de données est capable de traiter des millions de points de données par seconde.\\
 	Elle dispose de plus d'une \textbf{API Web} permettant ainsi un accès distant des données, nous verrons par la suite que cette \textbf{API} nous sera essentiels pour accèder aux données transférées.\\
