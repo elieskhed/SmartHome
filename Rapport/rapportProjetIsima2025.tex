@@ -435,7 +435,22 @@
 	L'émission sécurisée des données depuis une adresse IP distante vers le serveur étant désormais établie, l'étape suivante consiste à assurer le stockage efficace et structuré de ces informations. L'objectif de ce projet, étant non seulement de permettre l'émission de grandes séries données en temps réel, mais aussi de pouvoir interroger et analyser des données collectées à une date ou une période spécifique. C'est pourquoi, nous avons jugés indispensable d'intégrer une base de données adaptées à des contraintes temporelles.\\
 	Afin de répondre à ce problème de contrainte temporelle, nous avons utilisé une \textbf{base de donnée à sériess temporelles (TSDB)}. Une base de donnée à séries temporelles est un type de base de donénes optimisée pour stocker et interroger des données indexées par le temps. A la différence des base de données classiques tels que \textbf{MySQL ou PostgreSQL}, stockant les données sous forme de relation statiques, une \textbf{TSDB} permet de gérer des séries de données continus, optimisant les requêtes temporelles et sotckant de manière efficace les données horodatées.\\
 	Une des plus connues est \textbf{InfluxDB}. Développée par \textbf{InfluxData}, cette base de données répond parfaitement au problème du fiat qu'elle permet l'enregistrement de données évoluant dans le temps et facilite leur analyse. A la différence de ses concurents, elle permet une écriture des donnnées rapide, ce qui est essentiels pour le temps réel. De plus, elle compresse les données de manière efficace, permettant ainsi l'optimisation de l'espace de stockage. Enfin, un des avantages clès pour notre projet, est le fait que cette base de données est capable de traiter des millions de points de données par seconde.\\
-	Elle dispose de plus d'une \textbf{API Web} permettant ainsi un accès distant des données, nous verrons par la suite que cette \textbf{API} nous sera essentiels pour accèder aux données transférées.
+	Elle dispose de plus d'une \textbf{API Web} permettant ainsi un accès distant des données, nous verrons par la suite que cette \textbf{API} nous sera essentiels pour accèder aux données transférées.\\
+	Cependant, la subtilité, est que \textbf{InfluxDB} ne supporte pas nativement le protocole \textbf{MQTT}, il est donc nécéssaire d'utiliser un composant intermédiaire afin d'assurer la transmission des messages depuis le protocole MQTT vers la base de données.\\
+	Pour cela, nous avons intégré \textbf{Telegraf}, un agent de collecte de métrique concu afin d'intéragir avec différents systèmes de monitoring et bases de données.\\
+	Nous avons ainsi configuré \textbf{Telegraf} pour écouter les messages publiés sur \textbf{Mosquitto} et les reformater avant des les insérer directement au sein de la base de données.\newpage
+	\textbf{Telegraf} propose deux formats principaux pour insérer des données au sein d'\textbf{InfluxDB}:
+	\begin{itemize}
+		\item \textbf{Line Protocol:} Ce format propre à \textbf{InfluxDB} optimise le sotckage ainsi que la vitesse d'écriture, il s'agit d'une syntaxe représenté sous la forme \textbf{measurement,tag=value timestamp}. Bien que très performant, ce format peut être complexe à manipuler et requiere une structure rigide des données envoyées.
+		
+		\item \textbf{JSON:} Ce format est plus lisible et universellement reconnu, facilitant le traitement et la manipulation des données. Il permet une structuration claire des informations envoyées, avec des clés explicites pour chaque valeur de mesure, ce qui facilite le débogage et l’analyse des données stockées.
+	\end{itemize}
+	Ainsi, pour des raisons de clarté et de lisibilité, nous avons opté pour le format \textbf{JSON}, cela nous facilitera ainsi l'écriture des algorithmes dédiées à l'envoie de données des maison.\\
+	Afin d'effectuer cela, nous avons configuré le fichier \textbf{telegraf.conf} auquel nous avons utilisé le plugin \textbf{mqtt\_consumer}.\\
+	Ce plugin va permettre à \textbf{Telegraf} de s'abonner à tout les \textbf{topics MQTT} auxquels par la suite nous aurons besoin de récupérer les messages publiées au format \textbf{JSON}, afin d'\textbf{orchestrer automatiquement} la structuration des données au sein des tables \textbf{InfluxDB}, et de faire correspondre \textbf{les colonnes aux valeurs JSON} issues des clés correspondantes. Nous verrons plus en détail à la \textbf{sous-section suivante} comment nous avons choisit de formaliser les données et ainsi structuré la base de données.\\\\
+	Le schéma \textbf{ci-dessous} décrit le but de \textbf{Telegraf au sein de notre architecture} par un exemple simple de données à envoyer.
+	
+	
 	\subsubsection{Formalisation des données entre Mosquitto et InfluxDB}
 	
 	\subsection{Modélisation et Simulation d'une Maison Connectée}
