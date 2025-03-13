@@ -418,7 +418,7 @@
 		\label{fig:mosquittoValide}
 	\end{figure}
 	
-	Dans la figure ci-dessus, nous pouvons nous apercevoir (par la capture d'écran du résultat du log instantané du broker) que la connexion de l'emetteur, s'est correctement déroulée, et que ce client a été correctement authentifiée par le nom d'utilisateur \textbf{houseElies}. \newpage
+	Dans la figure ci-dessus, nous pouvons nous apercevoir (par la capture d'écran du résultat du log instantané du broker) que la connexion de l'emetteur s'est correctement déroulée, et que ce client a été correctement authentifiée par le nom d'utilisateur \textbf{houseElies}. \newpage
 	
 	\begin{figure}[h!]
 		\centering
@@ -457,13 +457,13 @@
 		\label{fig:archiInflux}
 	\end{figure}
 	\vspace{1cm}
-	Ainsi, l'émetteur écrit un \textbf{buffer} dans lequel il insère des donnée formatées en \textbf{JSON}, ces données sont envoyées à travers le protocole MQTT à un topic nommé \textbf{example/}.\\
-	Ces données sont recu au sein du broker au topic \textbf{example}, auquel s'abonne le service \textbf{telegraf} dans le but de \textbf{traduire} le format JSON recu, afin d'orchestrer et créer au sein d'\textbf{InfluxDB} la table correspondante.
+	Ainsi, l'émetteur écrit un \textbf{buffer} dans lequel il insère des données formatées en \textbf{JSON}, ces données sont envoyées à travers le protocole MQTT à un topic nommé \textbf{example/}.\\
+	Ces données sont reçues au sein du broker au topic \textbf{example}, auquel s'abonne le service \textbf{telegraf} dans le but de \textbf{traduire} le format JSON recu, afin d'orchestrer et créer au sein d'\textbf{InfluxDB} la table correspondante.
 	
 	
 	\subsubsection{Structuration et formalisation des données échangées}
 	
-	Afin d'assurer une gestion cohérente et efficace des données transmises par les maisons connectées au serveur central, il est necessaire de mettre en place une structuration précises des \textbf{topics} et des \textbf{messages MQTT en utilisant le format JSON}.Cette structuration va ainsi permettre une identification claire des maisons, une organisation logique des équipements et un formats de données standarisées, disposées au sein de la base de données \textbf{InfluxDB}, facilitant leur stockage, leur exploitation, et l'extensibilité des données à ajouter. 
+	Pour assurer une gestion cohérente et efficace des données transmises par les maisons connectées au serveur central, il est nécessaire de mettre en place une structuration précises des \textbf{topics} et des \textbf{messages MQTT en utilisant le format JSON}. Cette structuration va ainsi permettre une identification claire des maisons, une organisation logique des équipements et un formats de données standarisé, disposé au sein de la base de données \textbf{InfluxDB}, facilitant leur stockage, leur exploitation, et l'extensibilité des données à ajouter. 
 	
 	\subsection{Modélisation et Simulation d'une Maison Connectée}
 	\subsubsection{Conception de l'architecture logicielle de la simulation}
