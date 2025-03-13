@@ -354,7 +354,7 @@
 	
 	\section{Infrastructure et Environnement de Développement}
 	Cette section détaille l'ensemble de l’infrastructure mise en place, depuis la simulation logicielle d'une maison connectée jusqu'à l'infrastructure serveur dédiée. Cette dernière assure la \textbf{réception}, le \textbf{traitement} ainsi que le \textbf{stockage} sécurisé des données issues des différents capteurs IoT simulés. Nous présenterons les diverses technologies utilisées au sein de l'infrastructure, ainsi que la façon dont elles ont été intégrées afin de garantir une cohérence globale avec les objectifs initiales du projet.\\
-	Ce projet a été réalisé en \textbf{local}, sous la forme d'une \textbf{simulation globale}. Le serveur utilisé repose sur une machine virtuelle exécutant \textbf{Ubuntu Server}, configurée localement via \textbf{un accès réseau en mode pont}. Cette configuration permet au serveur d'obtenir une adresse IP dédiée sur le même réseau local que la machine hôte, facilitant ainsi une connectivité réseau directe et simplifiée avec la maison connectée simulée. Dans ce contexte, notre simulation considère que le serveur et l’émetteur sont présents au sein du même réseau local, en l'absence de solution cloud externe.\\
+	Ce projet a été réalisé en \textbf{local}, sous la forme d'une \textbf{simulation globale}. Le serveur utilisé repose sur une machine virtuelle exécutant \textbf{Ubuntu Server}, configurée localement via \textbf{un accès réseau en mode pont}. Cette configuration permet au serveur d'obtenir une adresse IP dédiée sur le même réseau local que la machine hôte, facilitant ainsi une connectivité réseau directe et simplifiée avec la maison connectée simulée. Dans ce contexte, notre simulation considère que le serveur et l’émetteur sont présents au sein du même réseau local, en l'absence de solution Cloud externe.\\
 	Nous verrons que le serveur joue un rôle central au sein de cette infrastructure. En effet, il héberge l'ensemble des services essentiels au fonctionnement de la solution réceptrice: le \textbf{broker MQTT}, l'\textbf{API REST} développée sous Laravel, ainsi que l'ensemble des bases de données qu'elles soient à\textbf{ séries temporelles ou relationnelles}.\\
 	Concernant l'infrastructure émettrice, afin de simuler les équipement IOTs de la \textbf{maison connectée}, nous avons utilisé le\textbf{ language Python} du fait de la disponibilité étendue des bibliothèques réseau faciles à implémenter, facilitant ainsi la mise en œuvre rapide et fiable de la simulation. \\
 	Dans les sous-sections suivantes, nous détaillerons la mise en place précise de chacun des composants techniques essentiels à la réalisation de nos objectifs.
@@ -460,14 +460,105 @@
 	Ainsi, l'émetteur écrit un \textbf{buffer} dans lequel il insère des donnée formatées en \textbf{JSON}, ces données sont envoyées à travers le protocole MQTT à un topic nommé \textbf{example/}.\\
 	Ces données sont recu au sein du broker au topic \textbf{example}, auquel s'abonne le service \textbf{telegraf} dans le but de \textbf{traduire} le format JSON recu, afin d'orchestrer et créer au sein d'\textbf{InfluxDB} la table correspondante.
 	
-	
-	\subsubsection{Structuration et formalisation des données échangées}
-	
-	Afin d'assurer une gestion cohérente et efficace des données transmises par les maisons connectées au serveur central, il est necessaire de mettre en place une structuration précises des \textbf{topics} et des \textbf{messages MQTT en utilisant le format JSON}.Cette structuration va ainsi permettre une identification claire des maisons, une organisation logique des équipements et un formats de données standarisées, disposées au sein de la base de données \textbf{InfluxDB}, facilitant leur stockage, leur exploitation, et l'extensibilité des données à ajouter. 
+
 	
 	\subsection{Modélisation et Simulation d'une Maison Connectée}
+	Après avoir rendu possible l'émission ainsi que le stockage de manière sécurisée et authentifiée entre un client et un serveur via le protocole \textbf{MQTTs}, nous avons entrepris la modélisation d'une maison connectée de manière réaliste.La simulation vise à reproduire les interactions d'une habitation intelligente équipée de capteurs IoT, tout en respectant les contraintes de communication définies précédemment.\\
+	L'objectif de cette simulation est d'une part de permettre l'émission de séries de données depuis une maison connectée simulée, personnalisable et extensible, utilisant le protocole MQTT, et d'autre part de mettre en place un format d'envoi de données en JSON afin de permettre le remplissage de la base de données distante tout en identifiant chaque maison. 
+
+	\subsubsection{Structuration et formalisation des données échangées}
+	Dans un premier temps, avant de commencer la conception des maisons simulées, il est nécessaire de réfléchir à la structure des données au format \textbf{JSON}, que nous allons mettre en place afin de permettre une gestion efficace des données recues par les IOT's de la maison.\\
+	La structuration des données repose sur une approche où chaque message transmit par la maison suit un format JSON préféfin. Le but est de garantir une compatibilité optimale avec les systèmes de stockage et de permettre ainsi un affichage correctement structuré au sein de la base de donnée.\\\\
+	Afin de garantir tout cela, il nous a fallut insérer au sein de la donnée transmise divers élément permettant d'identifier la maison emettrice, mais aussi d'identifier quel IOT de la maison est concerné. Voici les clès que nous avons judicieusement choisit afin de garantir un stockage des données optimale au sein de la base de données:
+	\begin{itemize}
+		\item \textbf{token:} Le token est la clés primaire d'une donnée envoyée. En effet, elle permet d'identifier la maison connectée émettrice, c'est sur ce jeton que nous nous baserons afin qu'un propriétaire puisse rechercher sa maison. Nous pouvons voir le token tels que la clès de l'utilisateur, que seul lui dispose et qu'il ne doit partager personne. Nous verrons par la suite que cette clès sera généré par l'API et donnée au propriétaire lorsque ce dernier souhaitera enregistrer sa maison au sein de la base de donnée.
+		
+		\item \textbf{house\_name:} permet simplement de nommer la maison, il s'agit là aussi d'une clès unique, en effet elle permettera de distinguer les différents maisons au sein des sous-topics de \textbf{houses/} (explication détaillée au paragraphe suivant).
+		
+		\item \textbf{device\_name:} concerne l'\textbf{IOT} auquel on a capturée la donnée à envoyer (il peut s'agir d'un capteur, de l'état d'une porte d'une lumière...). Ainsi, contiendra une chaîne JSON auxquel sera stocké sont état en tant qu'information utile au propriétaire.
+		
+		\item \textbf{device\_location:} permet de localiser l'IOT au sein de la maison, cette information pourra être utile dans le cas où l'on souhaiterait établir une cartographie de la maison au sein de l'interface graphique, et que le propriétaire puisse ainsi avoir une vue globale de sa propriété, avec l'ensemble des capteurs présent à leur localisation spécifiques.
+		
+		\item \textbf{type:} Cette clés permettra d'organiser chaque \textbf{IOT} en fonction de leur rôle attribué (capteur\_lumière...), cela pourra ainsi permettre d'ajouter un filtre en plus dans le cas où on suppose qu'un propriètaire veuille récupérer les données issues de l'ensemble des lampes de sa maison par exemple.
+		
+		\item \textbf{values:} Cette clés pourra stocker un tableaux contenant une ou plusieurs donnée, correspondant à l'état d'un \textbf{IOT} à un instant donné.
+	\end{itemize}
+	
+	Ainsi, chaque série de données envoyées par la maison est constituée d'une ou plusieurs données au format JSON composées des clés spécifiés.\\
+	Voici un exemple de donnée envoyé par une maison à un un instant donné composé uniquement d'un capteur de lumière:
+	
+	\begin{lstlisting}
+	{
+		"house_name": "eliesHouse",
+		"house_token": "Wdp4HCPNvC3wHnvSfSwmVknhLuHtjUkoIzG6zPno",
+		"device_name": "lamp_kit",
+		"device_id": 1,
+		"device_location": "kitchen",
+		"type": "light_sensor",
+		"values": { "state": 0 }
+	}
+	\end{lstlisting}
+	
+	\paragraph{Disposition des Topics}
+	
+Un autre élément permettant la structuration des données émises par les maisons ainsi que l'organisation de ces dernières est la disposition des topics.
+En effet, il est important de distinguer les différents \textbf{sous-topics} du topic racine \textbf{houses}, contenant l'ensemble des maisons, qui elles-mêmes incluent dans des sous-topics les différents types d'IoT.
+
+L'organisation des \textbf{topics} suit la hiérarchie suivante :
+\begin{itemize}
+	\item \textbf{houses/} : Racine des topics, regroupant toutes les maisons connectées.
+	\item \textbf{houses/<house\_name>/} : Chaque maison possède un sous-topic dédié identifié par son nom unique.
+	\item \textbf{houses/<house\_name>/<device\_type>/} : Le but est de garantir une catégorisation des équipements par type (ex: TYPE\_LIGHT, TYPE\_HUMIDITY...).
+	\item \textbf{houses/<house\_name>/<device\_type>/<device\_name>} : Le dernier niveau représente un équipement précis (par exemple lampe, capteur de température).
+\end{itemize}
+	\vspace{1cm}
+	Voici un exemple de topics auquel l'information de l'état de la lampe de la maison est publié:
+	\textbf{houses/eliesHouse/TYPE\_LIGHT/lamp\_kit}\\
+	
+
+	Cette organisation permet une classification logique et structurée des messages publiés, facilitant ainsi la récupération et le traitement des données par les abonnés spécifiques aux topics concernés.\\
+	
+	Afin de garantir cette organisation, nous avons configuré avant de passer à la création du simulateur configure telegraf. Le plugin \textbf{mqtt\_consumer} permet de hierarchiser les topics auxquels seront envoyées les donénes et d'établir des strutures précises.
 	\subsubsection{Conception de l'architecture logicielle de la simulation}
-	\subsubsection{Implémentation du protocole MQTTs}
+	La conception de l'architecture logicielle de la simulation repose sur une structure modulaire extensible et permettant d'intégrer plusieurs maisons connectées, entièrement personnalisable, pouvant contenir un très grand nombre d'appareils \textbf{IOTs}. Nous avons choisit de développer cette architecture en Python en raison de sa flexibilité et du fait qu'il contient des bibliothèques permettant l'implémentation des communication réseau via le protocole MQTT de manière simple et rapide.\\
+	
+	Chaque maison connectée est modélisée sous forme d'une classe Python encapsulant l'ensemble des capteurs et des dispositifs présents dans l'habitation.Ces équipements sont eux-mêmes représentés par des classes spécifiques dérivées d'une classe abstraite \textbf{Device}, permettant d'uniformiser la gestion des données et des envois MQTT.\\
+	
+	\paragraph{Principales composantes de l'architecture logicielle}
+		Voici les fonctionnalités que nous avons implémenté au sein de l'architecture logiciel:
+
+	\begin{itemize}
+		\item \textbf{House} : Classe représentant une \textbf{maison connectée}. Chaque instance est associée à un token unique et gère un ensemble d'équipements IoT.
+		\item \textbf{Device} : Classe abstraite représentant un dispositif connecté (capteurs, actionneurs). Les classes spécifiques (ex: \textbf{LightSensor}, \textbf{HumiditySensor}) en héritent.
+		\item \textbf{Main}: Cette classe agit comme un point central au sein de cette simulation, en effet, elle initialise les maisons connectée ainsi que leur capteurs, elle orchestre l'émission des données en fonction d'un intervalle défini et elle établit et maintient la connexion \textbf{MQTT} pour chaque maison. 
+	\end{itemize}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/shémas/housesimulationDiagram}
+		\caption{Architecture logicielle proposée de notre simulateur de maisons connectées}
+		\label{fig:archiMaisonConnectées}
+	\end{figure}
+	
+	\paragraph{Envoies des données JSON à chaque classe IoT}
+
+	\paragraph{Implémentation du Protocole MQTT} Afin d'implémenter le protocole \textbf{MQTT} nous avons utilisé la bibliothèque \textbf{paho-mqtt}, qui est une implémentation légère du protocole en Python. Cette bibliotèque permet la gestion complète des communications entre les clients \textbf{MQTT} et le \textbf{broker}, en facilitant la publication ainsi que la souscription aux topics définis.\\
+	Nous avons dans un premier temps vérifié le fonctionnement de manière non sécurisé (sans SSL/TLS), afin de vérifier si l'émission des données au format conçu fonctionnait tels que prévu, avant d'ajouter les \textbf{certificats SSL/TLS} afin de permettre l'implémentation du protocole MQTTs. 
+
+	
+	\paragraph{Implémentation du protocole MQTTs} La bibliothèque \textbf{paho-mqtt} que nous avons utilisée supporte l'intégration de certificats \textbf{SSL/TLS}. Afin d'intégrer ces certificats, la bibliothèque dispose de l'objet \textbf{mqtt.Client()} contenant une méthode \textbf{tls\_set(ca\_certs, certfile, keyfile)}. Cette méthode prend en paramètre le chemin du certificat de l'autorité de certification, du propriétaire ainsi que la clé privée de ce dernier.\\
+	En appelant ensuite la méthode \textbf{publish()} de la classe \textbf{mqtt.Client}, il nous sera possible d'envoyer les données en utilisant ces certificats et ainsi garantir une authentification sécurisée.
+	
+	Cette implémentation garantit une transmission fiable et sécurisée des données IoT simulées, tout en respectant les bonnes pratiques d’authentification et de chiffrement des communications réseau.
+	
+	\paragraph{Diagramme UML décrivant l'architecture des classes du simulateur} Afin de résumer l'architecture des classes du simulateur, voici le diagramme UML:
+
+		\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/shémas/housesimulationUML}
+		\caption{Diagramme UML du \textbf{simulateur de maisons connectées}}
+		\label{fig:umlMaisonConnectées}
+	\end{figure}
 	
 	\section{Mise en place d'une API Web}
 	\subsection{Architecture logicielle de l'API et choix technologiques}
