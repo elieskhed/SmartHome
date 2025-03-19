@@ -731,8 +731,15 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 	\caption{Routes de l'API et leurs descriptions}
 	\label{tab:api_routes}
 \end{table}
-
-	\paragraph{Résumé de l'architecture}
+	
+	\paragraph{Résumé de l'architecture}L'API suit une architecture MVC et permet l’authentification sécurisée des maisons ainsi que la récupération de leurs données en temps réel. Lorsqu’un propriétaire enregistre sa maison, l’API génère un token unique et des certificats SSL, stockant les informations dans une base MySQL. Pour accéder aux données IoT, le client envoie des requêtes à l’InfluxDBController, qui interroge InfluxDB via une API dédiée et retourne les mesures correspondant au token. Cette architecture garantit une gestion efficace des maisons connectées et de leur données, ainsi qu'une automatisation du placement des certificats, et clés privé au sein du dossier \textbf{cert} du simulateur.\\
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.75\textwidth]{ressources/img/shémas/archiAPI}
+		\caption{Architecture de SmartHomeAPI}
+		\label{fig:archAPI}
+	\end{figure}
 	
 	
 	\subsection{Tests de l'API avec Postman}

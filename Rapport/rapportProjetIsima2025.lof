@@ -16,6 +16,7 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Diagramme UML du \textbf {simulateur de maisons connectées}}}{13}{figure.3.7}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Vérication de la création de la \textbf {base de données}}}{15}{figure.3.8}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Association d'une Table Maison de Smarthouse à ses séries de données temporelles collectées}}{16}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Architecture de SmartHomeAPI}}{18}{figure.3.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
