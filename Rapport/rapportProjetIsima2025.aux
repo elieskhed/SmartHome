@@ -1,10 +1,4 @@
 \relax 
-\providecommand\babel@aux[2]{}
-\@nameuse{bbl@beforestart}
-\catcode `:\active 
-\catcode `;\active 
-\catcode `!\active 
-\catcode `?\active 
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
@@ -19,6 +13,12 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand\babel@aux[2]{}
+\@nameuse{bbl@beforestart}
+\catcode `:\active 
+\catcode `;\active 
+\catcode `!\active 
+\catcode `?\active 
 \pgfsyspdfmark {pgfid1}{4736286}{50644704}
 \providecommand\@newglossary[4]{}
 \@newglossary{main}{glg}{gls}{glo}
@@ -86,15 +86,15 @@
 \@writefile{toc}{\contentsline {paragraph}{Implémentation du Protocole MQTT}{12}{section*.10}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Implémentation du protocole MQTTs}{12}{section*.11}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Diagramme UML décrivant l'architecture des classes du simulateur}{12}{section*.12}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagramme UML du \textbf  {simulateur de maisons connectées}}}{12}{figure.3.7}\protected@file@percent }
-\newlabel{fig:umlMaisonConnectées}{{3.7}{12}{Diagramme UML du \textbf {simulateur de maisons connectées}}{figure.3.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Mise en place d'une API Web}{12}{section.3.2}\protected@file@percent }
 \pgfsyspdfmark {pgfid18}{4736286}{50644704}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Mise en place d'une API Web}{13}{section.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagramme UML du \textbf  {simulateur de maisons connectées}}}{13}{figure.3.7}\protected@file@percent }
+\newlabel{fig:umlMaisonConnectées}{{3.7}{13}{Diagramme UML du \textbf {simulateur de maisons connectées}}{figure.3.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Architecture logicielle de l'API et choix technologiques}{13}{subsection.3.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Choix du framework Laravel}{13}{section*.13}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Déploiement de Laravel au sein du serveur Virtuel}{13}{section*.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Installation des dépendances requises}{13}{section*.15}\protected@file@percent }
 \pgfsyspdfmark {pgfid19}{4736286}{50644704}
+\@writefile{toc}{\contentsline {paragraph}{Installation des dépendances requises}{14}{section*.15}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Configuration de SmartHomeAPI}{14}{section*.16}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Configuration d'Apache2}{14}{section*.17}\protected@file@percent }
 \pgfsyspdfmark {pgfid20}{4736286}{50644704}
@@ -107,42 +107,40 @@
 \@writefile{toc}{\contentsline {paragraph}{Structure des bases de données}{16}{section*.21}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Association d'une Table Maison de Smarthouse à ses séries de données temporelles collectées}}{16}{figure.3.9}\protected@file@percent }
 \newlabel{fig:archBDDs}{{3.9}{16}{Association d'une Table Maison de Smarthouse à ses séries de données temporelles collectées}{figure.3.9}{}}
-\@writefile{toc}{\contentsline {paragraph}{Fonctionnement des routes}{16}{section*.22}\protected@file@percent }
 \pgfsyspdfmark {pgfid22}{4736286}{50644704}
-\@writefile{toc}{\contentsline {paragraph}{Fonctionnement des Contrôleurs}{17}{section*.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Résumé de l'architecture}{17}{section*.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Automatisation de l'authentification des maisons}{17}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Signature automatique des certificats}{17}{section*.25}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Filtrage et récupération des données}{17}{subsection.3.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Communication avec InfluxDB API}{17}{section*.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Tests de l'API avec Postman}{17}{subsection.3.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{17}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{17}{subsection.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{17}{subsection.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Authentification des maisons}{17}{section*.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Affichage des données récupérées}{17}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Fonctionnement des routes}{17}{section*.22}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Routes de l'API et leurs descriptions}}{17}{table.3.1}\protected@file@percent }
+\newlabel{tab:api_routes}{{3.1}{17}{Routes de l'API et leurs descriptions}{table.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Résumé de l'architecture}{17}{section*.23}\protected@file@percent }
 \pgfsyspdfmark {pgfid23}{4736286}{50644704}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Résultats et Discussion}{18}{chapter.4}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{18}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{18}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Tests de l'API avec Postman}{18}{subsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{18}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{18}{subsection.3.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{18}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Authentification des maisons}{18}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Affichage des données récupérées}{18}{section*.25}\protected@file@percent }
 \pgfsyspdfmark {pgfid24}{4736286}{50644704}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Résultats et Discussion}{19}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Conclusion du projet}{19}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Limites et améliorations possibles}{19}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{19}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{19}{section.4.2}\protected@file@percent }
+\pgfsyspdfmark {pgfid25}{4736286}{50644704}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{20}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Conclusion du projet}{20}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Limites et améliorations possibles}{20}{section.5.2}\protected@file@percent }
 \citation{*}
 \bibstyle{unsrt}
 \bibdata{references}
-\pgfsyspdfmark {pgfid25}{4736286}{50644704}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Annexes}{20}{appendix.A}\protected@file@percent }
+\pgfsyspdfmark {pgfid26}{4736286}{50644704}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Annexes}{21}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Lexique}{20}{section.A.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Bibliographie}{20}{section.A.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Webographie}{20}{section.A.3}\protected@file@percent }
-\pgfsyspdfmark {pgfid26}{4736286}{50644704}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Lexique}{21}{section.A.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Bibliographie}{21}{section.A.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Webographie}{21}{section.A.3}\protected@file@percent }
 \pgfsyspdfmark {pgfid27}{4736286}{50644704}
-\gdef \@abspage@last{27}
+\pgfsyspdfmark {pgfid28}{4736286}{50644704}
+\gdef \@abspage@last{28}

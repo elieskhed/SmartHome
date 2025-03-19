@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{natbib}
 \usepackage[english, french]{babel}
 \usepackage{graphicx}
 \usepackage{fullpage}
@@ -15,9 +17,11 @@
 \usepackage{background}
 \usepackage{setspace}
 \usepackage{titlepic}
+\usepackage{booktabs} % Pour de jolis tableaux
+\usepackage{tabularx} % Permet un ajustement automatique des colonnes
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=2cm, margin=1in]{geometry} % Définit les marges pour éviter les débordements
 
-\usepackage{hyperref}
-\usepackage{natbib}
+
 
 % Définir les paramètres de l'image de fond pour la première page
 \backgroundsetup{
@@ -31,7 +35,6 @@
 	contents={\includegraphics[width=\paperwidth]{ressources/img/logos/imageSmartHouse}} % Contenu (image de fond)
 }
 
-\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=2cm]{geometry}
 
 % Pour la lisibilité, on peut utiliser le package setspace pour ajuster l'espacement entre les lignes
 \usepackage{setspace}
@@ -685,14 +688,52 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 			\caption{Association d'une Table Maison de Smarthouse à ses séries de données temporelles collectées}
 		\label{fig:archBDDs}
 		\end{figure}
+		
+		La table \textbf{House}, situé au sein de la base de donnée \textbf{MySQL}, structurée à partie du modèle \textbf{House.php}, contient les informations liées à l'authentification d'une \textbf{maison connectée} au sein de l'architecture globale du serveur:
+		\begin{itemize}
+			\item \textbf{item} est identifiant unique s'auto-incrémentant au sein de la base à chaque création de maison de la part d'utilisateur.
+			\item \textbf{houseName} est nom unique de maisons au sein de la base de données relationnel.
+			\item \textbf{password} est le mots de passe haché en \textbf{bcrypt} du propriétaire de la maison, lors de son authentification.
+			\item \textbf{apiKey} est une clé API unique généré par l'API, elle permet d'identifier les maison au sein des deux bases de données. 
+			\item \textbf{clientKeyPath} et \textbf{clientCertPath} constituent les chemins des certificats client au sein du serveur.
+		\end{itemize}
+		Les valeurs de la tables \textbf{intelighouse} ont été décrites à la fin de la partie \textbf{Structuration et formalisation des données échangées}, la seul spécificité est le fait que \textbf{house\_token} constitue une forme de \textbf{clé étrangére} liée à la valeur de \textbf{apiKey} situé au sein de la base de données \textbf{MySQL}.
+		
 	\paragraph{Fonctionnement des routes}
-	\paragraph{Fonctionnement des Contrôleurs}
+	La spécification des routes est contenue au sein du fichier \texttt{routes/api.php}. Ce fichier contient un \textbf{groupe de routes} préfixé \textbf{house}, permettant la mise en œuvre des action à réaliser par l'api en fonction des requêtes émises par l'utilisateur.\\
+	Au sein de notre API, cinq routes ont étés mise en œuvre permettant le fonctionnement voulu de l'\textbf{API} conforme aux besoins nécessaire à l'architecture.
+	
+	
+
+\begin{table}[h]
+	\centering
+	\small % Réduit la taille de la police pour éviter les débordements
+	\renewcommand{\arraystretch}{1.2} % Augmente l'espacement des lignes pour une meilleure lisibilité
+	\begin{tabularx}{\textwidth}{|X|c|X|X|}
+		\hline
+		\textbf{Route} & \textbf{Méthode} & \textbf{Fonction associée} & \textbf{Description} \\
+		\hline
+		\texttt{/api/house/create} & POST & \textbf{HouseController@create()} & Création d’une maison avec génération des certificats SSL et d’une clé API en retour JSON \\
+		\hline
+		\texttt{/api/house/data} & GET & \textbf{InfluxDBController@
+		getAllData()} & Récupération de toutes les données associées à une maison \\
+		\hline
+		\texttt{/api/house/latestData} & GET & \textbf{InfluxDBController@
+			getLatestData()} & Récupération des dernières données enregistrées \\
+		\hline
+		\texttt{/api/house/dataBySensor} & GET & \textbf{InfluxDBController@
+			getDataBySensor()} & Récupération des données pour un type de capteur spécifique \\
+		\hline
+		\texttt{/api/house/dataAverage} & GET & \textbf{InfluxDBController@
+			getAveragebySensor()} & Moyenne des données d’un capteur sur une période donnée \\
+		\hline
+	\end{tabularx}
+	\caption{Routes de l'API et leurs descriptions}
+	\label{tab:api_routes}
+\end{table}
+
 	\paragraph{Résumé de l'architecture}
 	
-	\subsection{Automatisation de l'authentification des maisons}
-	\subsubsection{Signature automatique des certificats}
-	\subsection{Filtrage et récupération des données}
-	\subsubsection{Communication avec InfluxDB API}
 	
 	\subsection{Tests de l'API avec Postman}
 	

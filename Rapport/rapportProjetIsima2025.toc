@@ -20,37 +20,32 @@
 \contentsline {paragraph}{Implémentation du Protocole MQTT}{12}{section*.10}%
 \contentsline {paragraph}{Implémentation du protocole MQTTs}{12}{section*.11}%
 \contentsline {paragraph}{Diagramme UML décrivant l'architecture des classes du simulateur}{12}{section*.12}%
-\contentsline {section}{\numberline {3.2}Mise en place d'une API Web}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Mise en place d'une API Web}{12}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Architecture logicielle de l'API et choix technologiques}{13}{subsection.3.2.1}%
 \contentsline {subsubsection}{Choix du framework Laravel}{13}{section*.13}%
 \contentsline {subsubsection}{Déploiement de Laravel au sein du serveur Virtuel}{13}{section*.14}%
-\contentsline {paragraph}{Installation des dépendances requises}{13}{section*.15}%
+\contentsline {paragraph}{Installation des dépendances requises}{14}{section*.15}%
 \contentsline {paragraph}{Configuration de SmartHomeAPI}{14}{section*.16}%
 \contentsline {paragraph}{Configuration d'Apache2}{14}{section*.17}%
 \contentsline {paragraph}{Configuration de la base de données}{15}{section*.18}%
 \contentsline {subsubsection}{Architecture de l'API}{16}{section*.19}%
 \contentsline {paragraph}{Structure globale de l'API}{16}{section*.20}%
 \contentsline {paragraph}{Structure des bases de données}{16}{section*.21}%
-\contentsline {paragraph}{Fonctionnement des routes}{16}{section*.22}%
-\contentsline {paragraph}{Fonctionnement des Contrôleurs}{17}{section*.23}%
-\contentsline {paragraph}{Résumé de l'architecture}{17}{section*.24}%
-\contentsline {subsection}{\numberline {3.2.2}Automatisation de l'authentification des maisons}{17}{subsection.3.2.2}%
-\contentsline {subsubsection}{Signature automatique des certificats}{17}{section*.25}%
-\contentsline {subsection}{\numberline {3.2.3}Filtrage et récupération des données}{17}{subsection.3.2.3}%
-\contentsline {subsubsection}{Communication avec InfluxDB API}{17}{section*.26}%
-\contentsline {subsection}{\numberline {3.2.4}Tests de l'API avec Postman}{17}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{17}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{17}{subsection.3.3.2}%
-\contentsline {subsubsection}{Authentification des maisons}{17}{section*.27}%
-\contentsline {subsubsection}{Affichage des données récupérées}{17}{section*.28}%
-\contentsline {chapter}{\numberline {4}Résultats et Discussion}{18}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{18}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{18}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusion du projet}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Limites et améliorations possibles}{19}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Annexes}{20}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Lexique}{20}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Bibliographie}{20}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Webographie}{20}{section.A.3}%
+\contentsline {paragraph}{Fonctionnement des routes}{17}{section*.22}%
+\contentsline {paragraph}{Résumé de l'architecture}{17}{section*.23}%
+\contentsline {subsection}{\numberline {3.2.2}Tests de l'API avec Postman}{18}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{18}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{18}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{18}{subsection.3.3.2}%
+\contentsline {subsubsection}{Authentification des maisons}{18}{section*.24}%
+\contentsline {subsubsection}{Affichage des données récupérées}{18}{section*.25}%
+\contentsline {chapter}{\numberline {4}Résultats et Discussion}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{19}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{20}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusion du projet}{20}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Limites et améliorations possibles}{20}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Annexes}{21}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Lexique}{21}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Bibliographie}{21}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Webographie}{21}{section.A.3}%
