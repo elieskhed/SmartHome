@@ -625,28 +625,69 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 		DB_PASSWORD=admin
 	\end{lstlisting}
 	\paragraph{Configuration d'Apache2}
-	Afin de rendre accessible notre 
+	\textbf{Apache2} est un serveur web open-source, que nous avons utiliser afin d'héberger notre API.\\
+	Il permet de traiter des requêtes HTTP et de servir les différentes pages aux clients connectés.\\
+	Ainsi, \textbf{Apache 2} va assurer la communication entre l'hutilisateur souhaitant avoir accès aux données de sa maison et le serveur virtuelle.\\
+	La configuration d'Apache2 est essentielle à la mise en place de notre projet \textbf{Laravel}, afin de permettre un accès sécurisé et contrôlé à l'API.\\\\
+	Dans un premier temps, nous avons mit en place un \textbf{VirtualHost}, une directive de configuration d’Apache2 qui permet d’héberger plusieurs sites web ou applications au sein d'un même serveur, en définissant des règles spécifiques à chaque hôte.Dans notre cas, nous avons créé un fichier de configuration dédié nommé \texttt{intelighouse.conf} afin d’exposer notre API SmartHome sur un port spécifique que nous avons attribué: \textbf{Le port 8000}.\\
+	Le fichier de configuration \textbf{intelighouse.conf} a été créé au sein du répertoire \texttt{/etc/apache2/sites-available/} avec le contenu suivant :
+	
+	\begin{lstlisting}
+	<VirtualHost *:8000>
+		ServerName 172.20.10.5
+		DocumentRoot /var/www/SmartHomeAPI/SmartHomeApi/public
+		
+		<Directory /var/www/SmartHomeAPI/SmartHomeApi/public>
+		AllowOverride All
+		Require all granted
+		</Directory>
+	</VirtualHost>
+	\end{lstlisting}
+	
+	La configuration ci-dessus, spécifie ainsi que l'application \textbf{Laravel} écoutera sur le \textbf{port 8000}, et que le \textbf{VirtualHost} sera associée à l'adresse IP \textbf{172.20.10.5}. Ainsi, l'API sera accessible via l'url: \textbf{http://172.20.10.5:8000/}, depuis le client.\\
+	Enfin, on associe le \textbf{VirtualHost} au répértoire dans lequel se situe l'application Larave, et attribuons à appache2 les droits nécéssaires afin d'activer les fichiers \textbf{.htaccess} et d'y définir des règles.
+	
 	\paragraph{Configuration de la base de données}
-	Nous avons aussi à ce moment là mit en place la base de données contenant les \textbf{intelighouseDB}, dans laquelle nous avons généré depuis \textbf{Laravel}, les migrations permettant la création de la table \textbf{houses} qui stockera les maison, identifié par un nom de \textbf{maison}, un \textbf{mots de passe} ainsi qu'un \textbf{token}.\newpage
+	Nous avons aussi à ce moment là mit en place la base de données contenant les \textbf{intelighouseDB}, dans laquelle nous avons généré depuis \textbf{Laravel}, les migrations permettant la création de la table \textbf{houses} qui stockera les maison, identifié par un nom de \textbf{maison}, un \textbf{mots de passe} ainsi qu'un \textbf{token}.
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.75\textwidth]{ressources/img/preuves/preuveMigration}
+		\includegraphics[width=0.5\textwidth]{ressources/img/preuves/preuveMigration}
 		\caption{Vérication de la création de la \textbf{base de données}}
 		\label{fig:preuveBDD}
 	\end{figure}
-	
+	\newpage
 	On constate ainsi en analysant l'image ci-dessus deux points:
 	\begin{itemize}
 		\item La commande \textbf{php artisan migrate.status} permet de ici de vérifier le statut quand aux migrations déployées au sein du projet, nous pouvons voir que la migration \textbf{create\_house\_table} a bien été crée. 
 		\item La commande \textbf{DB::seect('SHOW TABLES')} permet de vérifier quels tables sont contenues en base, ce qui nous permet ainsi de constater que la table \textbf{houses} issues de la migration \textbf{create\_houses\_tables} a bien été crée au sein de \textbf{intelighouseDB}.
 	\end{itemize}
 	
-	
-	
-
-	
 	\subsubsection{Architecture de l'API}
+	SmartHomeAPI repose sur une architecture suivant l'architecture MVC définit par le framework \textbf{Laravel}, faisant ainsi d'elle une architecture modulaire et extensible.\\
+	L'architecture permet de gérer les maisons connectés de leur authentication, ainsi que la récéption des données issues des maisons authentifié.\\
+	L'API suit le modèle \textbf{RESTful}, permettant ainsi une séparation claire des résponsabilités ainsi qu'une compatibilité avec divers applications clientes (\textit{cf.} section 3.3 \textbf{Surveillance des données avec une interface graphique}).
+	
+	\paragraph{Structure globale de l'API}
+	
+	L'API est structurée en plusieurs composants:
+	\begin{itemize}
+		\item \textbf{Les routes}: Elles permettent de définir les \textbf{points d'entrée} de l'API, c'est à dire les différents URL par lesquelles les clients vont effectuer leurs requêtes de manière à accéder au service voulu. Ces points d'entrées ont étaient mis en place au sein du fichier \texttt{routes/api.php}.
+		\item \textbf{Les contrôleurs}: Ils permettent d'acheminer les commandes des modèles. Au sein de l'\textbf{API}, deux contrôleurs sont centraux: Il y a tout d'abord \textbf{HouseController}, qui permet de gérer la création de maison, l'authentification, et il y a \textbf{InfluxDBController}, qui permet de gérer la récupération des données des divers maisons, authentifié par token, via l'API \textbf{InfluxDB} interne au serveur.
+		\item \textbf{Le Modèle}: Le modèle dans notre cas contient la représentation spécifiques des données spécifiques d'une maison stockée au sein de la base de données \textbf{MySQL}.
+		\item \textbf{Base de données} L'API accès à deux bases de données au sein du serveur virtuelle: La base de donnée liée au séries de donnée de chaque maison, aucuel l'accès se fait par le biais de l'API \textbf{InfluxDB}, ainsi que la base de données MySQL contenant les utilisateurs. Les deux base de données correspondent leurs information par le biais d'une clès appelée \textbf{token}, généré lorsque l'utilisateur effectue une requête de création de maison à \textbf{SmartHomeAPI}.
+	\end{itemize}
+	
+	\paragraph{Structure des bases de données} La figure ci-dessous décrit la structure de la table \textbf{House} associée à sa table \textbf{intelighouse}, situées au sein de bases de données de type différents.
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.5\textwidth]{ressources/img/shémas/BDDS_Archi}
+			\caption{Association d'une Table Maison de Smarthouse à ses séries de données temporelles collectées}
+		\label{fig:archBDDs}
+		\end{figure}
+	\paragraph{Fonctionnement des routes}
+	\paragraph{Fonctionnement des Contrôleurs}
+	\paragraph{Résumé de l'architecture}
 	
 	\subsection{Automatisation de l'authentification des maisons}
 	\subsubsection{Signature automatique des certificats}

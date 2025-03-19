@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  18 MAR 2025 12:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.3)  19 MAR 2025 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,14 +1193,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 330--334
 
  []
 
-<ressources/img/Gantt/diagrammePrevisionnel.png, id=210, 887.315pt x 222.8325pt
+<ressources/img/Gantt/diagrammePrevisionnel.png, id=212, 887.315pt x 222.8325pt
 >
 File: ressources/img/Gantt/diagrammePrevisionnel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammePrevisionnel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammePrevisionnel.png  used o
 n input line 341.
 (pdftex.def)             Requested size: 455.24411pt x 114.32309pt.
-<ressources/img/Gantt/diagrammeReel.png, id=211, 1110.1475pt x 301.125pt>
+<ressources/img/Gantt/diagrammeReel.png, id=213, 1110.1475pt x 301.125pt>
 File: ressources/img/Gantt/diagrammeReel.png Graphic file (type png)
 <use ressources/img/Gantt/diagrammeReel.png>
 Package pdftex.def Info: ressources/img/Gantt/diagrammeReel.png  used on input 
@@ -1209,7 +1209,7 @@ line 347.
 [4 <./ressources/img/Gantt/diagrammePrevisionnel.png> <./ressources/img/Gantt/d
 iagrammeReel.png>]
 Chapter 3.
-<ressources/img/shémas/shemaInfras.png, id=217, 1073.00874pt x 620.3175pt>
+<ressources/img/shémas/shemaInfras.png, id=219, 1073.00874pt x 620.3175pt>
 File: ressources/img/shémas/shemaInfras.png Graphic file (type png)
 <use ressources/img/shémas/shemaInfras.png>
 Package pdftex.def Info: ressources/img/shémas/shemaInfras.png  used on input 
@@ -1228,7 +1228,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 392--396
  []
 
 [6]
-<ressources/img/shémas/shemaEmissionSSL.drawio.png, id=228, 1073.00874pt x 590
+<ressources/img/shémas/shemaEmissionSSL.drawio.png, id=230, 1073.00874pt x 590
 .205pt>
 File: ressources/img/shémas/shemaEmissionSSL.drawio.png Graphic file (type png
 )
@@ -1241,7 +1241,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
-<ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png, id=230, 33
+<ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png, id=232, 33
 13.37875pt x 1263.72125pt>
 File: ressources/img/preuves/emissionReceptionMosquittoValide.drawio.png Graphi
 c file (type png)
@@ -1251,7 +1251,7 @@ e.drawio.png  used on input line 416.
 (pdftex.def)             Requested size: 455.24411pt x 173.6224pt.
 [7 <./ressources/img/shémas/shemaEmissionSSL.drawio.png> <./ressources/img/pre
 uves/emissionReceptionMosquittoValide.drawio.png>]
-<ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png, id=239, 
+<ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png, id=241, 
 4078.23625pt x 1263.72125pt>
 File: ressources/img/preuves/emissionReceptionMosquittoInvalide.drawio.png Grap
 hic file (type png)
@@ -1271,7 +1271,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 448--452
 
  []
 
-<ressources/img/shémas/archiInflux.drawio.png, id=247, 5779.5925pt x 1290.8225
+<ressources/img/shémas/archiInflux.drawio.png, id=249, 5779.5925pt x 1290.8225
 pt>
 File: ressources/img/shémas/archiInflux.drawio.png Graphic file (type png)
 <use ressources/img/shémas/archiInflux.drawio.png>
@@ -1310,7 +1310,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 525--526
  []
 
 [11]
-<ressources/img/shémas/housesimulationDiagram.png, id=277, 1194.4625pt x 251.9
+<ressources/img/shémas/housesimulationDiagram.png, id=279, 1194.4625pt x 251.9
 4125pt>
 File: ressources/img/shémas/housesimulationDiagram.png Graphic file (type png)
 
@@ -1324,7 +1324,7 @@ Overfull \hbox (12.57788pt too wide) in paragraph at lines 554--555
 la-teur[] \T1/cmr/m/n/10 Afin de r�-sumer l'architecture
  []
 
-<ressources/img/shémas/housesimulationUML.png, id=278, 1544.77126pt x 429.605p
+<ressources/img/shémas/housesimulationUML.png, id=280, 1544.77126pt x 429.605p
 t>
 File: ressources/img/shémas/housesimulationUML.png Graphic file (type png)
 <use ressources/img/shémas/housesimulationUML.png>
@@ -1348,34 +1348,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 596--602
 
  []
 
-[13] [14]
-<ressources/img/preuves/preuveMigration.png, id=321, 667.49374pt x 582.175pt>
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 628--634
+
+ []
+
+
+Overfull \hbox (28.44472pt too wide) in paragraph at lines 628--634
+\T1/cmr/m/n/10 Le fichier de con-fig-u-ra-tion \T1/cmr/bx/n/10 in-te-lig-house.
+conf \T1/cmr/m/n/10 a �t� cr�� au sein du r�per-toire \T1/cmtt/m/n/10 /etc/apac
+he2/sites-available/
+ []
+
+[14]
+<ressources/img/preuves/preuveMigration.png, id=322, 667.49374pt x 582.175pt>
 File: ressources/img/preuves/preuveMigration.png Graphic file (type png)
 <use ressources/img/preuves/preuveMigration.png>
 Package pdftex.def Info: ressources/img/preuves/preuveMigration.png  used on in
-put line 634.
-(pdftex.def)             Requested size: 341.43307pt x 297.79366pt.
- [15 <./ressources/img/preuves/preuveMigration.png>] [16]
+put line 655.
+(pdftex.def)             Requested size: 227.62206pt x 198.52318pt.
+ [15 <./ressources/img/preuves/preuveMigration.png>]
+<ressources/img/shémas/BDDS_Archi.png, id=342, 728.7225pt x 329.23pt>
+File: ressources/img/shémas/BDDS_Archi.png Graphic file (type png)
+<use ressources/img/shémas/BDDS_Archi.png>
+Package pdftex.def Info: ressources/img/shémas/BDDS_Archi.png  used on input l
+ine 684.
+(pdftex.def)             Requested size: 227.62206pt x 102.83388pt.
+ [16 <./ressources/img/shémas/BDDS_Archi.png>] [17]
 Chapter 4.
-[17
-
-]
-Chapter 5.
 [18
 
 ]
+Chapter 5.
+[19
+
+]
 Appendix A.
-(./rapportProjetIsima2025.bbl [19
+(./rapportProjetIsima2025.bbl [20
 
 ]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [20
+) [21
 
 ]
 No file rapportProjetIsima2025.gls.
-[21
+[22
 
 ] (./rapportProjetIsima2025.aux)
 Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
@@ -1383,11 +1402,11 @@ Package rerunfilecheck Info: File `rapportProjetIsima2025.out' has not changed.
 (rerunfilecheck)             Checksum: DC67B890FAF27B05A17937DA1FF80B15;5834.
  ) 
 Here is how much of TeX's memory you used:
- 33805 strings out of 476091
- 649351 string characters out of 5794081
- 1937330 words of memory out of 5000000
- 53480 multiletter control sequences out of 15000+600000
- 530409 words of font info for 63 fonts, out of 8000000 for 9000
+ 33856 strings out of 476091
+ 650311 string characters out of 5794081
+ 1938330 words of memory out of 5000000
+ 53509 multiletter control sequences out of 15000+600000
+ 531745 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,13n,90p,2268b,1300s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1398,22 +1417,25 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fo
-nts/type1/public/cm-super/sfbx0800.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfxc1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on rapportProjetIsima2025.pdf (26 pages, 5766666 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fo
+nts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/cm
+-super/sfbx0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfxc1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfxc1728.pfb>
+Output written on rapportProjetIsima2025.pdf (27 pages, 5827003 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 366 compressed objects within 4 object streams
- 112 named destinations out of 1000 (max. 500000)
- 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 399 compressed objects within 4 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
 
