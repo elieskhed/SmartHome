@@ -6,6 +6,17 @@
 \catcode `!\active 
 \catcode `?\active 
 \providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \pgfsyspdfmark {pgfid1}{4736286}{50644704}
@@ -80,38 +91,50 @@
 \pgfsyspdfmark {pgfid18}{4736286}{50644704}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Mise en place d'une API Web}{13}{section.3.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Architecture logicielle de l'API et choix technologiques}{13}{subsection.3.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Automatisation de l'authentification des maisons}{13}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Mise en place d'une base de données MySQL}{13}{section*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Signature automatique des certificats}{13}{section*.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Filtrage et récupération des données}{13}{subsection.3.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Communication avec InfluxDB API}{13}{section*.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{13}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{13}{subsection.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{13}{subsection.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Authentification des maisons}{13}{section*.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Affichage des données récupérées}{13}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Choix du framework Laravel}{13}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Déploiement de Laravel au sein du serveur Virtuel}{13}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Installation des dépendances requises}{13}{section*.15}\protected@file@percent }
 \pgfsyspdfmark {pgfid19}{4736286}{50644704}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Résultats et Discussion}{14}{chapter.4}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{14}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{14}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Configuration de SmartHomeAPI}{14}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Configuration d'Apache2}{14}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Configuration de la base de données}{14}{section*.18}\protected@file@percent }
 \pgfsyspdfmark {pgfid20}{4736286}{50644704}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{15}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Vérication de la création de la \textbf  {base de données}}}{15}{figure.3.8}\protected@file@percent }
+\newlabel{fig:preuveBDD}{{3.8}{15}{Vérication de la création de la \textbf {base de données}}{figure.3.8}{}}
+\pgfsyspdfmark {pgfid21}{4736286}{50644704}
+\@writefile{toc}{\contentsline {subsubsection}{Architecture de l'API}{16}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Automatisation de l'authentification des maisons}{16}{subsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Signature automatique des certificats}{16}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Filtrage et récupération des données}{16}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Communication avec InfluxDB API}{16}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Tests de l'API avec Postman}{16}{subsection.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{16}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{16}{subsection.3.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{16}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Authentification des maisons}{16}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Affichage des données récupérées}{16}{section*.23}\protected@file@percent }
+\pgfsyspdfmark {pgfid22}{4736286}{50644704}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Résultats et Discussion}{17}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Conclusion du projet}{15}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Limites et améliorations possibles}{15}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{17}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{17}{section.4.2}\protected@file@percent }
+\pgfsyspdfmark {pgfid23}{4736286}{50644704}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{18}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Conclusion du projet}{18}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Limites et améliorations possibles}{18}{section.5.2}\protected@file@percent }
 \citation{*}
 \bibstyle{unsrt}
 \bibdata{references}
-\pgfsyspdfmark {pgfid21}{4736286}{50644704}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Annexes}{16}{appendix.A}\protected@file@percent }
+\pgfsyspdfmark {pgfid24}{4736286}{50644704}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Annexes}{19}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Lexique}{16}{section.A.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Bibliographie}{16}{section.A.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Webographie}{16}{section.A.3}\protected@file@percent }
-\pgfsyspdfmark {pgfid22}{4736286}{50644704}
-\pgfsyspdfmark {pgfid23}{4736286}{50644704}
-\gdef \@abspage@last{23}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Lexique}{19}{section.A.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Bibliographie}{19}{section.A.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Webographie}{19}{section.A.3}\protected@file@percent }
+\pgfsyspdfmark {pgfid25}{4736286}{50644704}
+\pgfsyspdfmark {pgfid26}{4736286}{50644704}
+\gdef \@abspage@last{26}
