@@ -10,7 +10,6 @@
 \usepackage{eso-pic}
 \usepackage{tcolorbox}
 \usepackage{hyperref}
-\usepackage[toc]{glossaries}
 \usepackage{tikz}
 
 \usepackage{listings}
@@ -20,8 +19,6 @@
 \usepackage{booktabs} % Pour de jolis tableaux
 \usepackage{tabularx} % Permet un ajustement automatique des colonnes
 \usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=2cm, margin=1in]{geometry} % Définit les marges pour éviter les débordements
-
-
 
 % Définir les paramètres de l'image de fond pour la première page
 \backgroundsetup{
@@ -137,12 +134,99 @@
 	morestring=[b]"
 }
 
+
+\usepackage[toc,nonumberlist]{glossaries}
 \makeglossaries
-\newglossaryentry{API}
-{
-	name=API,
-	description={(Interface de Programmation d'Application) est un ensemble de protocole permettant à différentes applications logicielle d'echanger des données entre elles}
+\newglossaryentry{api}{
+	name={API},
+	description={(Interface de Programmation d'Application) est un ensemble de protocoles permettant à différentes applications logicielles d'échanger des données entre elles}
 }
+\newglossaryentry{api_rest}{
+	name={API REST},
+	description={Une API REST (Representational State Transfer) est une interface de programmation utilisant le protocole HTTP pour faciliter l'accès et la manipulation de ressources via des méthodes standardisées, tout en assurant une communication fluide entre systèmes.}
+}
+\newglossaryentry{authentification}{
+	name={Authentification},
+	description={L'authentification est le processus par lequel un système vérifie l'identité d'un utilisateur ou d'un appareil, garantissant ainsi un accès sécurisé aux ressources.}
+}
+\newglossaryentry{buffer}{
+	name={Buffer},
+	description={Un buffer est une zone de mémoire temporaire utilisée pour stocker des données en transit entre différentes parties d'un système, afin de compenser les différences de vitesse de traitement.}
+}
+\newglossaryentry{broker}{
+	name={Broker},
+	description={Dans le contexte des systèmes de messagerie, un broker est un intermédiaire qui reçoit, filtre et transmet des messages entre différents clients, assurant ainsi la communication dans des architectures distribuées.}
+}
+\newglossaryentry{chiffrement}{
+	name={Chiffrement},
+	description={Le chiffrement consiste à transformer des données lisibles en un format illisible à l'aide d'un algorithme et d'une clé, afin de protéger la confidentialité des informations.}
+}
+\newglossaryentry{domotique}{
+	name={Domotique},
+	description={La domotique désigne l'ensemble des techniques permettant de contrôler et d'automatiser les équipements d'une habitation afin d'améliorer le confort, la sécurité et l'efficacité énergétique.}
+}
+\newglossaryentry{influxdb}{
+	name={InfluxDB},
+	description={InfluxDB est une base de données open source optimisée pour le stockage et l'analyse de séries temporelles, particulièrement utilisée dans les applications de monitoring et IoT.}
+}
+\newglossaryentry{iot}{
+	name={IoT},
+	description={(Internet des Objets) désigne l'ensemble des objets physiques connectés à Internet et capables de collecter et d'échanger des données, facilitant ainsi l'automatisation et le contrôle à distance.}
+}
+\newglossaryentry{json}{
+	name={JSON},
+	description={JSON (JavaScript Object Notation) est un format léger d'échange de données, facile à lire et à écrire pour les humains, et simple à parser pour les machines.}
+}
+\newglossaryentry{mosquitto}{
+	name={Mosquitto},
+	description={Mosquitto est un logiciel open source qui sert de courtier (broker) pour le protocole MQTT, facilitant la transmission de messages entre différents clients, notamment dans des applications IoT.}
+}
+\newglossaryentry{mqtt}{
+	name={MQTT},
+	description={MQTT (Message Queuing Telemetry Transport) est un protocole de messagerie léger basé sur le modèle publish/subscribe, conçu pour les communications machine-à-machine dans des environnements à bande passante limitée.}
+}
+\newglossaryentry{monitoring}{
+	name={Monitoring},
+	description={Du terme anglais "monitoring" (surveillance), il s'agit de l'ensemble des techniques permettant de suivre et d'analyser en temps réel l'activité d'un système ou d'une application.}
+}
+\newglossaryentry{optimiser}{
+	name={Optimiser},
+	description={Optimiser signifie rendre quelque chose plus efficace, performant ou mieux adapté à son usage en améliorant sa configuration ou son fonctionnement.}
+}
+\newglossaryentry{orm}{
+	name={ORM},
+	description={Un ORM (Object-Relational Mapping) est une technique qui permet de faire le lien entre les données d'une base relationnelle et les objets d'un langage de programmation orienté objet, facilitant ainsi l'interaction avec la base de données.}
+}
+\newglossaryentry{orm_deployment}{
+	name={ORM Deployment},
+	description={L'ORM deployment désigne le processus de déploiement et de configuration d'un système d'Object-Relational Mapping dans un environnement de production, afin de garantir une interaction efficace entre l'application et la base de données.}
+}
+\newglossaryentry{pdo}{
+	name={PDO},
+	description={PDO (PHP Data Objects) est une interface d'abstraction qui permet d'accéder à diverses bases de données en PHP de manière uniforme et sécurisée.}
+}
+\newglossaryentry{qt}{
+	name={Qt},
+	description={Qt est un framework multiplateforme en C++ destiné au développement d'interfaces graphiques riches et d'applications performantes, offrant un ensemble complet de bibliothèques et d'outils.}
+}
+\newglossaryentry{telegraph}{
+	name={Telegraph},
+	description={(Probablement une référence à "Telegraf") Telegraf est un agent open source développé par InfluxData, qui collecte et transmet des métriques vers InfluxDB pour le monitoring des systèmes.}
+}
+\newglossaryentry{topics}{
+	name={Topics},
+	description={Dans le cadre du protocole MQTT, un topic est un canal de communication auquel les clients peuvent publier ou s'abonner pour recevoir des messages organisés par sujet.}
+}
+\newglossaryentry{token}{
+	name={Token},
+	description={Un token est une chaîne de caractères utilisée pour représenter une autorisation ou une identité dans un système, souvent employé pour l'authentification et la sécurisation des échanges.}
+}
+\newglossaryentry{widget}{
+	name={Widget},
+	description={Dans le développement d'interfaces graphiques, un widget est un élément d'interface (tel qu'un bouton, un champ de texte, etc.) qui permet à l'utilisateur d'interagir avec l'application.}
+}
+
+
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
@@ -1057,9 +1141,8 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 	\bibliographystyle{unsrt}
 	\bibliography{references}
 	
-	\clearpage
 	
+	\glsaddall
 	\printglossaries
-	
 	
 \end{document}
