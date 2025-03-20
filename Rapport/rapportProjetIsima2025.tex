@@ -865,6 +865,8 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 		
 	\paragraph{Explication des différentes classes de SmartHouse Monitoring}
 	
+	Afin de faciliter la compréhension, le schéma ci-dessous décrit l'architecture de \textbf{SmartHouse Monitoring}:
+		
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.75\textwidth]{ressources/img/shémas/hierarchieQT.png}
@@ -872,7 +874,35 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 		\label{fig:hierarchieQT}
 	\end{figure}
 	
+	L’architecture de \textbf{SmartHouse Monitoring} repose sur une conception \textbf{orientée objet} permettant de gérer les interactions entre l’\textbf{interface graphique} et l’\textbf{API REST}. Le fichier \textbf{main.cpp} constitue le \textbf{point d’entrée} de l’application. Il initialise une instance de la classe \textbf{Window}, qui est une extension de \textbf{QMainWindow}, et la \textbf{rend visible à l’exécution}. Ce choix permet d’avoir une interface principale centralisée, capable de gérer et de contenir différents \textbf{widgets} en fonction des besoins de l’utilisateur. Ces widgets constituent \textbf{des onglets} permettant à l'utilisateur d'aller vers les différents services du logiciel.
 	
+	L’un des composants clés du projet est la classe \textbf{MonitorHouseData}, qui hérite de \textbf{QWidget} et sert \textbf{d’interface dédiée à la récupération et l’affichage des données issues de l’API}. Cette classe définit plusieurs éléments, notamment \textbf{un champ de texte} permettant à l’utilisateur de saisir son \textbf{token d’authentification}, des \textbf{cases à cocher afin de filtrer les données} (données récentes ou historiques), ainsi qu’un \textbf{bouton d’envoi qui déclenche une requête HTTP}. La communication avec l’\textbf{API} est réalisée via \textbf{QNetworkAccessManager}, qui permet \textbf{d’envoyer des requêtes et de gérer leurs réponses de manière asynchrone}. Une fois les données récupérées, elles sont affichées et interprétées \textbf{via un graphique interactif}, rendu possible grâce à l’utilisation de \textbf{QtCharts}.
+	
+	La classe \textbf{CreateUtil}, également héritée de \textbf{QWidget}, a pour rôle\textbf{ de gérer l’inscription d’un propriétaire} et la \textbf{création d’une maison connectée}. Elle intègre des \textbf{champs de saisie} pour le\textbf{ nom de la maison} et le \textbf{mot de passe}, ainsi qu’un \textbf{bouton pour envoyer les informations à l’API REST}. Cette approche permet d’associer chaque \textbf{maison} à un \textbf{propriétaire unique} et d’obtenir en retour un \textbf{token} et des\textbf{ certificats d’authentification}.
+	
+	Enfin, l’interprétation des réponses \textbf{JSON} envoyées par l’\textbf{API} est assurée par la classe \textbf{ApiResponseParser}, qui hérite de \textbf{QObject}. Son rôle est de convertir les \textbf{chaînes JSON en objets exploitables} grâce aux classes \textbf{QJsonDocument} et \textbf{QJsonObject}. Le choix des bibliothèques \textbf{QT} natives, comme \textbf{QtNetwork} pour les requêtes \textbf{HTTP}, \textbf{QJson} pour la \textbf{manipulation des objets JSON} et \textbf{QtCharts} pour l’\textbf{affichage des données}, permettera ainsi de répondre au besoin globale de \textbf{SmartHouse Monitoring}, à savoir afficher les données en temps réels par le biais de graphes interactifs, en communiquant de manière asynchrone à des périodes définies avec \textbf{Smarthouse API}.\\
+
+	\subsection{Tests réalisée avec SmartHouse Monitoring}
+	\paragraph{Structure interface graphique}	L'interface graphique de \textbf{SmartHouse Monitoring} se compose de \textbf{deux onglets distincts}, permettant de \textbf{gérer} et de \textbf{surveiller les maisons connectées} facilement. Le \textbf{premier onglet}, intitulé \textbf{Créer une Maison}, est permet d'enregistrer \textbf{une nouvelle maison au sein du système}. Il comporte \textbf{plusieurs champs de saisie} permettant à l’utilisateur d’entrer un\textbf{ nom de maison}, un \textbf{mot de passe}, ainsi qu’une \textbf{confirmation du mot de passe}. Une fois ces informations renseignées, un bouton situé au bas de l’interface permet de \textbf{valider l’enregistrement} et de \textbf{récupérer les données d’authentification associées}:  le \textbf{token} ainsi que les \textbf{certificats}.
+	 Un champ \textbf{Résultat} affiche la réponse \textbf{JSON} de la requête.\\
+	
+	Le \textbf{second onglet}, \textbf{Surveiller une maison}, permet à l’utilisateur de suivre en \textbf{temps réel} les \textbf{données des capteurs de sa maison connectée}. Un champ est présent pour entrer le \textbf{token d’authentification} récupéré lors de l'enregistrement. Ensuite, plusieurs options sont disponibles pour \textbf{filtrer le type de données à récupérer}, notamment \textbf{les données les plus récentes ou les données historiques}. Une fois la requête validée en appuyant sur le bouton \textbf{État du capteur}, les informations sont récupérées depuis l’\textbf{API} et affichées sous forme d’un graphique dynamique, permettant une visualisation \textbf{claire} et \textbf{détaillée} des valeurs mesurées par les capteurs.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.75\textwidth]{ressources/img/preuves/qt12.drawio}
+		\caption{Interface utilisateur réalisée}
+		\label{fig:interfaceQT}
+	\end{figure}
+	
+	\paragraph{Une première communication avec l'API} L’image ci-dessous illustre un pas majeure dans le \textbf{développement de SmartHouse Monitoring}. En effet, nous sommes parvenus à \textbf{établir une communication entre l’interface Qt et l’API REST}. Lorsqu’un utilisateur saisit le \textbf{token} de la maison et sélectionne une \textbf{option de récupération des données}, une requête \textbf{HTTP} est envoyée à l’\textbf{API}. La réponse obtenue, visible dans la console, est un \textbf{JSON contenant les données des capteurs associés à la maison connectée}.\\
+	
+	Toutefois, ces données sont \textbf{encore brutes et non exploitées visuellement}. L'étape suivante consiste donc à \textbf{parser ce JSON} afin d’extraire les informations utiles, telles que les \textbf{valeurs des capteurs} et leurs \textbf{horodatages}, dans le but de les afficher sous forme de\textbf{ graphique dynamique} dans \textbf{l’onglet de surveillance des capteurs}. Cette dernière phase permettrait une visualisation \textbf{claire} de l’\textbf{évolution des données en temps réel}, rendant ainsi l’interface  \textbf{fonctionnelle} et \textbf{efficace} pour le \textbf{suivi d’une maison connectée}.
+		\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.75\textwidth]{ressources/img/preuves/preuveQTApi}
+		\caption{Communication entre \textbf{SmartHouse Monitoring} et \textbf{SmartHouseAPI}}
+		\label{fig:preuveQTApi}
+	\end{figure}
 	\chapter{Résultats et Discussion}
 	À l’issue de ce projet, nous avons pu mettre en place un système de surveillance des données issues de maisons connectée, sécurisé. l'architecture globale intègre plusieurs technologies, assurant l'\textbf{émission} et la \textbf{réception} des données en temps réel via le protocole MQTTs, ainsi que leur \textbf{stockage} et leur \textbf{affichage}.\\
 	\section{Situation à la fin de l’étude}

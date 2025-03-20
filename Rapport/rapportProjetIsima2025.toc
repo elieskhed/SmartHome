@@ -41,14 +41,17 @@
 \contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{23}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{23}{subsection.3.3.1}%
 \contentsline {paragraph}{Structure de SmartHouse Monitoring}{23}{section*.28}%
-\contentsline {paragraph}{Explication des différentes classes de SmartHouse Monitoring}{24}{figure.3.19}%
-\contentsline {chapter}{\numberline {4}Résultats et Discussion}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{25}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{26}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{27}{chapter.5}%
-\contentsline {paragraph}{Réponse à la problématique}{27}{section*.30}%
-\contentsline {section}{\numberline {5.1}Limites et améliorations possibles}{28}{section.5.1}%
-\contentsline {chapter}{\numberline {A}Annexes}{29}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Lexique}{29}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Bibliographie}{29}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Webographie}{29}{section.A.3}%
+\contentsline {paragraph}{Explication des différentes classes de SmartHouse Monitoring}{24}{section*.29}%
+\contentsline {subsection}{\numberline {3.3.2}Tests réalisée avec SmartHouse Monitoring}{25}{subsection.3.3.2}%
+\contentsline {paragraph}{Structure interface graphique}{25}{section*.30}%
+\contentsline {paragraph}{Une première communication avec l'API}{25}{section*.31}%
+\contentsline {chapter}{\numberline {4}Résultats et Discussion}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{28}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}%
+\contentsline {paragraph}{Réponse à la problématique}{29}{section*.32}%
+\contentsline {section}{\numberline {5.1}Limites et améliorations possibles}{30}{section.5.1}%
+\contentsline {chapter}{\numberline {A}Annexes}{31}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Lexique}{31}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Bibliographie}{31}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Webographie}{31}{section.A.3}%

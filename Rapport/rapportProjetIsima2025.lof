@@ -26,6 +26,8 @@
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Requête de récupération des \textbf {données acquises par capteur d'humidité}}}{21}{figure.3.17}%
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Réponse de l'API des \textbf {données acquises par capteur d'humidité}}}{22}{figure.3.18}%
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Architecture des classes de \textbf {SmartHouse Monitoring}}}{24}{figure.3.19}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Interface utilisateur réalisée}}{25}{figure.3.20}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Communication entre \textbf {SmartHouse Monitoring} et \textbf {SmartHouseAPI}}}{26}{figure.3.21}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
