@@ -272,11 +272,11 @@
 		aux propriétaires d'obtenir une \textbf{vue globale de l'état de leur habitation en temps réel}. Cela joue un rôle crucial dans 
 		plusieurs domaines:
 		\begin{itemize}
-			\item il \textbf{sécuriser} un domicile, permettant par exemple la détéction d'intrusion ainsi que la prévention 
+			\item il permet de \textbf{sécuriser} un domicile, permettant par exemple la détéction d'intrusion ainsi que la prévention 
 			des cambriolages
 			
-			\item il \textbf{optimise énérgétiquement} le domicile, par le biais de l'automatisation des objets 
-			connectés, en fonction d'horraires programmés, afin d'optimiser la consommation d'énergie.
+			\item il \textbf{optimise énergiquement} le domicile, par le biais de l'automatisation des objets 
+			connectés, en fonction d'horaires programmés, afin d'optimiser la consommation d'énergie.
 			
 			\item et il permet enfin \textbf{un confort et un contrôle à distance}, offrant aux propriétaires la possibilité d'activer ou 
 			de désactiver certains dispositifs sans être physiquement présent.\\
@@ -743,6 +743,103 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 	
 	
 	\subsection{Tests de l'API avec Postman}
+	
+	Dans cette sous-section, nous allons tester l’\textbf{API REST} à l’aide de \textbf{Postman}, un outil permettant d’envoyer \textbf{des requêtes HTTP} et d’\textbf{analyser les réponses du serveur}. \textbf{Postman} facilite le développement, le test et la validation des API en simulant des appels client sans nécessiter d’interface graphique spécifique. Il nous a été particulièrement utile lors du développement de l'API.
+	
+	Le tests de l'API est constitué de 3 phases :
+	\begin{itemize}
+		\item \textbf{Créer un propriétaire} et associer son token à la maison connectée simulée, et \textbf{récupérer les certificats} nécessaires à l’authentification auprès du broker MQTT.
+		\item \textbf{Simuler} l’envoi de données depuis la maison connectée.
+		\item \textbf{Vérifier} que l’API accède correctement aux données stockées dans InfluxDB.
+	\end{itemize}
+	
+	
+
+	
+	\paragraph{Création d'un Propriétaire} La première requête consiste à associer un propriétaire à une maison connectée. Pour ce faire, il enregistre sa maison au sein de la base de données du serveur via l’API REST. En réponse, l’\textbf{API} retourne plusieurs éléments \textbf{essentiels à l’identification et à la sécurisation des échanges} :
+	
+	\begin{itemize}
+		\item \textbf{Le Token:} Un identifiant unique attribué à la maison. Il agit comme une clé d’authentification, connue uniquement du propriétaire et stockée dans la maison connectée. Ce token est utilisé pour accéder aux données des capteurs et garantir que seul le propriétaire peut consulter l’état de son domicile.
+		
+		\item \textbf{Le certificat d’autorité (CA.crt):} Nécessaire pour toute communication sécurisée avec le \textbf{broker MQTT}, ce certificat permet de \textbf{vérifier l’authenticité du serveur et d’établir une connexion sécurisée}
+		
+		\item \textbf{clientKey:} Il s’agit de la clé privée propre à la maison connectée, générée lors de son enregistrement. Elle est essentielle pour établir une connexion sécurisée et authentifiée avec le \textbf{broker MQTT}, garantissant que \textbf{seule cette maison spécifique est autorisée à publier des messages}.
+		
+		\item \textbf{cientCrt: }Ce certificat est associé \textbf{à la clé privée} et permet d’\textbf{authentifier la maison auprès du broker MQTT}. Il assure que seules les maisons disposant d’un certificat valide pourront être reconnues et communiquer avec le serveur, empêchant ainsi \textbf{toute tentative d’usurpation d’identité}. 
+	\end{itemize}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.75\textwidth]{ressources/img/preuves/creerMaisonRequete}
+		\caption{Requête d'enregistrement d'un propriétaire associable à sa maison}
+		\label{fig:preuveRequeteCreate}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.75\textwidth]{ressources/img/preuves/creerMaisonReponse}
+		\caption{Réponse de \textbf{SmartHomeAPI} après enregistrement réussis}
+		\label{fig:preuveResponseCreate}
+	\end{figure}
+	
+	\paragraph{Association d'un propriétaire à sa maison et envoie des données}
+		Une fois le propriétaire enregistré via l’\textbf{API REST}, la maison connectée \textbf{récupère les informations d’authentification nécessaires pour communiquer de manière sécurisée avec le broker MQTT}. Les certificats ainsi que les clès sont stockés au sein du répertoire \texttt{certs/} de \textbf{HomeSimulation}, garantissant que chaque maison dispose de son \textbf{ensemble de certificats} et de sa \textbf{clés privé}.
+		
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.75\textwidth]{ressources/img/preuves/champsRenseignes}
+			\caption{Champs à renseigner au sein de \textbf{HomeSimulation : main.py}}
+			\label{fig:champsARenseigner}
+		\end{figure}
+		
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.75\textwidth]{ressources/img/preuves/envoieDonnesAPI}
+			\caption{Envoie de 2 séries de données au serveur: \textbf{172.20.10.5}}
+			\label{fig:envoieDonnees}
+		\end{figure}
+		Ainsi, les données sont envoyées à \textbf{Mosquitto}, et stockés dans \textbf{InfluxDB}.
+	\paragraph{Accès aux données des capteurs via SmartHouseAPI à temps réel}
+	Une fois les données \textbf{envoyées} et \textbf{stockées dans InfluxDB}, il est nécessaire de \textbf{vérifier leur accessibilité via SmartHouseAPI}. Par le biais du \textbf{token unique attribué lors de l’enregistrement de la maison}, seul le propriétaire peut récupérer les données associées à ses capteurs.\\
+	
+	L’accès aux données s’effectue en envoyant une requête \textbf{GET} à l’API, en fournissant \textbf{le token en paramètre}. L’API interroge alors \textbf{InfluxDB} pour \textbf{extraire les séries de données correspondant à la maison demandée}.\\\\
+	
+	\textbf{Récupération de la dernière données acquise}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/preuves/lastDataRequete}
+		\caption{Requête de récupération de la \textbf{dernière donnée acquise}}
+		\label{fig:lastDataRequete}
+	\end{figure}
+	\newpage
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.75\textwidth]{ressources/img/preuves/lastDataReponse}
+		\caption{Réponse de l'API de la dernière données acquise}
+		\label{fig:lastDataReponse}
+	\end{figure}
+	\vspace{1cm}
+	\textbf{Récupération de données filtrées en fonction du capteur d'humidité}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{ressources/img/preuves/dataBySensorRequete}
+		\caption{Requête de récupération des \textbf{données acquises par capteur d'humidité}}
+		\label{fig:dataBySensorRequete}
+	\end{figure}
+	\newpage
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.75\textwidth]{ressources/img/preuves/dataBySensorReponse}
+		\caption{Réponse de l'API des \textbf{données acquises par capteur d'humidité}}
+		\label{fig:dataBySensorResponse}
+	\end{figure}
+	
+	\paragraph{Synthèse des Tests}
+	Les tests effectués confirment \textbf{le bon fonctionnement de SmartHouseAPI}, démontrant que l’architecture mise en place\textbf{ répond aux exigences définies}. L’authentification des maisons via les certificats \textbf{SSL/TLS} et les \textbf{tokens} uniques s'est révélée efficace, \textbf{garantissant un accès sécurisé aux données}.
+	
+	Les requêtes envoyées via \textbf{Postman} ont permis de \textbf{valider les différentes fonctionnalités de l’API}, notamment la \textbf{création d’un propriétaire}, l’\textbf{association des certificats}, et l’\textbf{accès aux données stockées dans InfluxDB}. L'\textbf{API} a correctement \textbf{filtré} et \textbf{renvoyé} les \textbf{informations des capteurs en fonction des permissions définies, confirmant ainsi son rôle central dans la gestion et la sécurisation des échanges}.
+	
+	Ces résultats démontrent que l’\textbf{API} fonctionne \textbf{comme prévu}, offrant un \textbf{accès structuré}, \textbf{fiable} et\textbf{ sécurisé aux données des maisons connectées}.
 	
 	\section{Surveillance des données avec une interface graphique}
 	\subsection{Architecture logicielle de l'application SmartHouse Monitoring}

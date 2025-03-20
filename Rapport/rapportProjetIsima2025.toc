@@ -34,18 +34,22 @@
 \contentsline {paragraph}{Fonctionnement des routes}{17}{section*.22}%
 \contentsline {paragraph}{Résumé de l'architecture}{17}{section*.23}%
 \contentsline {subsection}{\numberline {3.2.2}Tests de l'API avec Postman}{18}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{18}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{18}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{18}{subsection.3.3.2}%
-\contentsline {subsubsection}{Authentification des maisons}{18}{section*.24}%
-\contentsline {subsubsection}{Affichage des données récupérées}{18}{section*.25}%
-\contentsline {chapter}{\numberline {4}Résultats et Discussion}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{19}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{20}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{21}{chapter.5}%
-\contentsline {paragraph}{Réponse à la problématique}{21}{section*.26}%
-\contentsline {section}{\numberline {5.1}Limites et améliorations possibles}{22}{section.5.1}%
-\contentsline {chapter}{\numberline {A}Annexes}{23}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Lexique}{23}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Bibliographie}{23}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Webographie}{23}{section.A.3}%
+\contentsline {paragraph}{Création d'un Propriétaire}{18}{section*.24}%
+\contentsline {paragraph}{Association d'un propriétaire à sa maison et envoie des données}{19}{section*.25}%
+\contentsline {paragraph}{Accès aux données des capteurs via SmartHouseAPI à temps réel}{20}{section*.26}%
+\contentsline {paragraph}{Synthèse des Tests}{22}{section*.27}%
+\contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{22}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{22}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Intégration et communication avec l'API Web}{22}{subsection.3.3.2}%
+\contentsline {subsubsection}{Authentification des maisons}{22}{section*.28}%
+\contentsline {subsubsection}{Affichage des données récupérées}{22}{section*.29}%
+\contentsline {chapter}{\numberline {4}Résultats et Discussion}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{24}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{25}{chapter.5}%
+\contentsline {paragraph}{Réponse à la problématique}{25}{section*.30}%
+\contentsline {section}{\numberline {5.1}Limites et améliorations possibles}{26}{section.5.1}%
+\contentsline {chapter}{\numberline {A}Annexes}{27}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Lexique}{27}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Bibliographie}{27}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Webographie}{27}{section.A.3}%

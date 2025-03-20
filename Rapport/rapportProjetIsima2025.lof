@@ -17,6 +17,14 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Vérication de la création de la \textbf {base de données}}}{15}{figure.3.8}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Association d'une Table Maison de Smarthouse à ses séries de données temporelles collectées}}{16}{figure.3.9}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Architecture de SmartHomeAPI}}{18}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Requête d'enregistrement d'un propriétaire associable à sa maison}}{19}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Réponse de \textbf {SmartHomeAPI} après enregistrement réussis}}{19}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Champs à renseigner au sein de \textbf {HomeSimulation : main.py}}}{19}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Envoie de 2 séries de données au serveur: \textbf {172.20.10.5}}}{20}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Requête de récupération de la \textbf {dernière donnée acquise}}}{20}{figure.3.15}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Réponse de l'API de la dernière données acquise}}{21}{figure.3.16}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Requête de récupération des \textbf {données acquises par capteur d'humidité}}}{21}{figure.3.17}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Réponse de l'API des \textbf {données acquises par capteur d'humidité}}}{22}{figure.3.18}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
