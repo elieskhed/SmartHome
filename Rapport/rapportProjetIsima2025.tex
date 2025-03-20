@@ -839,13 +839,32 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 	
 	Les requêtes envoyées via \textbf{Postman} ont permis de \textbf{valider les différentes fonctionnalités de l’API}, notamment la \textbf{création d’un propriétaire}, l’\textbf{association des certificats}, et l’\textbf{accès aux données stockées dans InfluxDB}. L'\textbf{API} a correctement \textbf{filtré} et \textbf{renvoyé} les \textbf{informations des capteurs en fonction des permissions définies, confirmant ainsi son rôle central dans la gestion et la sécurisation des échanges}.
 	
-	Ces résultats démontrent que l’\textbf{API} fonctionne \textbf{comme prévu}, offrant un \textbf{accès structuré}, \textbf{fiable} et\textbf{ sécurisé aux données des maisons connectées}.
+	Ces résultats démontrent que l’\textbf{API} fonctionne \textbf{comme prévu}, offrant un \textbf{accès structuré}, \textbf{fiable} et\textbf{ sécurisé aux données des maisons connectées}.\newpage
 	
 	\section{Surveillance des données avec une interface graphique}
-	\subsection{Architecture logicielle de l'application SmartHouse Monitoring}
-	\subsection{Intégration et communication avec l'API Web}
-	\subsubsection{Authentification des maisons}
-	\subsubsection{Affichage des données récupérées}
+	L’\textbf{intégration d’une interface graphique} est un \textbf{élément clé} dans la \textbf{gestion} et la \textbf{surveillance d’un système de maison connectée}. Une interface utilisateur intuitive permet aux propriétaires de \textbf{visualiser en temps réel l’état de leurs capteurs}, d’interpréter rapidement les données collectées et d’interagir avec le système. Sans cette couche visuelle, l’exploitation des informations se limiterait à des \textbf{requêtes API} et des \textbf{réponses JSON}, ce qui serait\textbf{ peu convivial pour un utilisateur non technique}.\\
+	
+	Pour le développement de cette interface, nous avons choisi \textbf{QT}, un \textbf{framework puissant} et \textbf{énormément utilisé pour la création d’applications multiplateformes en C++}. \textbf{QT} offre plusieurs avantages qui en font un outil performant pour notre projet :
+	
+	\begin{itemize}
+		\item \textbf{Simplicité de gestion de la mémoire: } Contrairement à un programme \textbf{C++ classique} où il est nécessaire de gérer la création ainsi que la \textbf{destruction des objets}, QT \textbf{réduit les risques de fuites de mémoire} en assurant une \textbf{gestion optimisée des ressources en mémoire}.
+		
+		\item \textbf{Documentation et support communautaire:}  \textbf{QT} bénéficie d’une documentation complète et largement accessible, ce qui \textbf{facilite la prise en main} et l’\textbf{implémentation des divers fonctionnalités fournies par le framework}. 
+		
+		\item \textbf{Compatibilité multiplateforme :} Une application développée avec \textbf{QT} peut être exécutée sur\textbf{ Windows, Linux, macOS et même certaines plateformes embarquées}, offrant ainsi une praticité accrue pour le déploiement.
+		\item \textbf{Intégration avec l’API REST :} \textbf{QT} permet une\textbf{ gestion efficace des requêtes réseau}, ce qui permet de \textbf{récupérer les données en temps réel depuis SmartHouseAPI}, de les \textbf{traiter} et de les \textbf{afficher} sous \textbf{forme de graphiques interactifs pour une meilleure surveillance des données issus des capteurs}.
+	\end{itemize}
+	\vspace{0.5cm}
+	Grâce à \textbf{QT}, nous avons pu développer un début d’interface permettant de \textbf{récupérer} et \textbf{parser} les données \textbf{issues de l’API}. Bien que l’affichage graphique n’ait pas encore été finalisé, cette première implémentation pose \textbf{les bases d’un système de monitoring}, ouvrant la voie à des \textbf{améliorations futures telles que l’ajout de tableaux de bord dynamiques et d’un contrôle interactif des équipements connectés}.
+	
+	\subsection{Architecture logicielle de l'application SmartHouse Monitoring}	
+	
+	\paragraph{Structure de SmartHouse Monitoring}
+		Tout d'abord, il est \textbf{essentiel de comprendre la structure d’un projet Qt en C++}. Un projet Qt repose sur un fichier \textbf{.pro}, qui définit sa \textbf{configuration}, les \textbf{bibliothèques utilisées} ainsi que les \textbf{paramètres de compilation}. Il est composé de \textbf{fichiers source} et \textbf{en-têtes}, qui contiennent respectivement l’\textbf{implémentation} ainsi que la \textbf{définition des classes}. L’interface graphique peut être \textbf{conçue à l’aide de fichiers .ui, générés via Qt Designer}, mais dans notre cas, nous avons préféré structurer l’interface directement depuis le code, en créant des classes dédiées afin d'avoir un contrôle plus précis sur l’affichage. Enfin, un projet peut inclure des fichiers de ressources (.qrc), permettant d’intégrer des éléments tels que des \textbf{icônes} et \textbf{images} nécessaires à l'affichage.\\\\
+		Ainsi, le développement de \textbf{SmartHouse Monitoring} s'est structuré autour de cette architecture en commençant par la \textbf{configuration du projet QT} via le fichier \textbf{.pro}. Cette étape a permis d’intégrer les bibliothèques essentielles au bon fonctionnement de l’application. Tout d’abord, l’ajout des \textbf{bibliothèques réseau (QtNetwork)} a été nécessaire afin de permettre l’envoi et la réception de requêtes HTTP, assurant ainsi la communication avec \textbf{SmartHouseAPI} pour récupérer les données des capteurs en temps réel. Ensuite, l’utilisation des\textbf{ widgets (QtWidgets)} a facilité la conception de l’interface utilisateur, en offrant des composants interactifs tels que \textbf{fenêtres}, \textbf{boutons} et \textbf{champs de saisie}, rendant l’application \textbf{ergonomique} et \textbf{intuitive}. Enfin, l’intégration des bibliothèques \textbf{graphiques (QtCharts)} dans le but d'afficher des \textbf{courbes} et des \textbf{graphiques dynamiques}, afin d'offrir une visualisation \textbf{claire} et \textbf{efficace} des données capturées par les capteurs IoT.
+		
+	\paragraph{Explication des différentes classes de SmartHouse Monitoring}
+	
 	
 	\chapter{Résultats et Discussion}
 	À l’issue de ce projet, nous avons pu mettre en place un système de surveillance des données issues de maisons connectée, sécurisé. l'architecture globale intègre plusieurs technologies, assurant l'\textbf{émission} et la \textbf{réception} des données en temps réel via le protocole MQTTs, ainsi que leur \textbf{stockage} et leur \textbf{affichage}.\\
