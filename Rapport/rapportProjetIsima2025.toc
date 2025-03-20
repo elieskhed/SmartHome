@@ -41,11 +41,11 @@
 \contentsline {subsubsection}{Affichage des données récupérées}{18}{section*.25}%
 \contentsline {chapter}{\numberline {4}Résultats et Discussion}{19}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{19}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{19}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusion du projet}{20}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Limites et améliorations possibles}{20}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Annexes}{21}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Lexique}{21}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Bibliographie}{21}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Webographie}{21}{section.A.3}%
+\contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{20}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{21}{chapter.5}%
+\contentsline {paragraph}{Réponse à la problématique}{21}{section*.26}%
+\contentsline {section}{\numberline {5.1}Limites et améliorations possibles}{22}{section.5.1}%
+\contentsline {chapter}{\numberline {A}Annexes}{23}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Lexique}{23}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Bibliographie}{23}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Webographie}{23}{section.A.3}%

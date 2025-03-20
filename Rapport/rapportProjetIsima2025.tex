@@ -751,12 +751,68 @@ L'organisation des \textbf{topics} suit la hiérarchie suivante :
 	\subsubsection{Affichage des données récupérées}
 	
 	\chapter{Résultats et Discussion}
+	À l’issue de ce projet, nous avons pu mettre en place un système de surveillance des données issues de maisons connectée, sécurisé. l'architecture globale intègre plusieurs technologies, assurant l'\textbf{émission} et la \textbf{réception} des données en temps réel via le protocole MQTTs, ainsi que leur \textbf{stockage} et leur \textbf{affichage}.\\
 	\section{Situation à la fin de l’étude}
+
+	En l'absence de dispositifs physiques, nous avons développé \textbf{HomeSimulation}, un \textbf{simulateur en Python}, exécuté sur l’une de nos machines, afin de reproduire le comportement de capteurs IoT. Cette simulation permet de \textbf{créer une ou plusieurs maisons virtuelles} capables d’émettre, via le protocole MQTTs, des séries de données générées aléatoirement, \textbf{simulant ainsi les mesures des capteurs connectés}.\\
+	L’architecture de la simulation a été conçue pour être \textbf{extensible}, facilitant l’ajout de nouveaux dispositifs et ne limitant ni le \textbf{nombre de capteurs} présents dans une maison ni la \textbf{fréquence d’envoi} des données.\\
+	Cette approche permet de \textbf{tester} et \textbf{valider} l’ensemble du système dans des conditions \textbf{proches d’une utilisation réelle}, permettant ainsi la simulation divers scénarios d’exploitation sans nécessiter de matériel physique.\\
+	
+	La transmission des données générées par \textbf{HomeSimulation} vers la base de données est assurée via \textbf{Mosquitto}, un \textbf{broker MQTT} reconnu pour sa \textbf{légèreté} et sa \textbf{fiabilité}. Afin de garantir la sécurité des échanges, nous avons mis en place une authentification basée sur \textbf{SSL/TLS}, assurant ainsi que \textbf{seules les maisons autorisées peuvent communiquer avec le serveur}. Ce protocole permet de \textbf{chiffrer les données en transit}, les protégeant contre \textbf{toute interception} ou \textbf{modification malveillante}. Cette sécurisation est essentielle dans le cadre d’un système de maison connectée, où la \textbf{confidentialité} et l’\textbf{intégrité} des informations transmises sont essentiels.\\
+	
+	\textbf{SmartHomeAPI}, l'\textbf{API REST} que nous avons développée en PHP avec le framework \textbf{Laravel} constitue \textbf{le cœur de notre architecture}. Elle permet d'\textbf{authentifier} les propriétaires des maisons connectées, de \textbf{générer des certificats SSL} et de récupérer les \textbf{données stockées via InfluxDB}, en utilisant un token d'authentification, unique à chaque utilisateur. L'\textbf{API} a été conçue de manière à être totalement \textbf{indépendante} de l'interface utilisateur, ce qui la rend \textbf{utilisable} avec tout type d'interface future – qu'il s'agisse d'une \textbf{application web}, d'\textbf{une application Android} ou \textbf{iOS}. Cette modularité garantit que l’API n’aura pas besoin d'être modifiée en cas d’évolution des supports ou des interfaces, assurant ainsi une grande \textbf{pérennité} et \textbf{évolutivité} pour l'ensemble du système.\\
+	
+	Pour l’interface utilisateur, nous avons opté pour \textbf{Qt}, une technologie très utilisée en entreprise et en industrie, nous permettant ainsi \textbf{d’approfondir nos compétences en développement C++}, et de l'utiliser dans un but plus tangible. Ce choix nous a offert une approche plus concrète du développement d’interfaces graphiques et de leur interaction avec une API REST.	
+	Grâce à Qt, nous avons pu \textbf{récupérer} et \textbf{parser} les données issues de la maison connectée, établissant ainsi une \textbf{base solide pour la visualisation des informations en temps réel}. Toutefois, la dernière étape, qui consistait à \textbf{afficher ces données sous forme de graphiques dynamiques et interactifs}, n’a pas pu être finalisée par manque de temps.
+	Malgré cela, cette phase nous a permis de mieux appréhender l’intégration de Qt avec notre \textbf{API REST}, en posant les \textbf{fondations nécessaires pour d’éventuelles améliorations}. À terme, cette interface pourrait être enrichie avec des fonctionnalités d’analyse visuelle avancées, permettant une surveillance optimisée des équipements connectés.
+	
 	\section{Analyse des résultats obtenus}
 	
+	Lors de l’analyse des résultats, nous avons mené une\textbf{ série de tests} visant à \textbf{optimiser la structuration des topics MQTT} et à \textbf{déterminer le format de données le plus adapté à la simulation des capteurs.}
+	
+	Dans un premier temps, nous avons réalisé \textbf{des tests de transmission de données} en \textbf{clair}, afin d’analyser la \textbf{fluidité} et la \textbf{fiabilité} des échanges. Par la suite, nous avons sécurisé la communication en \textbf{activant MQTTs} et en \textbf{intégrant des certificats SSL}, garantissant ainsi l’\textbf{authentification} et le \textbf{chiffrement des échanges}.
+	
+	Ces expérimentations nous ont permis d’évaluer la \textbf{robustesse} du protocole et d\textbf{’analyser l'impact de la sécurisation sur les performances globales du système}, notamment en termes de \textbf{latence}.
+	
+	Les tests effectués ont confirmé plusieurs points forts de notre système : 
+	\begin{itemize}
+		\item  \textbf{Sécurisation des données :} La transmission est sécurisée grâce à l'utilisation de MQTTs combiné aux \textbf{certificats SSL/TLS}, garantissant ainsi un \textbf{chiffrement complet} et \textbf{protégeant les échanges contre toute tentative d'interception}.  
+		\item  \textbf{Efficacité de l’API REST :} L’\textbf{API REST}, remplit \textbf{efficacement son rôle d'intermédiaire} en \textbf{filtrant} et en fournissant les données requises par les maisons connectées, assurant ainsi une communication \textbf{fluide} entre les différents composants du système.  
+		\item  \textbf{Intégration avec InfluxDB :} La base de données InfluxDB permet une \textbf{récupération rapide} et optimisée des \textbf{données historiques} ainsi que des\textbf{ données en temps réel}, ce qui est essentiel pour une \textbf{réponse réactive de l'API}.  
+		\item  \textbf{Authentification par certificat :} Le mécanisme d'authentification par certificat, des maisons renforce la sécurité en garantissant que seules les maisons \textbf{préalablement enregistrées peuvent communiquer avec le serveur, limitant ainsi les risques d'intrusion.}
+	\end{itemize} 
+
+
+	
 	\chapter{Conclusion}
-	\section{Conclusion du projet}
+	Ce projet nous a permis d’explorer et de mettre en œuvre plusieurs technologies essentielles à la domotique et à l’Internet des objets (IoT). Dès le début, nous avons conçu un système de communication sécurisé permettant l’échange en temps réel des données entre une maison connectée et un serveur central. Cette communication constitue la base indispensable pour assurer un suivi fiable des équipements et optimiser leur gestion.
+	
+	La sécurisation des échanges a été une priorité majeure, avec l’intégration de MQTTs et de certificats SSL/TLS garantissant l’authenticité des émetteurs et l’intégrité des données transmises. De plus, le choix de InfluxDB pour le stockage des données temporelles a permis d’assurer une récupération rapide et efficace des informations, tout en facilitant l’analyse des historiques.
+	
+	L’API REST développée sous Laravel joue un rôle clé en assurant une interface sécurisée et modulaire entre les équipements IoT et les systèmes clients. Son architecture indépendante de toute interface utilisateur permet une compatibilité future avec divers supports, qu’il s’agisse d’applications web, Android ou iOS.
+	
+	Enfin, bien que l’interface utilisateur en Qt ne soit pas totalement finalisée, les bases sont bien établies. Nous avons pu récupérer et parser les données depuis l’API, ouvrant la voie à une intégration future de visualisations graphiques dynamiques. Cette expérience nous a permis d’approfondir nos connaissances en C++, tout en renforçant notre compréhension des interactions entre une interface graphique et une API REST.\\
+	
+	\paragraph{Réponse à la problématique}
+	\textbf{\textit{Comment développer un système de monitoring en temps réel pour une maison connectée, garantissant la sécurité de la transmission des données tout en renforçant l'authentification des équipements IoT ?}}\vspace{1cm}
+	
+	Ce projet apporte une \textbf{réponse concrète et fonctionnelle à cette problématique}. Grâce à l’utilisation de \textbf{MQTTs}, nous avons mis en place un \textbf{canal de communication sécurisé garantissant l’authenticité des équipements et la confidentialité des échanges} par le biais de certificats \textbf{SSL/TLS}, limitant \textbf{l’accès aux seules maisons enregistrées}.
+	
+	De plus, l’\textbf{API REST} centralisée permet de \textbf{filtrer} et récupérer les \textbf{données IoT}, tout en offrant une architecture extensible et adaptable. Enfin, l’implémentation de \textbf{InfluxDB} permet de gérer efficacement les données en \textbf{temps réel}, garantissant une \textbf{réactivité optimale du système}.
+	
+	En conclusion, notre projet répond aux exigences de \textbf{sécurité} et de \textbf{surveillance en temps réel} pour une maison connectée, tout en offrant une base évolutive permettant d’enrichir et d’améliorer ses fonctionnalités dans le futur.
+	
 	\section{Limites et améliorations possibles}
+	
+	Malgré des bases solides, il est toujours possible \textbf{d’envisager des améliorations afin d’approcher encore davantage notre projet de la réalité et de renforcer sa sécurité}. En effet, bien que notre système dispose d\textbf{’un premier niveau de sécurité complet}, nous aurions pu aller plus loin dans la réflexion sécuritaire, notamment en développant notre API pour qu’\textbf{elle fonctionne en HTTPS plutôt qu’en HTTP}. Cela aurait permis d’assurer une transmission entièrement \textbf{chiffrée} des requêtes, garantissant ainsi une protection accrue des données en transit et une meilleure adaptation aux exigences de sécurité du monde réel.
+	
+	Sur le plan de l’interface, des améliorations auraient également pu être apportées \textbf{pour renforcer la connexion utilisateur}. Actuellement, l’authentification repose sur un \textbf{mécanisme à facteur unique (1FA)} utilisant uniquement un \textbf{token}. La mise en place d’un\textbf{ second facteur d’authentification}, ou encore \textbf{l’implémentation d’un système reposant sur OAuth2}, aurait permis d’offrir une sécurité renforcée pour \textbf{les comptes utilisateurs et de réduire le risque d’accès non autorisé}.
+	
+	Concernant l’interface graphique, nous avons choisi de ne pas utiliser d’outil déjà existant, tel que \textbf{Grafana}, afin de nous \textbf{perfectionner dans la compréhension et l’utilisation de Qt}, et d'utiliser le language C++ à \textbf{des fins plus concrètes}. Cette décision nous a demandé un effort supplémentaire, puisque nous avons dû développer nous-mêmes une interface qui, bien qu’elle ne soit pas finalisée, démontre déjà notre capacité à \textbf{récupérer} et \textbf{parser} les données via l’\textbf{API REST}. Une alternative aurait été d’implémenter d’abord \textbf{Grafana} pour disposer rapidement d’un \textbf{outil de visualisation efficace, puis d’envisager par la suite soit de l’utiliser tel quel, soit de développer un outil personnalisé plus complet et intuitif pour afficher les données en temps réel}. Cela nous aurait permis d’obtenir dès le départ un aperçu précis des données utilisateur, même si dans notre cas il s’agissait de données simulées.
+	
+	Enfin, pour se rapprocher encore plus d’un environnement de production, il aurait été intéressant de déployer \textbf{notre projet sur un serveur réellement distant}, par exemple en utilisant des services de CLOUDS tels qu’\textbf{Azure} ou \textbf{AWS}. Ce déploiement aurait permis de mettre en réseau notre application et de la rendre accessible depuis \textbf{n’importe quel appareil possédant un compte utilisateur, ouvrant ainsi la voie à une utilisation à plus grande échelle}. 
+	
+	Toutefois, en dépit de ces limites mineures et corrigeables, ce projet a été une expérience enrichissante, permettant d’\textbf{explorer} et d’\textbf{approfondir} des concepts essentiels en \textbf{réseau}, \textbf{sécurité} et \textbf{développement IoT}.	
 	
 	\appendix
 	\chapter{Annexes}
