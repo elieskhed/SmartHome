@@ -51,7 +51,3 @@
 \contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}%
 \contentsline {paragraph}{Réponse à la problématique}{29}{section*.32}%
 \contentsline {section}{\numberline {5.1}Limites et améliorations possibles}{30}{section.5.1}%
-\contentsline {chapter}{\numberline {A}Annexes}{31}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Lexique}{31}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Bibliographie}{31}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Webographie}{31}{section.A.3}%

@@ -1,3 +1,49 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{nebra2015}
+Mathieu Nebra.
+\newblock {\em Programmez avec le langage C++}.
+\newblock Eyrolles, 2015.
+
+\bibitem{meurisse2020}
+Dominique Meurisse.
+\newblock {\em Python, Raspberry Pi et Flask}.
+\newblock ENI, 2020.
+
+\bibitem{perre2020}
+Yannig Perré.
+\newblock {\em Prometheus et Grafana : Surveillez vos applications et
+  composants système}.
+\newblock ENI, 2020.
+
+\bibitem{huchet2021}
+Raphaël Huchet and Sean O’Shea.
+\newblock {\em Laravel : Un framework efficace pour développer vos
+  applications PHP (2\textsuperscript{e} édition)}.
+\newblock ENI, 2021.
+
+\bibitem{israel2022}
+Tristan Israël.
+\newblock {\em Maîtrisez Qt : Guide de développement d'applications
+  professionnelles (3\textsuperscript{e} édition)}.
+\newblock ENI, 2022.
+
+\bibitem{mosquitto_doc}
+{\em Documentation de Mosquitto}, 2024.
+
+\bibitem{influxdb_doc}
+{\em Documentation d'InfluxDB}, 2024.
+
+\bibitem{openssl_doc}
+{\em Documentation d'OpenSSL}, 2024.
+
+\bibitem{apache_doc}
+{\em Documentation d'Apache 2}, 2024.
+
+\bibitem{qt_doc}
+{\em Documentation de Qt}, 2024.
+
+\bibitem{laravel_doc}
+{\em Documentation de Laravel}, 2024.
 
 \end{thebibliography}
