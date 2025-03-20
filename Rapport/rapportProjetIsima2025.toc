@@ -41,7 +41,7 @@
 \contentsline {section}{\numberline {3.3}Surveillance des données avec une interface graphique}{23}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Architecture logicielle de l'application SmartHouse Monitoring}{23}{subsection.3.3.1}%
 \contentsline {paragraph}{Structure de SmartHouse Monitoring}{23}{section*.28}%
-\contentsline {paragraph}{Explication des différentes classes de SmartHouse Monitoring}{24}{section*.29}%
+\contentsline {paragraph}{Explication des différentes classes de SmartHouse Monitoring}{24}{figure.3.19}%
 \contentsline {chapter}{\numberline {4}Résultats et Discussion}{25}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Situation à la fin de l’étude}{25}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Analyse des résultats obtenus}{26}{section.4.2}%

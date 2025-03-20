@@ -1,0 +1,68 @@
+\hypertarget{monitorhousedata_8h_source}{}\doxysection{monitorhousedata.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MONITORHOUSEDATA\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MONITORHOUSEDATA\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QtWidgets/QTextEdit>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QtWidgets/QCheckBox>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QtWidgets/QPushButton>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QtWidgets/QLabel>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QtWidgets/QVBoxLayout>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include<QtCharts/QChartView>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <QtCharts/QLineSeries>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <QtCharts/QtCharts>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <QString>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QNetworkAccessManager>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <QNetworkRequest>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <QNetworkReply>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <QUrl>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <QDebug>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <QJsonObject>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <QJsonDocument>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <QJsonArray>}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{classMonitorHouseData}{MonitorHouseData}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30     Q\_OBJECT}
+\DoxyCodeLine{31 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \mbox{\hyperlink{classMonitorHouseData}{MonitorHouseData}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} connectAPILastData(QString \textcolor{keyword}{const}\& urlStr);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} createChartsExample();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{private}:}
+\DoxyCodeLine{39     QTextEdit* houseToken;}
+\DoxyCodeLine{40     QPushButton* buttonSend;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{comment}{// Checkbox choix API}}
+\DoxyCodeLine{43     QCheckBox* checkBoxLastData;}
+\DoxyCodeLine{44     QCheckBox* checkBoxDataFromScratch;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     QVBoxLayout* verticalLayout;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{// message d'erreur}}
+\DoxyCodeLine{49     QLabel* messageErreur;}
+\DoxyCodeLine{50     \textcolor{comment}{// Graphiques QtCharts}}
+\DoxyCodeLine{51     QLineSeries* series;}
+\DoxyCodeLine{52     QChart* chart;}
+\DoxyCodeLine{53     QChartView* chartView;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     QString responseDataStr;}
+\DoxyCodeLine{56     QString urlStr;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MONITORHOUSEDATA\_H}}
+
+\end{DoxyCode}
